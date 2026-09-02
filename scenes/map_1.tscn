@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://06xc4fwilh31"]
+
+[ext_resource type="PackedScene" uid="uid://bgbg88p35vh54" path="res://scenes/tornado.tscn" id="1_87ub3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l02jg"]
+size = Vector2(1158.5, 20)
+
+[node name="map1" type="Node2D" unique_id=1791689970]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1637570939]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1238725028]
+position = Vector2(578.75, -8)
+shape = SubResource("RectangleShape2D_l02jg")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1225026019]
+position = Vector2(575, 652)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1147593311]
+position = Vector2(589, -306)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_l02jg")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1538464086]
+position = Vector2(575, 652)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1095101207]
+position = Vector2(-577, -356)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_l02jg")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1324716498]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=857208499]
+position = Vector2(575, 652)
+shape = SubResource("RectangleShape2D_l02jg")
+
+[node name="Tornado" parent="." unique_id=1439906180 instance=ExtResource("1_87ub3")]
+position = Vector2(485, 269)
+scale = Vector2(0.35, 0.35)
