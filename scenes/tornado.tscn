@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bgbg88p35vh54"]
+
+[ext_resource type="Texture2D" uid="uid://d2ul3bix2077m" path="res://graphics/Diesaster's/Vector.png" id="1_7jxaq"]
+[ext_resource type="Script" uid="uid://jq8nnersdtyh" path="res://scripts/tornado.gd" id="1_shahy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l02jg"]
+radius = 111.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4r22t"]
+radius = 140.28899
+
+[node name="Tornado" type="CharacterBody2D" unique_id=1439906180]
+script = ExtResource("1_shahy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1860743311]
+position = Vector2(-6, 101)
+shape = SubResource("CircleShape2D_l02jg")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=259782243]
+texture = ExtResource("1_7jxaq")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=469494851]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1649172991]
+position = Vector2(-4, 99)
+shape = SubResource("CircleShape2D_4r22t")
+metadata/_edit_lock_ = true
