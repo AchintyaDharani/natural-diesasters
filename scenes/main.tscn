@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://sacjod7ax70e"]
 
-[ext_resource type="Texture2D" path="res://graphics/Diesaster's/Vector.png" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://kw5gw0xou8pm" path="res://graphics/Diesaster's/A_Tornado.png" id="1_o5qli"]
 
 [node name="main" type="Node2D" unique_id=1005716056]
 

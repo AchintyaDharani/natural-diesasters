@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5yvn1b06nmeu"
-path="res://.godot/imported/Nado.png-7c772440f5b1e4647126fa3ec9286d27.ctex"
+uid="uid://kw5gw0xou8pm"
+path="res://.godot/imported/A_Tornado.png-deccef9ae0fced398852403fa83c1a8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Diesaster's/Nado.png"
-dest_files=["res://.godot/imported/Nado.png-7c772440f5b1e4647126fa3ec9286d27.ctex"]
+source_file="res://graphics/Diesaster's/A_Tornado.png"
+dest_files=["res://.godot/imported/A_Tornado.png-deccef9ae0fced398852403fa83c1a8c.ctex"]
 
 [params]
 
