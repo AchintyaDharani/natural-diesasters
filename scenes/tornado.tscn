@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgbg88p35vh54"]
 
-[ext_resource type="Texture2D" uid="uid://d2ul3bix2077m" path="res://graphics/Diesaster's/Vector.png" id="1_7jxaq"]
+[ext_resource type="Texture2D" uid="uid://kw5gw0xou8pm" path="res://graphics/Diesaster's/A_Tornado.png" id="1_7jxaq"]
 [ext_resource type="Script" uid="uid://jq8nnersdtyh" path="res://scripts/tornado.gd" id="1_shahy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l02jg"]
