@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://gy4nguq4dpnn" path="res://graphics/house/Building_1.png" id="2_lj2ar"]
 [ext_resource type="Texture2D" uid="uid://djk71ldmug67w" path="res://graphics/house/Building_2.png" id="3_00lji"]
 [ext_resource type="PackedScene" uid="uid://bx8be6usvd43u" path="res://scenes/building.tscn" id="5_0dnla"]
-[ext_resource type="PackedScene" uid="uid://c4xqh1jrxr7up" path="res://scenes/bigbuilding.tscn" id="6_k075t"]
+[ext_resource type="PackedScene" uid="uid://ci3u4xeqkdnhu" path="res://scenes/bigbuilding.tscn" id="6_k075t"]
 
 [ext_resource type="PackedScene" uid="uid://bx8be6usvd43u" path="res://scenes/building.tscn" id="5_0dnla"]
 
