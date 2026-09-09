@@ -18,6 +18,3 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body) -> void:
 	body.take_damage(damage)
-=======
-func _on_area_2d_body_entered(body) -> void:
-	body.take_damage()
