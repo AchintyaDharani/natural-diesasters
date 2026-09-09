@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bx8be6usvd43u" path="res://scenes/building.tscn" id="5_0dnla"]
 [ext_resource type="PackedScene" uid="uid://ci3u4xeqkdnhu" path="res://scenes/bigbuilding.tscn" id="6_k075t"]
 
-[ext_resource type="PackedScene" uid="uid://bx8be6usvd43u" path="res://scenes/building.tscn" id="5_0dnla"]
-
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l02jg"]
 size = Vector2(1158.5, 20)
 
@@ -730,7 +727,6 @@ scale = Vector2(0.25, 0.25)
 position = Vector2(467, 170)
 scale = Vector2(0.25, 0.25)
 
-
 [node name="bigbuilding" parent="." unique_id=875487003 instance=ExtResource("6_k075t")]
 position = Vector2(642, 148)
 scale = Vector2(0.25, 0.25)
@@ -746,4 +742,3 @@ scale = Vector2(0.25, 0.25)
 [node name="bigbuilding4" parent="." unique_id=59975529 instance=ExtResource("6_k075t")]
 position = Vector2(854, 426)
 scale = Vector2(0.25, 0.25)
-
