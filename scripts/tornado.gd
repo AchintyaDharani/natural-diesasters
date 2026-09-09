@@ -16,10 +16,8 @@ func _physics_process(delta: float) -> void:
 
 
 
-<<<<<<< Updated upstream
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("lorik")
-=======
 func _on_area_2d_body_entered(body) -> void:
 	body.take_damage(damage)
->>>>>>> Stashed changes
+=======
+func _on_area_2d_body_entered(body) -> void:
+	body.take_damage()
