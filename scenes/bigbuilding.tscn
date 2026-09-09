@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c4xqh1jrxr7up"]
+
+[ext_resource type="Script" uid="uid://jxqqr8yqexp2" path="res://bigbuilding.gd" id="1_yqlbw"]
+[ext_resource type="Texture2D" uid="uid://djk71ldmug67w" path="res://graphics/house/Building_2.png" id="2_l8r8k"]
+
+[node name="bigbuilding" type="StaticBody2D" unique_id=875487003]
+collision_layer = 3
+script = ExtResource("1_yqlbw")
+
+[node name="Building2" type="Sprite2D" parent="." unique_id=765782270]
+texture = ExtResource("2_l8r8k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1407131181]
+position = Vector2(14, 84)
+polygon = PackedVector2Array(-89, 40, -11, 84, 87, 28, 1, -20)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1638859663]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" unique_id=1248462641]
+position = Vector2(0, 74)
+polygon = PackedVector2Array(-130, 37, -2, 111, 129, 36, 0, -40)

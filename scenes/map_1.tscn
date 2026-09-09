@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://gy4nguq4dpnn" path="res://graphics/house/Building_1.png" id="2_lj2ar"]
 [ext_resource type="Texture2D" uid="uid://djk71ldmug67w" path="res://graphics/house/Building_2.png" id="3_00lji"]
 [ext_resource type="PackedScene" uid="uid://bx8be6usvd43u" path="res://scenes/building.tscn" id="5_0dnla"]
+[ext_resource type="PackedScene" uid="uid://c4xqh1jrxr7up" path="res://scenes/bigbuilding.tscn" id="6_k075t"]
+
+[ext_resource type="PackedScene" uid="uid://bx8be6usvd43u" path="res://scenes/building.tscn" id="5_0dnla"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l02jg"]
 size = Vector2(1158.5, 20)
@@ -726,18 +730,20 @@ scale = Vector2(0.25, 0.25)
 position = Vector2(467, 170)
 scale = Vector2(0.25, 0.25)
 
-[node name="Building16" parent="." unique_id=1627333838 instance=ExtResource("5_0dnla")]
-position = Vector2(986, 470)
+
+[node name="bigbuilding" parent="." unique_id=875487003 instance=ExtResource("6_k075t")]
+position = Vector2(642, 148)
 scale = Vector2(0.25, 0.25)
 
-[node name="Building17" parent="." unique_id=1246134281 instance=ExtResource("5_0dnla")]
-position = Vector2(857, 494)
+[node name="bigbuilding2" parent="." unique_id=1567872561 instance=ExtResource("6_k075t")]
+position = Vector2(639, 399)
 scale = Vector2(0.25, 0.25)
 
-[node name="Building18" parent="." unique_id=1196502211 instance=ExtResource("5_0dnla")]
-position = Vector2(771, 444)
+[node name="bigbuilding3" parent="." unique_id=737358006 instance=ExtResource("6_k075t")]
+position = Vector2(116, 98)
 scale = Vector2(0.25, 0.25)
 
-[node name="Building19" parent="." unique_id=2060156838 instance=ExtResource("5_0dnla")]
-position = Vector2(683, 545)
+[node name="bigbuilding4" parent="." unique_id=59975529 instance=ExtResource("6_k075t")]
+position = Vector2(854, 426)
 scale = Vector2(0.25, 0.25)
+
