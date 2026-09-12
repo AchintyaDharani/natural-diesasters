@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvo8b2bosw2fc"
-path="res://.godot/imported/Tornado.png-efe6d2c726dc819420b336d87e926095.ctex"
+uid="uid://cfcrmngnqqo6f"
+path="res://.godot/imported/Timer.png-de7a07969f1f80ade8b9146515b4e26f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/buttons/Tornado.png"
-dest_files=["res://.godot/imported/Tornado.png-efe6d2c726dc819420b336d87e926095.ctex"]
+source_file="res://graphics/buttons/UI/Timer.png"
+dest_files=["res://.godot/imported/Timer.png-de7a07969f1f80ade8b9146515b4e26f.ctex"]
 
 [params]
 
