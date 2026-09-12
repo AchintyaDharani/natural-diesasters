@@ -1,0 +1,6 @@
+[gd_resource type="TileSet" format=3 uid="uid://c8gbcgqxdaxxg"]
+
+[resource]
+tile_shape = 1
+tile_size = Vector2i(16, 10)
+physics_layer_0/collision_layer = 1
