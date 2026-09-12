@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvo8b2bosw2fc"
-path="res://.godot/imported/Tornado.png-efe6d2c726dc819420b336d87e926095.ctex"
+uid="uid://djk71ldmug67w"
+path="res://.godot/imported/Building_2.png-ef13b1561348782c4b4265fccbbc259b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/buttons/Tornado.png"
-dest_files=["res://.godot/imported/Tornado.png-efe6d2c726dc819420b336d87e926095.ctex"]
+source_file="res://graphics/house/Building_2.png"
+dest_files=["res://.godot/imported/Building_2.png-ef13b1561348782c4b4265fccbbc259b.ctex"]
 
 [params]
 

@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://sacjod7ax70e"]
 
+[ext_resource type="Texture2D" uid="uid://kw5gw0xou8pm" path="res://graphics/Diesaster's/A_Tornado.png" id="1_o5qli"]
+
 [node name="main" type="Node2D" unique_id=1005716056]
+
+[node name="Nado" type="Sprite2D" parent="." unique_id=546806918]
+position = Vector2(617, 323)
+texture = ExtResource("1_o5qli")
