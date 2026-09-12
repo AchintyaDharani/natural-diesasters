@@ -2,6 +2,7 @@ extends Control
 
 @onready var map_1: Node2D = $".."
 @onready var color_rect: ColorRect = $ColorRect
+@onready var button: Button = $HBoxContainer3/Button
 
 
 
@@ -25,3 +26,8 @@ func blur():
 func unblur():
 	color_rect.visible = false
 	
+func disable_button():
+	button.disabled = true
+
+func enable_button():
+	button.disabled = false
