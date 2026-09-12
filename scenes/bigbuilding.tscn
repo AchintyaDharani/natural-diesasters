@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ci3u4xeqkdnhu"]
 
-[ext_resource type="Script" path="res://bigbuilding.gd" id="1_yqlbw"]
+[ext_resource type="Script" uid="uid://jxqqr8yqexp2" path="res://scripts/bigbuilding.gd" id="1_yqlbw"]
 [ext_resource type="Texture2D" uid="uid://djk71ldmug67w" path="res://graphics/house/Building_2.png" id="2_l8r8k"]
 
 [node name="bigbuilding" type="StaticBody2D" unique_id=875487003]
