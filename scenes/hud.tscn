@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://scripts/countdown.gd" id="6_5pdws"]
 [ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="6_047uy"]
 
-
 [node name="hud" type="Control" unique_id=160174252]
 layout_mode = 3
 anchors_preset = 15
@@ -111,7 +110,6 @@ offset_top = -40.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.1, 0.1)
 pivot_offset_ratio = Vector2(0.5, 1)
 
 [node name="Button" type="Button" parent="HBoxContainer3" unique_id=184168531]
