@@ -1,13 +1,12 @@
-
 [gd_scene format=3 uid="uid://ndeiykqp43s8"]
 
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="1_ahhtf"]
-[ext_resource type="Script" path="res://scripts/hud.gd" id="1_hd3ao"]
+[ext_resource type="Script" uid="uid://dxmlfbeepc2pl" path="res://scripts/hud.gd" id="1_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://ca55ufdfifxf0" path="res://graphics/buttons/Hurricane.png" id="2_oo0fn"]
-[ext_resource type="Script" path="res://scripts/coin_count.gd" id="2_uo2fv"]
+[ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="2_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://h1igmahoxgwv" path="res://graphics/buttons/Wind.png" id="3_6fi6k"]
 [ext_resource type="Texture2D" uid="uid://cfcrmngnqqo6f" path="res://graphics/buttons/UI/Timer.png" id="4_uo2fv"]
-[ext_resource type="Script" path="res://scripts/countdown.gd" id="6_5pdws"]
+[ext_resource type="Script" uid="uid://bola36iblahtd" path="res://scripts/countdown.gd" id="6_5pdws"]
 [ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="6_047uy"]
 
 [node name="hud" type="Control" unique_id=160174252]
@@ -30,10 +29,12 @@ grow_horizontal = 0
 scale = Vector2(0.1, 0.1)
 pivot_offset_ratio = Vector2(1, 0)
 theme_override_constants/separation = 100
+alignment = 2
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1502493215]
 layout_mode = 2
 texture = ExtResource("1_ahhtf")
+expand_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TextureRect" unique_id=2033773620]
 layout_mode = 1
@@ -42,6 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 100
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/TextureRect/HBoxContainer" unique_id=99863906]
 custom_minimum_size = Vector2(15, 356)
@@ -61,8 +63,8 @@ icon = ExtResource("2_oo0fn")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1874554733]
 layout_mode = 1
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1920.0
+offset_bottom = 364.0
 scale = Vector2(0.1, 0.1)
 theme_override_constants/separation = 100
 
@@ -73,6 +75,7 @@ icon = ExtResource("3_6fi6k")
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer2" unique_id=1873050214]
 layout_mode = 2
 texture = ExtResource("4_uo2fv")
+expand_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/TextureRect" unique_id=1858590447]
 layout_mode = 1
