@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://084fagjkh7oe"
-path="res://.godot/imported/Currency.png-8da19c6508545694774a6449a4c1ca05.ctex"
+uid="uid://ba6we0tcwwrws"
+path="res://.godot/imported/Pause.png-4825235e98e8adab091628791aa95706.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/buttons/Currency.png"
-dest_files=["res://.godot/imported/Currency.png-8da19c6508545694774a6449a4c1ca05.ctex"]
+source_file="res://graphics/buttons/UI/Buttons/Pause.png"
+dest_files=["res://.godot/imported/Pause.png-4825235e98e8adab091628791aa95706.ctex"]
 
 [params]
 
