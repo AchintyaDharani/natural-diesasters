@@ -1,14 +1,14 @@
-[gd_scene format=3 uid="uid://hfenkhg0hls0"]
+
+[gd_scene format=3 uid="uid://ndeiykqp43s8"]
 
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="1_ahhtf"]
-[ext_resource type="Script" uid="uid://dxmlfbeepc2pl" path="res://scripts/hud.gd" id="1_hd3ao"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_hd3ao"]
 [ext_resource type="Texture2D" uid="uid://ca55ufdfifxf0" path="res://graphics/buttons/Hurricane.png" id="2_oo0fn"]
-[ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="2_uo2fv"]
+[ext_resource type="Script" path="res://scripts/coin_count.gd" id="2_uo2fv"]
 [ext_resource type="Texture2D" uid="uid://h1igmahoxgwv" path="res://graphics/buttons/Wind.png" id="3_6fi6k"]
 [ext_resource type="Texture2D" uid="uid://cfcrmngnqqo6f" path="res://graphics/buttons/UI/Timer.png" id="4_uo2fv"]
-[ext_resource type="Script" uid="uid://bola36iblahtd" path="res://scripts/countdown.gd" id="6_5pdws"]
+[ext_resource type="Script" path="res://scripts/countdown.gd" id="6_5pdws"]
 [ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="6_047uy"]
-
 
 [node name="hud" type="Control" unique_id=160174252]
 layout_mode = 3
@@ -110,7 +110,6 @@ offset_top = -40.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(0.1, 0.1)
 pivot_offset_ratio = Vector2(0.5, 1)
 
 [node name="Button" type="Button" parent="HBoxContainer3" unique_id=184168531]

@@ -8,6 +8,7 @@ var nullvector = Vector2(0, 0)
 
 func _ready():
 	velocity = nullvector.normalized() * speed
+	process_mode = PROCESS_MODE_DISABLED
 
 
 
@@ -23,3 +24,6 @@ func update_direction(direction):
 
 func _on_area_2d_body_entered(body) -> void:
 	body.take_damage(damage)
+
+func activate():
+	process_mode = PROCESS_MODE_INHERIT
