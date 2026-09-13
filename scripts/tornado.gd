@@ -19,6 +19,10 @@ func _physics_process(delta: float) -> void:
 
 
 func update_direction(direction):
+	if direction == nullvector:
+		var n1 = rng.randf_range(-1,1)
+		var n2 = rng.randf_range(-1,1)
+		direction = Vector2(n1,n2) 
 	velocity = direction.normalized() * speed
 
 
