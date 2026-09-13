@@ -13,7 +13,7 @@ radius = 140.28899
 script = ExtResource("1_shahy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1860743311]
-position = Vector2(-6, 101)
+position = Vector2(0, 100)
 shape = SubResource("CircleShape2D_l02jg")
 metadata/_edit_lock_ = true
 
@@ -22,12 +22,14 @@ texture = ExtResource("1_7jxaq")
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=469494851]
+
 collision_layer = 2
 collision_mask = 2
 metadata/_edit_lock_ = true
 
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1649172991]
-position = Vector2(-4, 99)
+position = Vector2(0, 100)
 shape = SubResource("CircleShape2D_4r22t")
 metadata/_edit_lock_ = true
 

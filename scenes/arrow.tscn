@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://qybdddjuxweq"]
+
+[node name="arrow" type="Polygon2D" unique_id=1701188863]
+color = Color(1, 0.19607843, 0.21960784, 1)
+polygon = PackedVector2Array(0, 0, 0, -1, 4, -1, 4, -2, 6, 0, 4, 2, 4, 1, 0, 1)

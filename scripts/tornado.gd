@@ -2,9 +2,13 @@ extends CharacterBody2D
 
 
 var speed = 300.0
+var damage = 10
+var rng = RandomNumberGenerator.new()
+var nullvector = Vector2(0, 0)
 
 func _ready():
-	velocity = Vector2(200,200).normalized() * speed
+	velocity = nullvector.normalized() * speed
+
 
 
 func _physics_process(delta: float) -> void:
@@ -13,7 +17,9 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.bounce(collision.get_normal())
 
 
+func update_direction(direction):
+	velocity = direction.normalized() * speed
 
 
 func _on_area_2d_body_entered(body) -> void:
-	body.take_damage()
+	body.take_damage(damage)

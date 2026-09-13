@@ -1,3 +1,4 @@
+
 [gd_scene format=3 uid="uid://ndeiykqp43s8"]
 
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="1_ahhtf"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cfcrmngnqqo6f" path="res://graphics/buttons/UI/Timer.png" id="4_uo2fv"]
 [ext_resource type="Script" path="res://scripts/countdown.gd" id="6_5pdws"]
 [ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="6_047uy"]
+
 
 [node name="hud" type="Control" unique_id=160174252]
 layout_mode = 3
