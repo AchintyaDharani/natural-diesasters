@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://djk71ldmug67w" path="res://graphics/house/Building_2.png" id="3_00lji"]
 [ext_resource type="PackedScene" uid="uid://bx8be6usvd43u" path="res://scenes/building.tscn" id="5_0dnla"]
 [ext_resource type="PackedScene" uid="uid://ci3u4xeqkdnhu" path="res://scenes/bigbuilding.tscn" id="6_k075t"]
-[ext_resource type="PackedScene" uid="uid://ndeiykqp43s8" path="res://scenes/hud.tscn" id="7_nfx0i"]
+[ext_resource type="PackedScene" uid="uid://hfenkhg0hls0" path="res://scenes/hud.tscn" id="7_nfx0i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l02jg"]
 size = Vector2(1158.5, 20)
