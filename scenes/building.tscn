@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://gy4nguq4dpnn" path="res://graphics/house/Building_1.png" id="1_n8bkc"]
 [ext_resource type="Script" uid="uid://sbcpxbmdc7mf" path="res://scripts/building.gd" id="1_uvy8r"]
+[ext_resource type="Texture2D" uid="uid://hvrk6pionro8" path="res://graphics/house/Broken_1.png" id="3_ejq8p"]
 
 [node name="Building" type="StaticBody2D" unique_id=2068289871]
 collision_layer = 2
@@ -21,3 +22,7 @@ collision_mask = 2
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" unique_id=1416764367]
 polygon = PackedVector2Array(-130, 37, -2, 111, 129, 36, 0, -40)
+
+[node name="Broken1" type="Sprite2D" parent="." unique_id=477284317]
+position = Vector2(0, 36)
+texture = ExtResource("3_ejq8p")

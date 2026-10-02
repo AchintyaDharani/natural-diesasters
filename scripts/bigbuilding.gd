@@ -2,18 +2,20 @@ extends StaticBody2D
 
 var hp = 400
 var mancount = 20
-
-
+var destroyed := false
 
 func _ready() -> void:
-	pass
+	$Broken2.hide()
 
-
-func _process(_delta: float) -> void:
-	if hp == 0:
-		queue_free()
-	
 func take_damage(damage):
-	hp -= damage
+	if destroyed:
+		return
+
+	hp = hp - damage
 	print(hp)
 	Global.coins += 10
+
+	if hp <= 0:
+		destroyed = true
+		$Building2.hide()
+		$Broken2.show()
