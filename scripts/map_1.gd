@@ -27,6 +27,7 @@ func _process(_delta: float) -> void:
 		if Input.is_action_just_pressed("Click"):
 			directing = false
 			scene.update_direction(mouse_pos - scene.position)
+			scene.activate()
 			arrowdir.queue_free()
 			hud.unblur()
 			hud.enable_button()
