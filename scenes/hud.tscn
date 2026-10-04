@@ -140,7 +140,7 @@ anchor_bottom = 0.5
 offset_left = -52.0
 offset_top = -50.0
 offset_right = 52.0
-offset_bottom = 520.0
+offset_bottom = 307.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 1)
@@ -166,4 +166,5 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.22352941)
 
+[connection signal="pressed" from="Top Right/HBoxContainer/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button" to="." method="_on_button_pressed"]

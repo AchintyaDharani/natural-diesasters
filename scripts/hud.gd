@@ -36,6 +36,6 @@ func enable_button():
 
 
 
-func _on_pause_button_pressed() -> void:
+func _on_shop_pressed() -> void:
 	var instance = shop.instantiate()
 	add_child(instance)
