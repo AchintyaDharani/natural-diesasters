@@ -2,12 +2,18 @@
 
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="1_ahhtf"]
 [ext_resource type="Script" uid="uid://dxmlfbeepc2pl" path="res://scripts/hud.gd" id="1_hd3ao"]
-[ext_resource type="Texture2D" uid="uid://ca55ufdfifxf0" path="res://graphics/buttons/Hurricane.png" id="2_oo0fn"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="2_uo2fv"]
-[ext_resource type="Texture2D" uid="uid://h1igmahoxgwv" path="res://graphics/buttons/Wind.png" id="3_6fi6k"]
-[ext_resource type="Texture2D" uid="uid://cfcrmngnqqo6f" path="res://graphics/buttons/UI/Timer.png" id="4_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://coek3rxfoy75l" path="res://graphics/buttons/UI/Shop.png" id="4_apjy4"]
+[ext_resource type="Texture2D" uid="uid://c0v0thfi0bpkx" path="res://graphics/buttons/UI/Shop_Pressed.png" id="5_5n1hp"]
 [ext_resource type="Script" uid="uid://bola36iblahtd" path="res://scripts/countdown.gd" id="6_5pdws"]
 [ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="6_047uy"]
+[ext_resource type="Texture2D" uid="uid://r64igyhbyj4v" path="res://graphics/buttons/UI/Shop_Hover.png" id="6_eld54"]
+[ext_resource type="Texture2D" uid="uid://bfyucrsu5b034" path="res://graphics/buttons/UI/Pause.png" id="7_eld54"]
+[ext_resource type="Texture2D" uid="uid://cgp12dlrt3emf" path="res://graphics/buttons/UI/Pause_Pressed.png" id="8_3swnk"]
+[ext_resource type="Texture2D" uid="uid://bfhik72ffhlj5" path="res://graphics/buttons/Tornado/Tornado_Pressed.png" id="9_mphia"]
+[ext_resource type="Texture2D" uid="uid://oj5pt5rrd81p" path="res://graphics/buttons/UI/Pause_Hover.png" id="9_qkknv"]
+[ext_resource type="Texture2D" uid="uid://brm17v2qbalfm" path="res://graphics/buttons/Tornado/Tornado_Hover.png" id="10_0m4u7"]
+[ext_resource type="Texture2D" uid="uid://drw4xg8f6m4tq" path="res://graphics/buttons/UI/Timer_UI.png" id="11_eld54"]
 
 [node name="hud" type="Control" unique_id=160174252]
 layout_mode = 3
@@ -18,78 +24,99 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hd3ao")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2010115029]
+[node name="Top Right" type="HBoxContainer" parent="." unique_id=2010115029]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1305.0
-offset_bottom = 356.0
+offset_left = -3559.9966
+offset_right = -0.00048828125
+offset_bottom = 819.99994
 grow_horizontal = 0
 scale = Vector2(0.1, 0.1)
 pivot_offset_ratio = Vector2(1, 0)
 theme_override_constants/separation = 100
 alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1502493215]
-layout_mode = 2
+[node name="Currency_UI" type="Sprite2D" parent="Top Right" unique_id=1842098276]
+position = Vector2(1300, 410)
+scale = Vector2(5.999998, 5.999998)
 texture = ExtResource("1_ahhtf")
-expand_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TextureRect" unique_id=2033773620]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 100
-
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/TextureRect/HBoxContainer" unique_id=99863906]
-custom_minimum_size = Vector2(15, 356)
+[node name="HBoxContainer2" type="HBoxContainer" parent="Top Right" unique_id=1812170695]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
+size_flags_horizontal = 6
 
-[node name="coin count" type="Label" parent="HBoxContainer/TextureRect/HBoxContainer" unique_id=1134594414]
+[node name="coin count" type="Label" parent="Top Right/HBoxContainer2" unique_id=1134594414]
 custom_minimum_size = Vector2(930, 356)
 layout_mode = 2
+size_flags_horizontal = 2
 theme_override_font_sizes/font_size = 200
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("2_uo2fv")
 
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=1933381942]
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right" unique_id=27485837]
+custom_minimum_size = Vector2(600, 600)
 layout_mode = 2
-icon = ExtResource("2_oo0fn")
+size_flags_horizontal = 10
+size_flags_vertical = 4
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1874554733]
+[node name="Shop" type="TextureButton" parent="Top Right/HBoxContainer" unique_id=907536374]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("4_apjy4")
+texture_pressed = ExtResource("5_5n1hp")
+texture_hover = ExtResource("6_eld54")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=29144351]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Top Left" type="HBoxContainer" parent="." unique_id=1874554733]
+custom_minimum_size = Vector2(3559.996, 820)
 layout_mode = 1
 offset_right = 1920.0
 offset_bottom = 364.0
 scale = Vector2(0.1, 0.1)
 theme_override_constants/separation = 100
 
-[node name="Button" type="Button" parent="HBoxContainer2" unique_id=2127619426]
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Left" unique_id=213331926]
+custom_minimum_size = Vector2(600, 600)
 layout_mode = 2
-icon = ExtResource("3_6fi6k")
+size_flags_horizontal = 0
+size_flags_vertical = 4
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer2" unique_id=1873050214]
-layout_mode = 2
-texture = ExtResource("4_uo2fv")
-expand_mode = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer2/TextureRect" unique_id=1858590447]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer2/TextureRect/HBoxContainer" unique_id=668197029]
-custom_minimum_size = Vector2(15, 356)
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Left/HBoxContainer" unique_id=1887474329]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="countdown" type="Label" parent="HBoxContainer2/TextureRect/HBoxContainer" unique_id=259431097]
+[node name="Pause" type="TextureButton" parent="Top Left/HBoxContainer" unique_id=691071370]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+texture_normal = ExtResource("7_eld54")
+texture_pressed = ExtResource("8_3swnk")
+texture_hover = ExtResource("9_qkknv")
+stretch_mode = 0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Top Left" unique_id=15454015]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="Timer_UI" type="Sprite2D" parent="Top Left" unique_id=751689432]
+position = Vector2(2299.9998, 409.99997)
+scale = Vector2(5.9999995, 5.9999995)
+texture = ExtResource("11_eld54")
+
+[node name="H" type="HBoxContainer" parent="Top Left" unique_id=2143021642]
+layout_mode = 2
+
+[node name="countdown" type="Label" parent="Top Left/H" unique_id=259431097]
 custom_minimum_size = Vector2(930, 356)
 layout_mode = 2
 theme_override_font_sizes/font_size = 200
@@ -97,27 +124,35 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("6_5pdws")
 
-[node name="Timer" type="Timer" parent="HBoxContainer2/TextureRect/HBoxContainer" unique_id=1048390485]
+[node name="Timer" type="Timer" parent="Top Left/H/countdown" unique_id=1048390485]
 wait_time = 900.0
 autostart = true
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="." unique_id=763055771]
+[node name="Bottom" type="HBoxContainer" parent="." unique_id=763055771]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -50.0
+offset_right = 52.0
+offset_bottom = 520.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 1)
 
-[node name="Button" type="Button" parent="HBoxContainer3" unique_id=184168531]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Bottom" unique_id=1137205744]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-icon = ExtResource("6_047uy")
+size_flags_vertical = 8
+
+[node name="Button" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=1631280341]
+layout_mode = 2
+texture_normal = ExtResource("6_047uy")
+texture_pressed = ExtResource("9_mphia")
+texture_hover = ExtResource("10_0m4u7")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1871193079]
 visible = false
@@ -129,4 +164,4 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.22352941)
 
-[connection signal="pressed" from="HBoxContainer3/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Bottom/HBoxContainer2/Button" to="." method="_on_button_pressed"]
