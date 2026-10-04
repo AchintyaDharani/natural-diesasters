@@ -3,6 +3,7 @@ extends Control
 @onready var map_1: Node2D = $".."
 @onready var color_rect: ColorRect = $ColorRect
 @onready var button: TextureButton = $Bottom/HBoxContainer2/Button
+@onready var shop: PackedScene = preload("res://scenes/shop.tscn")
 
 
 
@@ -31,3 +32,10 @@ func disable_button():
 
 func enable_button():
 	button.disabled = false
+
+
+
+
+func _on_pause_button_pressed() -> void:
+	var instance = shop.instantiate()
+	add_child(instance)
