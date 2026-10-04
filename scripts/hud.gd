@@ -2,9 +2,8 @@ extends Control
 
 @onready var map_1: Node2D = $".."
 @onready var color_rect: ColorRect = $ColorRect
-@onready var button: Button = $HBoxContainer3/Button
+@onready var button: TextureButton = $Bottom/HBoxContainer2/Button
 @onready var shop: PackedScene = preload("res://scenes/shop.tscn")
-
 
 
 

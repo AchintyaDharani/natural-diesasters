@@ -1,6 +1,6 @@
 extends Label
 
-@onready var countdown = $"../Timer"
+@onready var countdown = $Timer
 
  
 
