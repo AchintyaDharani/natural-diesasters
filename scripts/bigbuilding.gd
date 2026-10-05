@@ -18,4 +18,5 @@ func take_damage(damage):
 	if hp <= 0:
 		destroyed = true
 		$Building2.hide()
+		$CollisionPolygon2D.queue_free()
 		$Broken2.show()

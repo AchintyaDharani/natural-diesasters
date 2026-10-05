@@ -81,10 +81,8 @@ layout_mode = 2
 [node name="Top Left" type="HBoxContainer" parent="." unique_id=1874554733]
 custom_minimum_size = Vector2(3559.996, 820)
 layout_mode = 1
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 1930.0
-offset_bottom = 374.0
+offset_right = 3559.996
+offset_bottom = 820.0
 scale = Vector2(0.1, 0.1)
 theme_override_constants/separation = 100
 
@@ -140,7 +138,7 @@ anchor_bottom = 0.5
 offset_left = -52.0
 offset_top = -50.0
 offset_right = 52.0
-offset_bottom = 307.0
+offset_bottom = 490.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 1)
