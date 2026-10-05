@@ -81,8 +81,6 @@ layout_mode = 2
 [node name="Top Left" type="HBoxContainer" parent="." unique_id=1874554733]
 custom_minimum_size = Vector2(3559.996, 820)
 layout_mode = 1
-offset_left = 10.0
-offset_top = 10.0
 offset_right = 3559.996
 offset_bottom = 820.0
 scale = Vector2(0.1, 0.1)
