@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://cf7sn0cyoncea"]
+
+[ext_resource type="Script" uid="uid://hvj7ndarfq6j" path="res://scripts/shop.gd" id="1_lx5au"]
+[ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="2_ajxib"]
+[ext_resource type="Texture2D" uid="uid://biu85c8htfnqm" path="res://graphics/buttons/Earthquake.png" id="2_xfvoa"]
+[ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="3_032fp"]
+[ext_resource type="Texture2D" uid="uid://bfhik72ffhlj5" path="res://graphics/buttons/Tornado/Tornado_Pressed.png" id="3_y6sft"]
+[ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_2fc2m"]
+[ext_resource type="Texture2D" uid="uid://brm17v2qbalfm" path="res://graphics/buttons/Tornado/Tornado_Hover.png" id="4_m4ofw"]
+
+[node name="shop" type="Control" unique_id=739215886]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lx5au")
+radius = 200
+
+[node name="blur" type="ColorRect" parent="." unique_id=1856849263]
+self_modulate = Color(1, 1, 1, 0.5411765)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24477637, 0.2447764, 0.24477637, 1)
+
+[node name="centre" type="Control" parent="." unique_id=1636126983]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Tornado" type="TextureButton" parent="centre" unique_id=2105848232]
+layout_mode = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -212.0
+offset_bottom = 40.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_ajxib")
+texture_pressed = ExtResource("3_y6sft")
+texture_hover = ExtResource("4_m4ofw")
+
+[node name="Button2" type="TextureButton" parent="centre" unique_id=918136229]
+layout_mode = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -212.0
+offset_bottom = 40.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_xfvoa")
+
+[node name="Button3" type="TextureButton" parent="centre" unique_id=61614130]
+layout_mode = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -212.0
+offset_bottom = 40.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_xfvoa")
+
+[node name="Button4" type="TextureButton" parent="centre" unique_id=668699994]
+layout_mode = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -212.0
+offset_bottom = 40.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_xfvoa")
+
+[node name="Button5" type="TextureButton" parent="centre" unique_id=2060190929]
+layout_mode = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -212.0
+offset_bottom = 40.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_xfvoa")
+
+[node name="Button6" type="TextureButton" parent="centre" unique_id=1273956510]
+layout_mode = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -212.0
+offset_bottom = 40.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_xfvoa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=62119039]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1930.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 374.0
+grow_horizontal = 0
+scale = Vector2(0.1, 0.1)
+pivot_offset_ratio = Vector2(1, 0)
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1897221791]
+layout_mode = 2
+texture = ExtResource("3_032fp")
+expand_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TextureRect" unique_id=966578668]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/TextureRect/HBoxContainer" unique_id=215422738]
+custom_minimum_size = Vector2(15, 356)
+layout_mode = 2
+
+[node name="coin count" type="Label" parent="HBoxContainer/TextureRect/HBoxContainer" unique_id=21447080]
+custom_minimum_size = Vector2(930, 356)
+layout_mode = 2
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_2fc2m")
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer" unique_id=332023584]
+layout_mode = 2
+texture_normal = ExtResource("2_xfvoa")
+
+[node name="Label" type="Label" parent="." unique_id=1101310716]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="centre/Tornado" to="." method="_on_tornado_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
