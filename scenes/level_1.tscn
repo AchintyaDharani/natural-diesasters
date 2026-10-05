@@ -564,22 +564,6 @@ position = Vector2(2, 0)
 tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAFAAoAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAACAAcAAAAAAAAAAAADAAgAAAAAAAAAAAABAAcAAAAAAAAAAAACAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAoAAAAAAAAAAAABAAkAAAAAAAAAAAACAAoAAAAAAAAAAAABAAsAAAAAAAAAAAACAAwAAAAAAAAAAAAEAAsAAAAAAAAAAAAFAAwAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wcAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAkAAAAAAAAAAAAFAAgAAAAAAAAAAAD//wkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAwAAAAAAAAAAAADAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAABAAwAAAAAAAAAAAACAAsAAAAAAAAAAAADAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAD//wsAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAADAAQAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAACAAMAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAD//wUAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAACAAYAAAAAAAAAAAAAAAYAAAAAAAAAAAADAAsAAAAAAAAAAAAEAAcAAAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAD3/w8AAAAAAAAAAAD4/w0AAAABAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAD/////AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_s30kw")
 
-[node name="Building1" parent="." unique_id=2068289871 instance=ExtResource("2_bswci")]
-position = Vector2(537, 587)
-scale = Vector2(0.6, 0.6)
-
-[node name="Building2" parent="." unique_id=923422635 instance=ExtResource("2_bswci")]
-position = Vector2(537, 587)
-scale = Vector2(0.6, 0.6)
-
-[node name="Building3" parent="." unique_id=1998421224 instance=ExtResource("2_bswci")]
-position = Vector2(537, 587)
-scale = Vector2(0.6, 0.6)
-
-[node name="bigbuilding" parent="." unique_id=875487003 instance=ExtResource("3_rus8k")]
-position = Vector2(886.00006, 367)
-scale = Vector2(0.6, 0.6)
-
 [node name="hud" parent="." unique_id=160174252 instance=ExtResource("4_5xbjy")]
 anchors_preset = 0
 anchor_right = 0.0
@@ -589,3 +573,31 @@ offset_bottom = 1080.0
 grow_horizontal = 1
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Building" parent="." unique_id=2068289871 instance=ExtResource("2_bswci")]
+position = Vector2(699, 688)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building3" parent="." unique_id=604501571 instance=ExtResource("2_bswci")]
+position = Vector2(176, 944)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building4" parent="." unique_id=349639846 instance=ExtResource("2_bswci")]
+position = Vector2(1753, 848)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building5" parent="." unique_id=1089015966 instance=ExtResource("2_bswci")]
+position = Vector2(1230, 939)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building2" parent="." unique_id=1802761373 instance=ExtResource("2_bswci")]
+position = Vector2(1233, 595)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding" parent="." unique_id=875487003 instance=ExtResource("3_rus8k")]
+position = Vector2(1420, 460)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding2" parent="." unique_id=1010958149 instance=ExtResource("3_rus8k")]
+position = Vector2(522, 374)
+scale = Vector2(0.6, 0.6)
