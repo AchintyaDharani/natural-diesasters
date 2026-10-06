@@ -15,17 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://brm17v2qbalfm" path="res://graphics/buttons/Tornado/Tornado_Hover.png" id="10_0m4u7"]
 [ext_resource type="Texture2D" uid="uid://drw4xg8f6m4tq" path="res://graphics/buttons/UI/Timer_UI.png" id="11_eld54"]
 
-[node name="hud" type="Control" unique_id=160174252]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="hud" type="CanvasLayer" unique_id=1579764713]
 script = ExtResource("1_hd3ao")
 
 [node name="Top Right" type="HBoxContainer" parent="." unique_id=2010115029]
-layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -80,7 +73,6 @@ layout_mode = 2
 
 [node name="Top Left" type="HBoxContainer" parent="." unique_id=1874554733]
 custom_minimum_size = Vector2(3559.996, 820)
-layout_mode = 1
 offset_right = 3559.996
 offset_bottom = 820.0
 scale = Vector2(0.1, 0.1)
@@ -129,7 +121,6 @@ wait_time = 900.0
 autostart = true
 
 [node name="Bottom" type="HBoxContainer" parent="." unique_id=763055771]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -147,6 +138,7 @@ pivot_offset_ratio = Vector2(0.5, 1)
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_constants/separation = 30
 
 [node name="Button" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=1631280341]
 layout_mode = 2
@@ -154,9 +146,14 @@ texture_normal = ExtResource("6_047uy")
 texture_pressed = ExtResource("9_mphia")
 texture_hover = ExtResource("10_0m4u7")
 
+[node name="Button2" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=1058348413]
+layout_mode = 2
+texture_normal = ExtResource("6_047uy")
+texture_pressed = ExtResource("9_mphia")
+texture_hover = ExtResource("10_0m4u7")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1871193079]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -166,3 +163,4 @@ color = Color(1, 1, 1, 0.22352941)
 
 [connection signal="pressed" from="Top Right/HBoxContainer/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Bottom/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]

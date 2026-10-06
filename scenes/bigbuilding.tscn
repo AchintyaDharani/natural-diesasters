@@ -14,16 +14,17 @@ texture = ExtResource("2_l8r8k")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1407131181]
 position = Vector2(14, 84)
-polygon = PackedVector2Array(-89, 40, -11, 84, 87, 28, 1, -20)
+polygon = PackedVector2Array(-93, 37, -11, 84, 87, 28, 6, -24)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1638859663]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" unique_id=1248462641]
-position = Vector2(0, 74)
-polygon = PackedVector2Array(-130, 37, -2, 111, 129, 36, 0, -40)
+position = Vector2(-1, 73)
+polygon = PackedVector2Array(-104, 47, -2, 111, 129, 36, 19, -28)
 
 [node name="Broken2" type="Sprite2D" parent="." unique_id=2082783059]
+visible = false
 position = Vector2(0, 106)
 texture = ExtResource("3_lq4j6")
