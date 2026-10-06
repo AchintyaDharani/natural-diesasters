@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="1_6ev6a"]
 [ext_resource type="Script" uid="uid://dg0nskwjop6m7" path="res://scripts/tornado_tree.gd" id="1_lk34b"]
+[ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="2_8aaq1"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="2_lk34b"]
 [ext_resource type="Texture2D" uid="uid://biu85c8htfnqm" path="res://graphics/buttons/Earthquake.png" id="3_vr6hn"]
 [ext_resource type="Texture2D" uid="uid://cpgvuuncx877f" path="res://graphics/buttons/Tornado/U_Tornado_I.png" id="5_lw8ad"]
@@ -32,7 +33,7 @@ grow_vertical = 2
 offset_transform_enabled = true
 script = ExtResource("1_lk34b")
 
-[node name="blur" type="ColorRect" parent="." unique_id=1723360764]
+[node name="blur" type="TextureRect" parent="." unique_id=1776888743]
 self_modulate = Color(1, 1, 1, 0.5411765)
 layout_mode = 1
 anchors_preset = 15
@@ -40,7 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.24477637, 0.2447764, 0.24477637, 1)
+texture = ExtResource("2_8aaq1")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1440530237]
 layout_mode = 1
@@ -89,68 +90,73 @@ texture_normal = ExtResource("3_vr6hn")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=472251635]
 layout_mode = 0
-offset_left = 208.0
-offset_top = 32.0
-offset_right = 379.0
-offset_bottom = 611.0
+offset_left = 154.0
+offset_top = 51.0
+offset_right = 559.5
+offset_bottom = 533.0
+scale = Vector2(2, 2)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1230724032]
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer" unique_id=1459254379]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/CenterContainer" unique_id=1230724032]
 layout_mode = 2
 alignment = 1
 
-[node name="TextureButton1" type="TextureButton" parent="ScrollContainer/VBoxContainer" unique_id=299019315]
+[node name="TextureButton1" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=299019315]
 layout_mode = 2
 disabled = true
 texture_normal = ExtResource("5_lw8ad")
 texture_pressed = SubResource("CompressedTexture2D_l0nwl")
 texture_hover = ExtResource("6_8aaq1")
 
-[node name="ColorRect4" type="ColorRect" parent="ScrollContainer/VBoxContainer" unique_id=595294012]
+[node name="ColorRect4" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=595294012]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="TextureButton2" type="TextureButton" parent="ScrollContainer/VBoxContainer" unique_id=1702000400]
+[node name="TextureButton2" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1702000400]
 layout_mode = 2
 disabled = true
 texture_normal = ExtResource("7_y1e4o")
 texture_pressed = ExtResource("8_k7xde")
 texture_hover = ExtResource("9_fc174")
 
-[node name="ColorRect3" type="ColorRect" parent="ScrollContainer/VBoxContainer" unique_id=1290912564]
+[node name="ColorRect3" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1290912564]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="TextureButton3" type="TextureButton" parent="ScrollContainer/VBoxContainer" unique_id=1105028471]
+[node name="TextureButton3" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1105028471]
 layout_mode = 2
 disabled = true
 texture_normal = ExtResource("10_pyvdv")
 texture_pressed = ExtResource("11_rie01")
 texture_hover = ExtResource("12_c2g6r")
 
-[node name="ColorRect2" type="ColorRect" parent="ScrollContainer/VBoxContainer" unique_id=1666228324]
+[node name="ColorRect2" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1666228324]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="TextureButton4" type="TextureButton" parent="ScrollContainer/VBoxContainer" unique_id=1896092685]
+[node name="TextureButton4" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1896092685]
 layout_mode = 2
 disabled = true
 texture_normal = ExtResource("13_v8ach")
 texture_pressed = ExtResource("14_uto5j")
 texture_hover = ExtResource("15_ukmck")
 
-[node name="ColorRect" type="ColorRect" parent="ScrollContainer/VBoxContainer" unique_id=122009146]
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=122009146]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="TextureButton5" type="TextureButton" parent="ScrollContainer/VBoxContainer" unique_id=1634995727]
+[node name="TextureButton5" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1634995727]
 layout_mode = 2
 disabled = true
 texture_normal = ExtResource("16_7qnnt")
@@ -160,14 +166,14 @@ texture_hover = ExtResource("18_2hamj")
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=995142637]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.66700006
+anchor_left = 0.66800004
 anchor_top = 0.5
-anchor_right = 0.66700006
+anchor_right = 0.66800004
 anchor_bottom = 0.5
-offset_left = -18.539063
-offset_top = -23.410004
-offset_right = 21.460938
-offset_bottom = 26.589996
+offset_left = -20.458984
+offset_top = -23.410034
+offset_right = 19.541016
+offset_bottom = 26.589966
 grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
@@ -179,8 +185,8 @@ layout_mode = 2
 layout_mode = 2
 
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]

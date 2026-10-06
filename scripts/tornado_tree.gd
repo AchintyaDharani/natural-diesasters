@@ -1,6 +1,6 @@
 extends Control
 
-@onready var tree = $ScrollContainer/VBoxContainer
+@onready var tree = $ScrollContainer/CenterContainer/VBoxContainer
 @onready var list = []
 @onready var label = $VBoxContainer2/Label
 @onready var cost = $VBoxContainer2/cost
@@ -14,7 +14,6 @@ var explanations = [
 ]
 
 func _ready() -> void:
-	tree.global_position.y = 30 - Global.tornado_level * 148
 	for i in tree.get_children():
 		if i is TextureButton:
 			list.append(i)

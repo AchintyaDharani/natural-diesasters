@@ -1,8 +1,9 @@
-extends Control
+extends CanvasLayer
 
 @onready var map_1: Node2D = $".."
 @onready var color_rect: ColorRect = $ColorRect
 @onready var button: TextureButton = $Bottom/HBoxContainer2/Button
+@onready var button2: TextureButton = $Bottom/HBoxContainer2/Button2
 @onready var shop: PackedScene = preload("res://scenes/shop.tscn")
 
 
@@ -29,9 +30,11 @@ func unblur():
 	
 func disable_button():
 	button.disabled = true
+	button2.disabled = true
 
 func enable_button():
 	button.disabled = false
+	button2.disabled = false
 
 
 
@@ -39,3 +42,7 @@ func enable_button():
 func _on_shop_pressed() -> void:
 	var instance = shop.instantiate()
 	add_child(instance)
+
+
+func _on_button_2_pressed() -> void:
+	map_1.spawn_earthquake()
