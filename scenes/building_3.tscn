@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b8ht6ulqtqd7x"]
+
+[ext_resource type="Script" uid="uid://bqqp5wvvb5yf5" path="res://scripts/building_3.gd" id="1_2h4hy"]
+[ext_resource type="Texture2D" uid="uid://cbagsk0uvcuic" path="res://graphics/house/Building_3.png" id="2_oberj"]
+[ext_resource type="Texture2D" uid="uid://bq1pi1yfd8hyy" path="res://graphics/house/Broken_3.png" id="3_yn37s"]
+
+[node name="building_3" type="StaticBody2D" unique_id=1619457780]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_2h4hy")
+
+[node name="Building3" type="Sprite2D" parent="." unique_id=2112091146]
+texture = ExtResource("2_oberj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=895134739]
+position = Vector2(-43, 33)
+polygon = PackedVector2Array(-110, 41, -42, 78, -3, 55, 82, 104, 181, 47, 91, -11, 91, -13, 32, -50)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1074193586]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" unique_id=333472111]
+position = Vector2(14, 84)
+polygon = PackedVector2Array(-188, -13, -15, 87, 156, -12, -11, -120)
+
+[node name="Broken3" type="Sprite2D" parent="." unique_id=1718655485]
+position = Vector2(0, 72)
+texture = ExtResource("3_yn37s")

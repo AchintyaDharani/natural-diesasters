@@ -4,9 +4,11 @@
 [ext_resource type="Script" uid="uid://dg0nskwjop6m7" path="res://scripts/tornado_tree.gd" id="1_lk34b"]
 [ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="2_8aaq1"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="2_lk34b"]
-[ext_resource type="Texture2D" uid="uid://biu85c8htfnqm" path="res://graphics/buttons/Earthquake.png" id="3_vr6hn"]
+[ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="5_k7xde"]
 [ext_resource type="Texture2D" uid="uid://cpgvuuncx877f" path="res://graphics/buttons/Tornado/U_Tornado_I.png" id="5_lw8ad"]
 [ext_resource type="Texture2D" uid="uid://iy1wn7u2r8d2" path="res://graphics/buttons/Tornado/U_Tornado_I_Hover.png" id="6_8aaq1"]
+[ext_resource type="Texture2D" uid="uid://c88e07xfwumul" path="res://graphics/buttons/UI/Back_Pressed.png" id="6_fc174"]
+[ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="7_pyvdv"]
 [ext_resource type="Texture2D" uid="uid://d2vlum2p0p653" path="res://graphics/buttons/Tornado/U_Tornado_II.png" id="7_y1e4o"]
 [ext_resource type="Texture2D" uid="uid://da1mdxk7ya3yu" path="res://graphics/buttons/Tornado/U_Tornado_II_Pressed.png" id="8_k7xde"]
 [ext_resource type="Texture2D" uid="uid://cwpce6l7xv740" path="res://graphics/buttons/Tornado/U_Tornado_II_Hover.png" id="9_fc174"]
@@ -43,50 +45,59 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_8aaq1")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1440530237]
+[node name="Top Right" type="HBoxContainer" parent="." unique_id=795459861]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1930.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = 374.0
+offset_left = -3559.9966
+offset_right = -0.00048828125
+offset_bottom = 819.99994
 grow_horizontal = 0
 scale = Vector2(0.1, 0.1)
 pivot_offset_ratio = Vector2(1, 0)
 theme_override_constants/separation = 100
 alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1141953620]
-layout_mode = 2
+[node name="Currency_UI" type="Sprite2D" parent="Top Right" unique_id=2015494425]
+position = Vector2(1300, 410)
+scale = Vector2(5.999998, 5.999998)
 texture = ExtResource("1_6ev6a")
-expand_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/TextureRect" unique_id=288198986]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 100
-
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/TextureRect/HBoxContainer" unique_id=610409592]
-custom_minimum_size = Vector2(15, 356)
+[node name="HBoxContainer2" type="HBoxContainer" parent="Top Right" unique_id=2088125052]
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
+size_flags_horizontal = 6
 
-[node name="coin count" type="Label" parent="HBoxContainer/TextureRect/HBoxContainer" unique_id=2127725249]
+[node name="coin count" type="Label" parent="Top Right/HBoxContainer2" unique_id=795435593]
 custom_minimum_size = Vector2(930, 356)
 layout_mode = 2
+size_flags_horizontal = 2
 theme_override_font_sizes/font_size = 200
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("2_lk34b")
 
-[node name="TextureButton" type="TextureButton" parent="HBoxContainer" unique_id=1668730303]
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right" unique_id=133120327]
+custom_minimum_size = Vector2(600, 600)
 layout_mode = 2
-texture_normal = ExtResource("3_vr6hn")
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="Back" type="TextureButton" parent="Top Right/HBoxContainer" unique_id=1310009088]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("5_k7xde")
+texture_pressed = ExtResource("6_fc174")
+texture_hover = ExtResource("7_pyvdv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=1430279043]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=472251635]
 layout_mode = 0
@@ -184,7 +195,7 @@ layout_mode = 2
 [node name="cost" type="Label" parent="VBoxContainer2" unique_id=1923948805]
 layout_mode = 2
 
-[connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]

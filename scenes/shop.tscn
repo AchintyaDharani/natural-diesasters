@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://hvj7ndarfq6j" path="res://scripts/shop.gd" id="1_lx5au"]
 [ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="2_ajxib"]
-[ext_resource type="Texture2D" uid="uid://biu85c8htfnqm" path="res://graphics/buttons/Earthquake.png" id="2_xfvoa"]
+[ext_resource type="Texture2D" path="res://graphics/buttons/Earthquake.png" id="2_xfvoa"]
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="3_032fp"]
 [ext_resource type="Texture2D" uid="uid://bfhik72ffhlj5" path="res://graphics/buttons/Tornado/Tornado_Pressed.png" id="3_y6sft"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_2fc2m"]
 [ext_resource type="Texture2D" uid="uid://brm17v2qbalfm" path="res://graphics/buttons/Tornado/Tornado_Hover.png" id="4_m4ofw"]
+[ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="8_heatd"]
+[ext_resource type="Texture2D" uid="uid://c88e07xfwumul" path="res://graphics/buttons/UI/Back_Pressed.png" id="9_1v8qu"]
+[ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="10_44xle"]
 
 [node name="shop" type="Control" unique_id=739215886]
 layout_mode = 3
@@ -97,6 +100,7 @@ scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("2_xfvoa")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=62119039]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -139,7 +143,9 @@ script = ExtResource("4_2fc2m")
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer" unique_id=332023584]
 layout_mode = 2
-texture_normal = ExtResource("2_xfvoa")
+texture_normal = ExtResource("8_heatd")
+texture_pressed = ExtResource("9_1v8qu")
+texture_hover = ExtResource("10_44xle")
 
 [node name="Label" type="Label" parent="." unique_id=1101310716]
 layout_mode = 1
@@ -155,5 +161,60 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Top Right" type="HBoxContainer" parent="." unique_id=640803661]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -3559.9966
+offset_right = -0.00048828125
+offset_bottom = 819.99994
+grow_horizontal = 0
+scale = Vector2(0.1, 0.1)
+pivot_offset_ratio = Vector2(1, 0)
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="Currency_UI" type="Sprite2D" parent="Top Right" unique_id=916566740]
+position = Vector2(1300, 410)
+scale = Vector2(5.999998, 5.999998)
+texture = ExtResource("3_032fp")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Top Right" unique_id=1340837527]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="coin count" type="Label" parent="Top Right/HBoxContainer2" unique_id=1463655108]
+custom_minimum_size = Vector2(930, 356)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_2fc2m")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right" unique_id=1703177412]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="Back" type="TextureButton" parent="Top Right/HBoxContainer" unique_id=2138484848]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("8_heatd")
+texture_pressed = ExtResource("9_1v8qu")
+texture_hover = ExtResource("10_44xle")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=681342806]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
 [connection signal="pressed" from="centre/Tornado" to="." method="_on_tornado_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]

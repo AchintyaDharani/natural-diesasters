@@ -39,8 +39,7 @@ func _process(_delta: float) -> void:
 			label.text = ""
 			cost.text = ""
 
-
-func _on_texture_button_pressed() -> void:
+func _on_back_pressed() -> void:
 	self.queue_free()
 
 
