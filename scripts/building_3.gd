@@ -13,7 +13,7 @@ func take_damage(damage):
 
 	hp = hp - damage
 	print(hp)
-	Global.coins += 10
+	Global.coins += 15
 
 	if hp <= 0:
 		destroyed = true
