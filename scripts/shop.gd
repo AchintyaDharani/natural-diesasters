@@ -26,6 +26,13 @@ func _process(_delta: float) -> void:
 		if button.is_hovered():
 			if button == $centre/Tornado:
 				label.text = "Tornado"
+			elif button == $centre/Earthquake:
+				label.text = "Earthquake"
+				
+			elif button == $centre/Flood:
+				label.text = "Flood"
+			elif button == $centre/Lightning:
+				label.text = "Lightning"
 			else:
 				label.text = "earfquake"
 			break
