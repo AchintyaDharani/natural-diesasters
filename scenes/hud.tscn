@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bola36iblahtd" path="res://scripts/countdown.gd" id="6_5pdws"]
 [ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="6_047uy"]
 [ext_resource type="Texture2D" uid="uid://r64igyhbyj4v" path="res://graphics/buttons/UI/Shop_Hover.png" id="6_eld54"]
+[ext_resource type="Script" uid="uid://b1y0vl67i62m3" path="res://scripts/shop_button.gd" id="7_48y67"]
 [ext_resource type="Texture2D" uid="uid://bfyucrsu5b034" path="res://graphics/buttons/UI/Pause.png" id="7_eld54"]
 [ext_resource type="Texture2D" uid="uid://cgp12dlrt3emf" path="res://graphics/buttons/UI/Pause_Pressed.png" id="8_3swnk"]
 [ext_resource type="Texture2D" uid="uid://bfhik72ffhlj5" path="res://graphics/buttons/Tornado/Tornado_Pressed.png" id="9_mphia"]
@@ -17,8 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://drw4xg8f6m4tq" path="res://graphics/buttons/UI/Timer_UI.png" id="11_eld54"]
 [ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="15_3swnk"]
 [ext_resource type="Texture2D" uid="uid://b2jdwtoodu06p" path="res://graphics/buttons/Earthquake/Earthquake.png" id="17_iypfu"]
+[ext_resource type="Script" uid="uid://c3o6xw6w0r1qf" path="res://button.gd" id="17_qpprf"]
 [ext_resource type="Texture2D" uid="uid://mdssbbppjs8k" path="res://graphics/buttons/Earthquake/Earthquake_Pressed.png" id="18_qpprf"]
 [ext_resource type="Texture2D" uid="uid://ckh6gfmfbyv2y" path="res://graphics/buttons/Earthquake/Earthquake_Hover.png" id="19_3xg78"]
+[ext_resource type="Script" uid="uid://dfn6nf77m7t1g" path="res://button_2.gd" id="21_3xg78"]
 
 [node name="hud" type="CanvasLayer" unique_id=1579764713]
 script = ExtResource("1_hd3ao")
@@ -71,6 +74,10 @@ texture_pressed = ExtResource("5_5n1hp")
 texture_hover = ExtResource("6_eld54")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("7_48y67")
+
+[node name="ButtonPressComponent" type="Node" parent="Top Right/HBoxContainer/Shop" unique_id=875940904]
+script = ExtResource("15_3swnk")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=29144351]
 custom_minimum_size = Vector2(200, 0)
@@ -154,12 +161,20 @@ layout_mode = 2
 texture_normal = ExtResource("6_047uy")
 texture_pressed = ExtResource("9_mphia")
 texture_hover = ExtResource("10_0m4u7")
+script = ExtResource("17_qpprf")
+
+[node name="ButtonPressComponent" type="Node" parent="Bottom/HBoxContainer2/Button" unique_id=2059176115]
+script = ExtResource("15_3swnk")
 
 [node name="Button2" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=1058348413]
 layout_mode = 2
 texture_normal = ExtResource("17_iypfu")
 texture_pressed = ExtResource("18_qpprf")
 texture_hover = ExtResource("19_3xg78")
+script = ExtResource("21_3xg78")
+
+[node name="ButtonPressComponent" type="Node" parent="Bottom/HBoxContainer2/Button2" unique_id=1514486655]
+script = ExtResource("15_3swnk")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1871193079]
 visible = false

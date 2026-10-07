@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk7qj565phln4"
-path="res://.godot/imported/A_Lightning.png-d1d7b04d6ce59e427b7f37bd1b69d0d4.ctex"
+uid="uid://whk5jtrvvl5"
+path="res://.godot/imported/A_Light_3.png-45c99d1be83a02387e140a61957e53ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/Diesaster's/A_Lightning.png"
-dest_files=["res://.godot/imported/A_Lightning.png-d1d7b04d6ce59e427b7f37bd1b69d0d4.ctex"]
+source_file="res://graphics/Diesaster's/A_Light_3.png"
+dest_files=["res://.godot/imported/A_Light_3.png-45c99d1be83a02387e140a61957e53ee.ctex"]
 
 [params]
 
