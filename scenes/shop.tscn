@@ -2,12 +2,18 @@
 
 [ext_resource type="Script" uid="uid://hvj7ndarfq6j" path="res://scripts/shop.gd" id="1_lx5au"]
 [ext_resource type="Texture2D" uid="uid://cvo8b2bosw2fc" path="res://graphics/buttons/Tornado/Tornado.png" id="2_ajxib"]
+[ext_resource type="Texture2D" uid="uid://b2jdwtoodu06p" path="res://graphics/buttons/Earthquake/Earthquake.png" id="2_xfvoa"]
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="3_032fp"]
 [ext_resource type="Texture2D" uid="uid://bfhik72ffhlj5" path="res://graphics/buttons/Tornado/Tornado_Pressed.png" id="3_y6sft"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_2fc2m"]
 [ext_resource type="Texture2D" uid="uid://brm17v2qbalfm" path="res://graphics/buttons/Tornado/Tornado_Hover.png" id="4_m4ofw"]
+[ext_resource type="Texture2D" uid="uid://ckh6gfmfbyv2y" path="res://graphics/buttons/Earthquake/Earthquake_Hover.png" id="6_44xle"]
+[ext_resource type="Texture2D" uid="uid://mdssbbppjs8k" path="res://graphics/buttons/Earthquake/Earthquake_Pressed.png" id="7_24it5"]
+[ext_resource type="Texture2D" uid="uid://dfjllwephc7dl" path="res://graphics/buttons/Lightning/Lightning.png" id="8_gobkm"]
 [ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="8_heatd"]
 [ext_resource type="Texture2D" uid="uid://c88e07xfwumul" path="res://graphics/buttons/UI/Back_Pressed.png" id="9_1v8qu"]
+[ext_resource type="Texture2D" uid="uid://bpr0nuny7d80t" path="res://graphics/buttons/Lightning/Lightning_Pressed.png" id="9_j14q8"]
+[ext_resource type="Texture2D" uid="uid://fbk1ki72ogup" path="res://graphics/buttons/Lightning/Lightning_Hover.png" id="10_5u241"]
 [ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="10_44xle"]
 
 [node name="shop" type="Control" unique_id=739215886]
@@ -44,54 +50,52 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 
 [node name="Tornado" type="TextureButton" parent="centre" unique_id=2105848232]
 layout_mode = 0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = -212.0
-offset_bottom = 40.0
-scale = Vector2(0.1, 0.1)
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_ajxib")
 texture_pressed = ExtResource("3_y6sft")
 texture_hover = ExtResource("4_m4ofw")
 
-[node name="Button2" type="TextureButton" parent="centre" unique_id=918136229]
+[node name="Earthquake" type="TextureButton" parent="centre" unique_id=918136229]
 layout_mode = 0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = -212.0
-offset_bottom = 40.0
-scale = Vector2(0.1, 0.1)
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_xfvoa")
+texture_pressed = ExtResource("7_24it5")
+texture_hover = ExtResource("6_44xle")
 
-[node name="Button3" type="TextureButton" parent="centre" unique_id=61614130]
+[node name="Flood" type="TextureButton" parent="centre" unique_id=668699994]
 layout_mode = 0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = -212.0
-offset_bottom = 40.0
-scale = Vector2(0.1, 0.1)
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_xfvoa")
 
-[node name="Button4" type="TextureButton" parent="centre" unique_id=668699994]
+
+[node name="Lightning" type="TextureButton" parent="centre" unique_id=61614130]
 layout_mode = 0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = -212.0
-offset_bottom = 40.0
-scale = Vector2(0.1, 0.1)
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("8_gobkm")
+texture_pressed = ExtResource("9_j14q8")
+texture_hover = ExtResource("10_5u241")
 
 [node name="Button5" type="TextureButton" parent="centre" unique_id=2060190929]
 layout_mode = 0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = -212.0
-offset_bottom = 40.0
-scale = Vector2(0.1, 0.1)
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_xfvoa")
 
 [node name="Button6" type="TextureButton" parent="centre" unique_id=1273956510]
 layout_mode = 0
-offset_left = -576.0
-offset_top = -324.0
-offset_right = -212.0
-offset_bottom = 40.0
-scale = Vector2(0.1, 0.1)
+offset_right = 100.0
+offset_bottom = 100.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_xfvoa")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=62119039]
 visible = false

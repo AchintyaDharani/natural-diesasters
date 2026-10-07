@@ -9,9 +9,9 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_uvy8r")
 
-[node name="Building1" type="Sprite2D" parent="." unique_id=1680141464]
-position = Vector2(0, -8.505)
-texture = ExtResource("1_n8bkc")
+[node name="Broken1" type="Sprite2D" parent="." unique_id=477284317]
+position = Vector2(0, 36)
+texture = ExtResource("3_ejq8p")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1200696337]
 polygon = PackedVector2Array(-89, 40, -11, 84, 87, 28, 1, -20)
@@ -23,6 +23,21 @@ collision_mask = 2
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D" unique_id=1416764367]
 polygon = PackedVector2Array(-130, 37, -2, 111, 129, 36, 0, -40)
 
-[node name="Broken1" type="Sprite2D" parent="." unique_id=477284317]
-position = Vector2(0, 36)
-texture = ExtResource("3_ejq8p")
+[node name="Building1" type="Sprite2D" parent="." unique_id=1680141464]
+position = Vector2(0, -8.505)
+texture = ExtResource("1_n8bkc")
+
+[node name="Flooding_1" type="Polygon2D" parent="." unique_id=879927379]
+visible = false
+color = Color(0.70980394, 1, 1, 0.49803922)
+polygon = PackedVector2Array(-89, 35, -89, 12, -92, 11, -89, 8, -89, -14, -175, 36, 0, 137, 175, 36, 87, -15, 86, 24, -11, 79)
+
+[node name="Flooding_2" type="Polygon2D" parent="." unique_id=787287718]
+visible = false
+color = Color(0.1254902, 0.61960787, 1, 0.7411765)
+polygon = PackedVector2Array(-89, 1, -89, -13, -174, 36, 0, 138, 175, 36, 86, -15, 86, -6, -12, 43)
+
+[node name="Flooding_3" type="Polygon2D" parent="." unique_id=185780543]
+visible = false
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-89, -97, 10, -155, 87, -110, 87, -14, 173, 36, -1, 137, -175, 36, -89, -13, -89, -54, -93, -56, -89, -59)
