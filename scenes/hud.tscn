@@ -186,5 +186,6 @@ grow_vertical = 2
 color = Color(1, 1, 1, 0.22352941)
 
 [connection signal="pressed" from="Top Right/HBoxContainer/Shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Top Left/HBoxContainer/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]

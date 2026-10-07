@@ -1,14 +1,31 @@
 [gd_scene format=3 uid="uid://p0kseega48ye"]
 
+[ext_resource type="Script" uid="uid://cmhm6u3npaovh" path="res://scripts/pause_menu.gd" id="1_d3xb4"]
 [ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="1_hdmo1"]
+[ext_resource type="Texture2D" uid="uid://dkqjcd0if5n13" path="res://graphics/buttons/UI/Paused_Menu.png" id="1_nwcfo"]
+[ext_resource type="Script" uid="uid://wr4bnaj2u1ou" path="res://scripts/resume.gd" id="3_2nc7s"]
+[ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="3_05uyy"]
+[ext_resource type="Script" uid="uid://bjynlpdp0n150" path="res://scripts/restart.gd" id="5_d3xb4"]
 
-[node name="Pause_menu" type="Control" unique_id=1401728353]
+[node name="Pause_menu" type="Control" unique_id=1738971995]
 layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d3xb4")
+
+[node name="blur" type="ColorRect" parent="." unique_id=27650561]
+self_modulate = Color(1, 1, 1, 0.5411765)
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.24477637, 0.2447764, 0.24477637, 1)
+
+[node name="Paused" type="Sprite2D" parent="." unique_id=518984884]
+position = Vector2(960, 540)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_nwcfo")
 
 [node name="Middle" type="VBoxContainer" parent="." unique_id=1154693850]
 custom_minimum_size = Vector2(660, 1080)
@@ -25,13 +42,41 @@ grow_horizontal = 2
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Middle" unique_id=937405151]
+[node name="ButtonContainer" type="VBoxContainer" parent="Middle" unique_id=1111694724]
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_constants/separation = 50
 
-[node name="Button" type="Button" parent="Middle/HBoxContainer" unique_id=66733585]
-custom_minimum_size = Vector2(500, 100)
+[node name="Resume" type="Button" parent="Middle/ButtonContainer" unique_id=66733585]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme = ExtResource("1_hdmo1")
+text = "Resume"
+script = ExtResource("3_2nc7s")
+
+[node name="ButtonPressComponent" type="Node" parent="Middle/ButtonContainer/Resume" unique_id=1526981169]
+script = ExtResource("3_05uyy")
+
+[node name="Restart" type="Button" parent="Middle/ButtonContainer" unique_id=1051117431]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("1_hdmo1")
+text = "Restart"
+script = ExtResource("5_d3xb4")
+
+[node name="ButtonPressComponent" type="Node" parent="Middle/ButtonContainer/Restart" unique_id=70023079]
+script = ExtResource("3_05uyy")
+
+[node name="(Settings)" type="Button" parent="Middle/ButtonContainer" unique_id=1185915265]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("1_hdmo1")
+text = "Settings"
+
+[node name="ButtonPressComponent" type="Node" parent="Middle/ButtonContainer/(Settings)" unique_id=2037771272]
+script = ExtResource("3_05uyy")
+
+[connection signal="pressed" from="Middle/ButtonContainer/Resume" to="Middle/ButtonContainer/Resume" method="_on_pressed"]
+[connection signal="pressed" from="Middle/ButtonContainer/Restart" to="Middle/ButtonContainer/Restart" method="_on_pressed"]
