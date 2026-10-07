@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca55ufdfifxf0"
-path="res://.godot/imported/Hurricane.png-e55bca687299842396a5ca43439d835b.ctex"
+uid="uid://bq1pi1yfd8hyy"
+path="res://.godot/imported/Broken_3.png-55c438f74a5c1540391a929d5758b0cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/buttons/Hurricane.png"
-dest_files=["res://.godot/imported/Hurricane.png-e55bca687299842396a5ca43439d835b.ctex"]
+source_file="res://graphics/house/Broken_3.png"
+dest_files=["res://.godot/imported/Broken_3.png-55c438f74a5c1540391a929d5758b0cb.ctex"]
 
 [params]
 

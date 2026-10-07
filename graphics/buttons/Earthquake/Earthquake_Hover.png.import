@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djleyhufluc8b"
-path="res://.godot/imported/Flood.png-1a931c0b343c7a1d8a0fe9d5b2e90977.ctex"
+uid="uid://ckh6gfmfbyv2y"
+path="res://.godot/imported/Earthquake_Hover.png-518d09ba7791d797f50b8a004d9aaf0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/buttons/Flood.png"
-dest_files=["res://.godot/imported/Flood.png-1a931c0b343c7a1d8a0fe9d5b2e90977.ctex"]
+source_file="res://graphics/buttons/Earthquake/Earthquake_Hover.png"
+dest_files=["res://.godot/imported/Earthquake_Hover.png-518d09ba7791d797f50b8a004d9aaf0a.ctex"]
 
 [params]
 

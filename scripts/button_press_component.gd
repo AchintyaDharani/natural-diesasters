@@ -1,7 +1,7 @@
 extends Node
 class_name ButtonComponent
 
-var parent = null
+var parent
 
 func _ready() -> void:
 	parent = get_parent()
@@ -10,7 +10,7 @@ func _press_button():
 	if !parent:
 		return
 
-	parent.pivot_offset = parent.size / 2.0
+	parent.pivot_offset_ratio = Vector2(0.5, 0.5)
 
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)

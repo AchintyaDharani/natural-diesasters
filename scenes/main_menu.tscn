@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b1t6v4jrclak8"]
+[gd_scene format=3 uid="uid://2joy22loilvk"]
 
 [ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="1_8ln24"]
 [ext_resource type="Script" uid="uid://ceppcm5hgkajd" path="res://scripts/play_button.gd" id="1_ekxnf"]

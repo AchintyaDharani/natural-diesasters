@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biu85c8htfnqm"
-path="res://.godot/imported/Earthquake.png-ce1eb6cd77058caac6dba6e29f4fab5f.ctex"
+uid="uid://cbagsk0uvcuic"
+path="res://.godot/imported/Building_3.png-7543852cb80bbe8aead0eea1da740a2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/buttons/Earthquake.png"
-dest_files=["res://.godot/imported/Earthquake.png-ce1eb6cd77058caac6dba6e29f4fab5f.ctex"]
+source_file="res://graphics/house/Building_3.png"
+dest_files=["res://.godot/imported/Building_3.png-7543852cb80bbe8aead0eea1da740a2b.ctex"]
 
 [params]
 

@@ -593,11 +593,4 @@ position = Vector2(522, 374)
 scale = Vector2(0.6, 0.6)
 
 [node name="hud" parent="." unique_id=160174252 instance=ExtResource("4_5xbjy")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-grow_horizontal = 1
-grow_vertical = 1
 metadata/_edit_use_anchors_ = true

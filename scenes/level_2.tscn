@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://bowokuaj35ask"]
 
-[ext_resource type="Script" uid="uid://clg6jcoj4gg80" path="res://scripts/level_2.gd" id="1_b4j7a"]
 [ext_resource type="Texture2D" uid="uid://cs6ix44888id0" path="res://Assets/Tileset.png" id="1_eqxsl"]
+[ext_resource type="Script" uid="uid://d3k2pd628kfhk" path="res://scripts/map_1.gd" id="1_wo48x"]
 [ext_resource type="PackedScene" uid="uid://bx8be6usvd43u" path="res://scenes/building.tscn" id="2_b4j7a"]
 [ext_resource type="PackedScene" uid="uid://ci3u4xeqkdnhu" path="res://scenes/bigbuilding.tscn" id="3_wo48x"]
 [ext_resource type="PackedScene" uid="uid://ndeiykqp43s8" path="res://scenes/hud.tscn" id="4_y0kc7"]
+[ext_resource type="PackedScene" uid="uid://b8ht6ulqtqd7x" path="res://scenes/building_3.tscn" id="5_wo48x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2mo"]
 size = Vector2(1984, 89.5)
@@ -531,7 +532,7 @@ tile_size = Vector2i(350, 175)
 sources/0 = SubResource("TileSetAtlasSource_6cvei")
 
 [node name="Level_2" type="Node2D" unique_id=221715628]
-script = ExtResource("1_b4j7a")
+script = ExtResource("1_wo48x")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1725971943]
 
@@ -620,12 +621,9 @@ scale = Vector2(0.6, 0.6)
 position = Vector2(1213, 346)
 scale = Vector2(0.6, 0.6)
 
+[node name="building_3" parent="." unique_id=1619457780 instance=ExtResource("5_wo48x")]
+position = Vector2(917, 237)
+scale = Vector2(0.6, 0.6)
+
 [node name="hud" parent="." unique_id=160174252 instance=ExtResource("4_y0kc7")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-grow_horizontal = 1
-grow_vertical = 1
 metadata/_edit_use_anchors_ = true

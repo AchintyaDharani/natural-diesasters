@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds1v4rpxdlk1d"
-path="res://.godot/imported/Rain.png-c87b17c03b1627f3f52fafb4de451294.ctex"
+uid="uid://b2jdwtoodu06p"
+path="res://.godot/imported/Earthquake.png-fe4e31d69a11fcf5f07fe1315819721f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/buttons/Rain.png"
-dest_files=["res://.godot/imported/Rain.png-c87b17c03b1627f3f52fafb4de451294.ctex"]
+source_file="res://graphics/buttons/Earthquake/Earthquake.png"
+dest_files=["res://.godot/imported/Earthquake.png-fe4e31d69a11fcf5f07fe1315819721f.ctex"]
 
 [params]
 
