@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var button: TextureButton = $Bottom/HBoxContainer2/Button
 @onready var button2: TextureButton = $Bottom/HBoxContainer2/Button2
 @onready var shop: PackedScene = preload("res://scenes/shop.tscn")
+@onready var pausemenu = preload("res://pause_menu.tscn")
 
 
 
@@ -46,3 +47,9 @@ func _on_shop_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	map_1.spawn_earthquake()
+
+
+func _on_pause_pressed() -> void:
+	get_tree().paused = true
+	var instance = pausemenu.instantiate()
+	add_child(instance)
