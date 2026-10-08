@@ -66,14 +66,6 @@ texture_normal = ExtResource("2_xfvoa")
 texture_pressed = ExtResource("7_24it5")
 texture_hover = ExtResource("6_44xle")
 
-[node name="Flood" type="TextureButton" parent="centre" unique_id=668699994]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 100.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_xfvoa")
-
-
 [node name="Lightning" type="TextureButton" parent="centre" unique_id=61614130]
 layout_mode = 0
 offset_right = 100.0
@@ -83,14 +75,7 @@ texture_normal = ExtResource("8_gobkm")
 texture_pressed = ExtResource("9_j14q8")
 texture_hover = ExtResource("10_5u241")
 
-[node name="Button5" type="TextureButton" parent="centre" unique_id=2060190929]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 100.0
-pivot_offset_ratio = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_xfvoa")
-
-[node name="Button6" type="TextureButton" parent="centre" unique_id=1273956510]
+[node name="Flood" type="TextureButton" parent="centre" unique_id=668699994]
 layout_mode = 0
 offset_right = 100.0
 offset_bottom = 100.0

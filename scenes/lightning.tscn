@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://di15yj8psm43g"]
+
+[ext_resource type="Script" uid="uid://crs1byy7mx86i" path="res://scripts/lightning.gd" id="1_gpx16"]
+[ext_resource type="Texture2D" uid="uid://wfpiitd37hs0" path="res://graphics/Diesaster's/A_Light_2.png" id="2_ybhjs"]
+[ext_resource type="Texture2D" uid="uid://bhxscb8ykuw8s" path="res://graphics/Diesaster's/A_L_Cloud.png" id="3_qg4np"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l02jg"]
+radius = 133.09395
+
+[sub_resource type="Animation" id="Animation_hfadc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ALCloud:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ALight2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wxtiq"]
+resource_name = "lightning_strike"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ALCloud:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ALight2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.35, 1.5, 1.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"strike"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5u1n0"]
+_data = {
+&"RESET": SubResource("Animation_hfadc"),
+&"lightning_strike": SubResource("Animation_wxtiq")
+}
+
+[node name="lightning" type="Area2D" unique_id=256708591]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_gpx16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250493744]
+shape = SubResource("CircleShape2D_l02jg")
+
+[node name="ALight2" type="Sprite2D" parent="." unique_id=536091682]
+position = Vector2(0, -200)
+texture = ExtResource("2_ybhjs")
+
+[node name="ALCloud" type="Sprite2D" parent="." unique_id=752089611]
+position = Vector2(0, -500)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_qg4np")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1767971021]
+libraries/ = SubResource("AnimationLibrary_5u1n0")
+autoplay = &"lightning_strike"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
