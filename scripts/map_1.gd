@@ -2,6 +2,7 @@ extends Node2D
 @onready var tornado = preload("res://scenes/tornado.tscn")
 @onready var arrow = preload("res://scenes/arrow.tscn")
 @onready var earthquake = preload("res://scenes/earthquake.tscn")
+@onready var lightning = preload("res://scenes/lightning.tscn")
 @onready var hud: CanvasLayer = $hud
 
 var mouse_pos = get_global_mouse_position()
@@ -10,9 +11,11 @@ var directing = false
 var arrowdir
 var scene
 var e_placing = false
+var t_placing
 
 var tornado_scaling = Vector2(.1, .1)
-var earthquake_scaling = Vector2(1,1)
+var earthquake_scaling = Vector2(1, 1)
+var lightning_scaling = Vector2(.7, .7)
 var arrow_scaling = Vector2(10, 10)
 
 
@@ -52,7 +55,18 @@ func _process(_delta: float) -> void:
 			scene.activate()
 			hud.unblur()
 			hud.enable_button()
-
+	if t_placing == true:
+		hud.blur()
+		scene.position = mouse_pos
+		if Input.is_action_just_pressed("Click"):
+			t_placing = false
+			scene.activate()
+			hud.unblur()
+			hud.enable_button()
+	
+	
+	
+	
 func spawn_tornado():
 	hud.disable_button()
 	var instance = tornado.instantiate()
@@ -70,3 +84,12 @@ func spawn_earthquake():
 	scene = instance
 	instance.scale = earthquake_scaling
 	e_placing = true
+	
+	
+func spawn_lightning():
+	hud.disable_button()
+	var instance = lightning.instantiate()
+	add_child(instance)
+	scene = instance
+	instance.scale = lightning_scaling
+	t_placing = true

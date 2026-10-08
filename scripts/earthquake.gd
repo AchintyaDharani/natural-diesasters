@@ -14,7 +14,7 @@ func _draw() -> void:
 		draw_circle(Vector2(0,0),hitbox.shape.radius * 3, Color.RED)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if redraw != true:
 		redraw = true
 		queue_redraw()

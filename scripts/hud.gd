@@ -4,8 +4,9 @@ extends CanvasLayer
 @onready var color_rect: ColorRect = $ColorRect
 @onready var button: TextureButton = $Bottom/HBoxContainer2/Button
 @onready var button2: TextureButton = $Bottom/HBoxContainer2/Button2
+@onready var button3: TextureButton = $Bottom/HBoxContainer2/Button3
 @onready var shop: PackedScene = preload("res://scenes/shop.tscn")
-@onready var pausemenu = preload("res://pause_menu.tscn")
+@onready var pausemenu = preload("res://scenes/pause_menu.tscn")
 
 
 
@@ -32,11 +33,12 @@ func unblur():
 func disable_button():
 	button.disabled = true
 	button2.disabled = true
+	button3.disabled = true
 
 func enable_button():
 	button.disabled = false
 	button2.disabled = false
-
+	button3.disabled = false
 
 
 
@@ -53,3 +55,7 @@ func _on_pause_pressed() -> void:
 	get_tree().paused = true
 	var instance = pausemenu.instantiate()
 	add_child(instance)
+
+
+func _on_button_3_pressed() -> void:
+	map_1.spawn_lightning()

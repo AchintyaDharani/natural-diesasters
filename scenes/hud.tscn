@@ -18,10 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://drw4xg8f6m4tq" path="res://graphics/buttons/UI/Timer_UI.png" id="11_eld54"]
 [ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="15_3swnk"]
 [ext_resource type="Texture2D" uid="uid://b2jdwtoodu06p" path="res://graphics/buttons/Earthquake/Earthquake.png" id="17_iypfu"]
-[ext_resource type="Script" uid="uid://c3o6xw6w0r1qf" path="res://button.gd" id="17_qpprf"]
+[ext_resource type="Script" uid="uid://c3o6xw6w0r1qf" path="res://scripts/button.gd" id="17_qpprf"]
 [ext_resource type="Texture2D" uid="uid://mdssbbppjs8k" path="res://graphics/buttons/Earthquake/Earthquake_Pressed.png" id="18_qpprf"]
 [ext_resource type="Texture2D" uid="uid://ckh6gfmfbyv2y" path="res://graphics/buttons/Earthquake/Earthquake_Hover.png" id="19_3xg78"]
-[ext_resource type="Script" uid="uid://dfn6nf77m7t1g" path="res://button_2.gd" id="21_3xg78"]
+[ext_resource type="Script" uid="uid://dfn6nf77m7t1g" path="res://scripts/button_2.gd" id="21_3xg78"]
+[ext_resource type="Texture2D" uid="uid://dfjllwephc7dl" path="res://graphics/buttons/Lightning/Lightning.png" id="23_kp442"]
+[ext_resource type="Texture2D" uid="uid://bpr0nuny7d80t" path="res://graphics/buttons/Lightning/Lightning_Pressed.png" id="24_gltyx"]
+[ext_resource type="Texture2D" uid="uid://fbk1ki72ogup" path="res://graphics/buttons/Lightning/Lightning_Hover.png" id="25_mgfyp"]
 
 [node name="hud" type="CanvasLayer" unique_id=1579764713]
 script = ExtResource("1_hd3ao")
@@ -176,6 +179,16 @@ script = ExtResource("21_3xg78")
 [node name="ButtonPressComponent" type="Node" parent="Bottom/HBoxContainer2/Button2" unique_id=1514486655]
 script = ExtResource("15_3swnk")
 
+[node name="Button3" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=816212701]
+layout_mode = 2
+texture_normal = ExtResource("23_kp442")
+texture_pressed = ExtResource("24_gltyx")
+texture_hover = ExtResource("25_mgfyp")
+script = ExtResource("21_3xg78")
+
+[node name="ButtonPressComponent" type="Node" parent="Bottom/HBoxContainer2/Button3" unique_id=10944947]
+script = ExtResource("15_3swnk")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1871193079]
 visible = false
 anchors_preset = 15
@@ -189,3 +202,4 @@ color = Color(1, 1, 1, 0.22352941)
 [connection signal="pressed" from="Top Left/HBoxContainer/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Bottom/HBoxContainer2/Button3" to="." method="_on_button_3_pressed"]
