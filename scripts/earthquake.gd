@@ -25,7 +25,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func deal_damage():
 	for i in building:
-		i.take_damage(damage)
+		i.take_damage(damage, "earthquake")
 
 
 func activate():

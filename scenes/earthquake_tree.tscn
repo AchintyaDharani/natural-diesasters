@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://srfil65nfo1v"]
+
+[ext_resource type="Script" uid="uid://0of8jrlqa17v" path="res://scripts/earthquake_tree.gd" id="1_y7w3f"]
+[ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="2_3r7u0"]
+[ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="3_22lsn"]
+[ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_v8bxb"]
+[ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="5_dpvot"]
+[ext_resource type="Texture2D" uid="uid://c88e07xfwumul" path="res://graphics/buttons/UI/Back_Pressed.png" id="6_q6arp"]
+[ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="7_flv80"]
+[ext_resource type="Texture2D" uid="uid://c1g6etoocllic" path="res://graphics/buttons/Earthquake/U_Earthquake_I.png" id="8_4yyjb"]
+[ext_resource type="Texture2D" uid="uid://cvf2tq4n445ss" path="res://graphics/buttons/Earthquake/U_Earthquake_I_Pressed.png" id="9_s44or"]
+[ext_resource type="Texture2D" uid="uid://ddrf84gbve5bn" path="res://graphics/buttons/Earthquake/U_Earthquake_I_Hover.png" id="10_mnal3"]
+[ext_resource type="Texture2D" uid="uid://15d3jbdh6yv0" path="res://graphics/buttons/Earthquake/U_Earthquake_II.png" id="11_nkphh"]
+[ext_resource type="Texture2D" uid="uid://b6lu8gwv285jv" path="res://graphics/buttons/Earthquake/U_Earthquake_II_Pressed.png" id="12_vjouu"]
+[ext_resource type="Texture2D" uid="uid://pra7ef5iiss6" path="res://graphics/buttons/Earthquake/U_Earthquake_II_Hover.png" id="13_jyb03"]
+[ext_resource type="Texture2D" uid="uid://drv1utlexp3xn" path="res://graphics/buttons/Earthquake/U_Earthquake_III.png" id="14_2idv3"]
+[ext_resource type="Texture2D" uid="uid://cg1jcu2dbfdty" path="res://graphics/buttons/Earthquake/U_Earthquake_III_Pressed.png" id="15_fg4n1"]
+[ext_resource type="Texture2D" uid="uid://b2qn632gpigxa" path="res://graphics/buttons/Earthquake/U_Earthquake_III_Hover.png" id="16_uh1nj"]
+[ext_resource type="Texture2D" uid="uid://dmrbef6jsqbr5" path="res://graphics/buttons/Earthquake/U_Earthquake_IV.png" id="17_jm2fj"]
+[ext_resource type="Texture2D" uid="uid://uuwd6o52fl27" path="res://graphics/buttons/Earthquake/U_Earthquake_IV_Pressed.png" id="18_m8fbf"]
+[ext_resource type="Texture2D" uid="uid://bxdaynxrwxb5e" path="res://graphics/buttons/Earthquake/U_Earthquake_IV_Hover.png" id="19_rw4vr"]
+[ext_resource type="Texture2D" uid="uid://1jl4ntbubj20" path="res://graphics/buttons/Earthquake/U_Earthquake_V.png" id="20_03cgc"]
+[ext_resource type="Texture2D" uid="uid://c5tfbdx6ga34p" path="res://graphics/buttons/Earthquake/U_Earthquake_V_Pressed.png" id="21_83q04"]
+[ext_resource type="Texture2D" uid="uid://b3se10n82vd4k" path="res://graphics/buttons/Earthquake/U_Earthquake_V_Hover.png" id="22_mb31g"]
+
+[node name="earthquake_tree" type="Control" unique_id=1534403053]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+script = ExtResource("1_y7w3f")
+
+[node name="blur" type="TextureRect" parent="." unique_id=1776888743]
+self_modulate = Color(1, 1, 1, 0.5411765)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3r7u0")
+
+[node name="Top Right" type="HBoxContainer" parent="." unique_id=795459861]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -3559.9966
+offset_right = -0.00048828125
+offset_bottom = 819.99994
+grow_horizontal = 0
+scale = Vector2(0.1, 0.1)
+pivot_offset_ratio = Vector2(1, 0)
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="Currency_UI" type="Sprite2D" parent="Top Right" unique_id=2015494425]
+position = Vector2(1300, 410)
+scale = Vector2(5.999998, 5.999998)
+texture = ExtResource("3_22lsn")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Top Right" unique_id=2088125052]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="coin count" type="Label" parent="Top Right/HBoxContainer2" unique_id=795435593]
+custom_minimum_size = Vector2(930, 356)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_v8bxb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right" unique_id=133120327]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="Back" type="TextureButton" parent="Top Right/HBoxContainer" unique_id=1310009088]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("5_dpvot")
+texture_pressed = ExtResource("6_q6arp")
+texture_hover = ExtResource("7_flv80")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=1430279043]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=472251635]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 51.0
+offset_right = 559.5
+offset_bottom = 533.0
+scale = Vector2(2, 2)
+
+[node name="CenterContainer" type="CenterContainer" parent="ScrollContainer" unique_id=1459254379]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/CenterContainer" unique_id=1230724032]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButton1" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=299019315]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("8_4yyjb")
+texture_pressed = ExtResource("9_s44or")
+texture_hover = ExtResource("10_mnal3")
+
+[node name="ColorRect4" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=595294012]
+custom_minimum_size = Vector2(5, 40)
+custom_maximum_size = Vector2(5, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureButton2" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1702000400]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("11_nkphh")
+texture_pressed = ExtResource("12_vjouu")
+texture_hover = ExtResource("13_jyb03")
+
+[node name="ColorRect3" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1290912564]
+custom_minimum_size = Vector2(5, 40)
+custom_maximum_size = Vector2(5, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureButton3" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1105028471]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("14_2idv3")
+texture_pressed = ExtResource("15_fg4n1")
+texture_hover = ExtResource("16_uh1nj")
+
+[node name="ColorRect2" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1666228324]
+custom_minimum_size = Vector2(5, 40)
+custom_maximum_size = Vector2(5, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureButton4" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1896092685]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("17_jm2fj")
+texture_pressed = ExtResource("18_m8fbf")
+texture_hover = ExtResource("19_rw4vr")
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=122009146]
+custom_minimum_size = Vector2(5, 40)
+custom_maximum_size = Vector2(5, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureButton5" type="TextureButton" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1634995727]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("20_03cgc")
+texture_pressed = ExtResource("21_83q04")
+texture_hover = ExtResource("22_mb31g")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=995142637]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.66800004
+anchor_top = 0.5
+anchor_right = 0.66800004
+anchor_bottom = 0.5
+offset_left = -20.458984
+offset_top = -23.410034
+offset_right = 19.541016
+offset_bottom = 26.589966
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1847457370]
+layout_mode = 2
+
+[node name="cost" type="Label" parent="VBoxContainer2" unique_id=1923948805]
+layout_mode = 2
+
+[connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]
