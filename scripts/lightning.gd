@@ -25,7 +25,7 @@ func _on_body_entered(body: Node2D) -> void:
 
 func strike():
 	for i in building:
-		i.take_damage(damage)
+		i.take_damage(damage, "lightning")
 
 func activate():
 	process_mode = PROCESS_MODE_INHERIT
