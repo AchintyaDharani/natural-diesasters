@@ -3,6 +3,7 @@ extends Control
 @onready var tornado = preload("res://scenes/tornado_tree.tscn")
 @onready var earthquake = preload("res://scenes/earthquake_tree.tscn")
 @onready var lightning = preload("res://scenes/lightning_tree.tscn")
+@onready var flood = preload("res://scenes/flood_tree.tscn")
 @onready var buttons_array = $centre.get_children()
 @onready var centre_pos = $centre.position
 @onready var label = $Label
@@ -57,4 +58,9 @@ func _on_earthquake_pressed() -> void:
 
 func _on_lightning_pressed() -> void:
 	var instance = lightning.instantiate()
+	add_child(instance)
+
+
+func _on_flood_pressed() -> void:
+	var instance = flood.instantiate()
 	add_child(instance)
