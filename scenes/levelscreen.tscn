@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://ccly8oxuirau0"]
+
+[ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="1_72efy"]
+[ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="1_oq732"]
+[ext_resource type="Texture2D" uid="uid://bb1bw4iniwxma" path="res://graphics/buttons/UI/BG_Text.png" id="2_duc3y"]
+
+[node name="levelscreen" type="Control" unique_id=564252386]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="." unique_id=302077930]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_oq732")
+
+[node name="Text" type="HBoxContainer" parent="." unique_id=679130162]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -280.0
+offset_right = 350.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Text" unique_id=10789644]
+layout_mode = 2
+texture = ExtResource("2_duc3y")
+
+[node name="Label" type="Label" parent="Text/TextureRect" unique_id=811016201]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -68.5
+offset_right = 325.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_72efy")
+theme_override_font_sizes/font_size = 100
+text = "SELECT LEVEL"
+
+[node name="levels" type="HBoxContainer" parent="." unique_id=659496691]
+custom_minimum_size = Vector2(1920, 250)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -125.0
+offset_right = 960.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="levels" unique_id=1326883693]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 100
+
+[node name="1" type="Button" parent="levels/HBoxContainer" unique_id=506791290]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_72efy")
+text = "1"
+
+[node name="2" type="Button" parent="levels/HBoxContainer" unique_id=823395836]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_72efy")
+text = "2"
+
+[node name="3" type="Button" parent="levels/HBoxContainer" unique_id=1717344237]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_72efy")
+text = "3"
+
+[node name="4" type="Button" parent="levels/HBoxContainer" unique_id=361361093]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_72efy")
+text = "4"

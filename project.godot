@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Natural Diesasters"
-run/main_scene="uid://sacjod7ax70e"
+run/main_scene="uid://2joy22loilvk"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://dfnxgunk06nf7"
 
 [autoload]
 
