@@ -1,6 +1,7 @@
 extends TextureButton
 @onready var button_press_component: ButtonComponent = $ButtonPressComponent
 
+
 func _ready() -> void:
 	pressed.connect(_on_pressed)
 

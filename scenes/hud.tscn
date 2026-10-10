@@ -169,6 +169,22 @@ script = ExtResource("17_qpprf")
 [node name="ButtonPressComponent" type="Node" parent="Bottom/HBoxContainer2/Button" unique_id=2059176115]
 script = ExtResource("15_3swnk")
 
+[node name="cooldown_nado" type="Timer" parent="Bottom/HBoxContainer2/Button" unique_id=1215811811]
+wait_time = 3.0
+one_shot = true
+
+[node name="Label" type="Label" parent="Bottom/HBoxContainer2/Button" unique_id=1118636642]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+
 [node name="Button2" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=1058348413]
 layout_mode = 2
 texture_normal = ExtResource("17_iypfu")
@@ -179,6 +195,19 @@ script = ExtResource("21_3xg78")
 [node name="ButtonPressComponent" type="Node" parent="Bottom/HBoxContainer2/Button2" unique_id=1514486655]
 script = ExtResource("15_3swnk")
 
+[node name="cooldown_quake" type="Timer" parent="Bottom/HBoxContainer2/Button2" unique_id=2024607528]
+wait_time = 3.0
+one_shot = true
+
+[node name="Label" type="Label" parent="Bottom/HBoxContainer2/Button2" unique_id=1412702897]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
 [node name="Button3" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=816212701]
 layout_mode = 2
 texture_normal = ExtResource("23_kp442")
@@ -188,6 +217,22 @@ script = ExtResource("21_3xg78")
 
 [node name="ButtonPressComponent" type="Node" parent="Bottom/HBoxContainer2/Button3" unique_id=10944947]
 script = ExtResource("15_3swnk")
+
+[node name="cooldown_lightning" type="Timer" parent="Bottom/HBoxContainer2/Button3" unique_id=1433206203]
+wait_time = 3.0
+one_shot = true
+
+[node name="Label" type="Label" parent="Bottom/HBoxContainer2/Button3" unique_id=927123409]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1871193079]
 visible = false
@@ -201,5 +246,8 @@ color = Color(1, 1, 1, 0.22352941)
 [connection signal="pressed" from="Top Right/HBoxContainer/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Top Left/HBoxContainer/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Bottom/HBoxContainer2/Button/cooldown_nado" to="." method="_on_cooldown_nado_timeout"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="Bottom/HBoxContainer2/Button2/cooldown_quake" to="." method="_on_cooldown_quake_timeout"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="timeout" from="Bottom/HBoxContainer2/Button3/cooldown_lightning" to="." method="_on_cooldown_lightning_timeout"]

@@ -12,11 +12,37 @@ var arrowdir
 var scene
 var e_placing = false
 var t_placing
+var counted_nados = 0
 
 var tornado_scaling = Vector2(.1, .1)
 var earthquake_scaling = Vector2(1, 1)
 var lightning_scaling = Vector2(.7, .7)
 var arrow_scaling = Vector2(10, 10)
+
+var max_tornados = 2
+var tornado_level:int = 0:
+	set(value):
+		if value == tornado_level:
+			return
+		tornado_level = value
+		_on_tornado_level_changed()
+var switch = 0
+
+
+func _on_tornado_level_changed():
+	match tornado_level:
+		0:
+			max_tornados = 2
+		1:
+			pass
+		2:
+			pass
+		3:
+			pass
+		4:
+			pass
+		5:
+			pass
 
 
 
@@ -26,6 +52,20 @@ func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
+	tornado_level = Global.tornado_level
+	
+	var counter = 0
+	for i in self.get_children():
+		if i is CharacterBody2D:
+			counter += 1
+	counted_nados = counter
+	if counted_nados == max_tornados and switch == 0:
+		hud.lock_nado()
+		switch = 1
+	elif counted_nados != max_tornados and switch == 1:
+		hud.unlock_nado()
+		switch = 0
+	
 	mouse_pos = get_global_mouse_position()
 	if directing == true:
 		arrowdir.look_at(mouse_pos)

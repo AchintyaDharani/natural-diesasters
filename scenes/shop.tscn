@@ -212,6 +212,7 @@ layout_mode = 2
 [connection signal="pressed" from="centre/Tornado" to="." method="_on_tornado_pressed"]
 [connection signal="pressed" from="centre/Earthquake" to="." method="_on_earthquake_pressed"]
 [connection signal="pressed" from="centre/Lightning" to="." method="_on_lightning_pressed"]
+[connection signal="pressed" from="centre/Flood" to="." method="_on_flood_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="Top Right/HBoxContainer/Back" method="_on_pressed"]
