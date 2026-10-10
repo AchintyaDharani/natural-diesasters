@@ -24,7 +24,7 @@ collision_mask = 2
 polygon = PackedVector2Array(-130, 37, -2, 111, 129, 36, 0, -40)
 
 [node name="Building1" type="Sprite2D" parent="." unique_id=1680141464]
-position = Vector2(0, -8.505)
+position = Vector2(-1, -22)
 texture = ExtResource("1_n8bkc")
 
 [node name="Flooding_1" type="Polygon2D" parent="." unique_id=879927379]
