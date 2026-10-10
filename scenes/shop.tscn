@@ -15,6 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://bpr0nuny7d80t" path="res://graphics/buttons/Lightning/Lightning_Pressed.png" id="9_j14q8"]
 [ext_resource type="Texture2D" uid="uid://fbk1ki72ogup" path="res://graphics/buttons/Lightning/Lightning_Hover.png" id="10_5u241"]
 [ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="10_44xle"]
+[ext_resource type="Texture2D" uid="uid://cb0o807tluvas" path="res://graphics/buttons/Flood/Flood.png" id="11_pqync"]
+[ext_resource type="Texture2D" uid="uid://evxauao2hqj0" path="res://graphics/buttons/Flood/Flood_Pressed.png" id="12_yuijs"]
+[ext_resource type="Texture2D" uid="uid://cxxgmcc6723wb" path="res://graphics/buttons/Flood/Flood_Hover.png" id="13_aa4hd"]
+[ext_resource type="Script" uid="uid://ktnswyrt1etq" path="res://scripts/back.gd" id="19_aa4hd"]
+[ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="20_68utx"]
 
 [node name="shop" type="Control" unique_id=739215886]
 layout_mode = 3
@@ -80,7 +85,9 @@ layout_mode = 0
 offset_right = 100.0
 offset_bottom = 100.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture_normal = ExtResource("2_xfvoa")
+texture_normal = ExtResource("11_pqync")
+texture_pressed = ExtResource("12_yuijs")
+texture_hover = ExtResource("13_aa4hd")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=62119039]
 visible = false
@@ -193,6 +200,10 @@ texture_pressed = ExtResource("9_1v8qu")
 texture_hover = ExtResource("10_44xle")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("19_aa4hd")
+
+[node name="ButtonPressComponent" type="Node" parent="Top Right/HBoxContainer/Back" unique_id=1767852246]
+script = ExtResource("20_68utx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=681342806]
 custom_minimum_size = Vector2(200, 0)
@@ -203,3 +214,4 @@ layout_mode = 2
 [connection signal="pressed" from="centre/Lightning" to="." method="_on_lightning_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Top Right/HBoxContainer/Back" to="Top Right/HBoxContainer/Back" method="_on_pressed"]
