@@ -6,7 +6,7 @@ var parent
 func _ready() -> void:
 	parent = get_parent()
 
-func _press_button():
+func _press_button() -> void:
 	if !parent:
 		return
 
