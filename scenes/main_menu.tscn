@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="1_8ln24"]
 [ext_resource type="Script" uid="uid://ceppcm5hgkajd" path="res://scripts/play_button.gd" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://b6cpd8lklatwu" path="res://scripts/main_menu.gd" id="1_oa1go"]
 [ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="1_rtw2f"]
 [ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="2_bqqt6"]
 [ext_resource type="Script" uid="uid://bxk4ytk2g1lf" path="res://scripts/settings_button.gd" id="3_wu84c"]
@@ -14,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_oa1go")
 
 [node name="BG" type="Sprite2D" parent="." unique_id=1394016286]
 position = Vector2(960, 540)
@@ -85,6 +87,7 @@ script = ExtResource("4_8ln24")
 [node name="ButtonPressComponent" type="Node" parent="VBoxContainer/QuitButton" unique_id=1205317255]
 script = ExtResource("2_bqqt6")
 
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="VBoxContainer/SettingsButton" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="VBoxContainer/QuitButton" method="_on_pressed"]
