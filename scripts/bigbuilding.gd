@@ -6,6 +6,7 @@ var destroyed := false
 var disasters = ["tornado", "earthquake", "lightning"]
 var multipliers = [.5, .5, 2]
 var local_scale = Vector2(.6,.6)
+signal destroyed_building
 
 func _ready() -> void:
 	$Broken2.hide()
@@ -25,6 +26,7 @@ func take_damage(damage, type):
 		$Building2.hide()
 		$CollisionPolygon2D.queue_free()
 		$Broken2.show()
+		destroyed_building.emit()
 
 func damage_effect() -> void:
 	var tween = create_tween()
