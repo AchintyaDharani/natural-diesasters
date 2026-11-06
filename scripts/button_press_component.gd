@@ -1,6 +1,5 @@
 extends Node
 class_name ButtonComponent
-
 var parent
 
 func _ready() -> void:
