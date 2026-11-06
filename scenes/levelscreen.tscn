@@ -3,6 +3,8 @@
 [ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="1_72efy"]
 [ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="1_oq732"]
 [ext_resource type="Texture2D" uid="uid://bb1bw4iniwxma" path="res://graphics/buttons/UI/BG_Text.png" id="2_duc3y"]
+[ext_resource type="Script" uid="uid://da0bnurjjdqg7" path="res://scripts/lvlscreen_1_button.gd" id="4_6stni"]
+[ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="4_duc3y"]
 
 [node name="levelscreen" type="Control" unique_id=564252386]
 layout_mode = 3
@@ -75,13 +77,17 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_constants/separation = 100
 
-[node name="1" type="Button" parent="levels/HBoxContainer" unique_id=506791290]
+[node name="lvlscreen_1_button" type="Button" parent="levels/HBoxContainer" unique_id=506791290]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_72efy")
 text = "1"
+script = ExtResource("4_6stni")
+
+[node name="ButtonPressComponent" type="Node" parent="levels/HBoxContainer/lvlscreen_1_button" unique_id=1754953320]
+script = ExtResource("4_duc3y")
 
 [node name="2" type="Button" parent="levels/HBoxContainer" unique_id=823395836]
 custom_minimum_size = Vector2(200, 200)
@@ -106,3 +112,5 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_72efy")
 text = "4"
+
+[connection signal="pressed" from="levels/HBoxContainer/lvlscreen_1_button" to="levels/HBoxContainer/lvlscreen_1_button" method="_on_pressed"]

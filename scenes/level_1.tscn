@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ndeiykqp43s8" path="res://scenes/hud.tscn" id="4_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://u3u720ejqffq" path="res://Assets/water2.png" id="4_15mv3"]
 [ext_resource type="Texture2D" uid="uid://dhfcqx5rb1e8n" path="res://Assets/water3.png" id="5_e3sih"]
+[ext_resource type="PackedScene" uid="uid://phjx54uyhnja" path="res://scenes/win_screen.tscn" id="9_e3sih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tu1g1"]
 size = Vector2(1984, 89.5)
@@ -641,3 +642,5 @@ scale = Vector2(0.6, 0.6)
 
 [node name="hud" parent="." unique_id=160174252 instance=ExtResource("4_5xbjy")]
 metadata/_edit_use_anchors_ = true
+
+[node name="win_screen" parent="." unique_id=777679151 instance=ExtResource("9_e3sih")]

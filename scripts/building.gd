@@ -6,6 +6,7 @@ var destroyed := false
 var disasters = ["tornado", "earthquake", "lightning"]
 var multipliers = [2, 2, .5]
 var local_scale = Vector2(.6,.6)
+signal destroyed_building
 
 func _ready() -> void:
 	$Broken1.hide()
@@ -24,6 +25,7 @@ func take_damage(damage, type):
 		destroyed = true
 		$Building1.hide()
 		$Broken1.show()
+		destroyed_building.emit()
 		
 func damage_effect() -> void:
 	var tween = create_tween()

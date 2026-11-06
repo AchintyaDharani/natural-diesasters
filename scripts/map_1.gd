@@ -4,6 +4,8 @@ extends Node2D
 @onready var earthquake = preload("res://scenes/earthquake.tscn")
 @onready var lightning = preload("res://scenes/lightning.tscn")
 @onready var hud: CanvasLayer = $hud
+@onready var win_screen = $win_screen
+
 
 var mouse_pos = get_global_mouse_position()
 var placing = false
@@ -13,6 +15,8 @@ var scene
 var e_placing = false
 var t_placing
 var counted_nados = 0
+
+var counter_building := 0
 
 var tornado_scaling = Vector2(.1, .1)
 var earthquake_scaling = Vector2(1, 1)
@@ -49,7 +53,16 @@ func _on_tornado_level_changed():
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	win_screen.hide()
+	for child in get_children():
+		if child.has_signal("destroyed_building"):
+			child.destroyed_building.connect(_on_building_destroyed)
+	
+func _on_building_destroyed() -> void:
+	counter_building += 1
+	if counter_building == 7:
+		win_screen.show()
+		hud.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _process(_delta: float) -> void:
 	tornado_level = Global.tornado_level
