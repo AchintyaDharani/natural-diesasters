@@ -6,6 +6,7 @@ var destroyed := false
 var disasters = ["tornado", "earthquake", "lightning"]
 var multipliers = [2, 2, .5]
 var local_scale = Vector2(.6,.6)
+signal destroyed_building
 @onready var f1 = $Flooding_1
 @onready var f2 = $Flooding_2
 @onready var f3 = $Flooding_3
