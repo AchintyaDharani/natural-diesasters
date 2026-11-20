@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://ce2ookjv2ydqt"]
+
+[ext_resource type="Script" uid="uid://5a3c4t32egnh" path="res://scripts/wave.gd" id="1_h2l3e"]
+[ext_resource type="Texture2D" uid="uid://hmxo4f22k8sy" path="res://graphics/Diesaster's/A_F_Wave.png" id="1_y5ysc"]
+[ext_resource type="Texture2D" uid="uid://bd4eovkwd3mgv" path="res://graphics/Diesaster's/bluebox.png" id="3_sl0wx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l02jg"]
+size = Vector2(353, 2220.1343)
+
+[sub_resource type="Animation" id="Animation_y5ysc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1800, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1274.9171, 678.34515)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h2l3e"]
+resource_name = "wave"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1800, 0), Vector2(2500, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1274.9171, 678.34515), Vector2(3025.083, 678.345)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.75, 4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"increase_flood_level"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.75, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sl0wx"]
+_data = {
+&"RESET": SubResource("Animation_y5ysc"),
+&"wave": SubResource("Animation_h2l3e")
+}
+
+[node name="Wave" type="Area2D" unique_id=487807695]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_h2l3e")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=830532105]
+position = Vector2(-1800, 0)
+
+[node name="AFWave" type="Sprite2D" parent="Node2D" unique_id=1042426511]
+position = Vector2(-582, 74)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_y5ysc")
+
+[node name="AFWave2" type="Sprite2D" parent="Node2D" unique_id=1856719744]
+position = Vector2(-288, 311)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_y5ysc")
+
+[node name="AFWave3" type="Sprite2D" parent="Node2D" unique_id=1136152387]
+position = Vector2(-39, 558)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_y5ysc")
+
+[node name="AFWave4" type="Sprite2D" parent="Node2D" unique_id=1122964843]
+position = Vector2(254, 781)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_y5ysc")
+
+[node name="AFWave5" type="Sprite2D" parent="Node2D" unique_id=2008996870]
+position = Vector2(523, 1006)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_y5ysc")
+
+[node name="AFWave6" type="Sprite2D" parent="Node2D" unique_id=1154971071]
+position = Vector2(787, 1236)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_y5ysc")
+
+[node name="Bluebox" type="Sprite2D" parent="Node2D" unique_id=1569439450]
+position = Vector2(-2554.125, 918.1875)
+scale = Vector2(11.181058, 10.209699)
+texture = ExtResource("3_sl0wx")
+
+[node name="Bluebox2" type="Sprite2D" parent="Node2D" unique_id=1798180300]
+position = Vector2(-2365, 1402)
+scale = Vector2(11.037372, 10.331966)
+texture = ExtResource("3_sl0wx")
+
+[node name="Bluebox3" type="Sprite2D" parent="Node2D" unique_id=533312013]
+position = Vector2(-1930, 1804)
+scale = Vector2(11.037372, 10.331966)
+texture = ExtResource("3_sl0wx")
+
+[node name="Bluebox4" type="Sprite2D" parent="Node2D" unique_id=1031361641]
+position = Vector2(-1454, 2137)
+scale = Vector2(11.037372, 10.331966)
+texture = ExtResource("3_sl0wx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=523228139]
+position = Vector2(-1274.9171, 678.34515)
+rotation = -0.863938
+shape = SubResource("RectangleShape2D_l02jg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1854761697]
+libraries/ = SubResource("AnimationLibrary_sl0wx")
+autoplay = &"wave"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

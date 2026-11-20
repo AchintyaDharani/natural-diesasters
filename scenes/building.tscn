@@ -30,15 +30,18 @@ texture = ExtResource("1_n8bkc")
 
 [node name="Flooding_1" type="Polygon2D" parent="." unique_id=879927379]
 visible = false
+position = Vector2(10.922331, -1.4563107)
 color = Color(0.70980394, 1, 1, 0.49803922)
-polygon = PackedVector2Array(-89, 35, -89, 12, -92, 11, -89, 8, -89, -14, -175, 36, 0, 137, 175, 36, 87, -15, 86, 24, -11, 79)
+polygon = PackedVector2Array(-89, 35, -89, 12, -91.74758, 10.436893, -89, 8, -89, -14, -175, 36, 0, 137, 175, 36, 86.165054, -15.048546, 86, 24, -11, 79)
 
 [node name="Flooding_2" type="Polygon2D" parent="." unique_id=787287718]
 visible = false
+position = Vector2(11.407767, -6.553398)
 color = Color(0.1254902, 0.61960787, 1, 0.7411765)
-polygon = PackedVector2Array(-89, 1, -89, -13, -174, 36, 0, 138, 175, 36, 86, -15, 86, -6, -12, 43)
+polygon = PackedVector2Array(-89, 1, -89, -13, -178.39806, 38.834953, 0, 142.47574, 178.6408, 38.349518, 86, -15, 86, -6, -12, 43)
 
 [node name="Flooding_3" type="Polygon2D" parent="." unique_id=185780543]
 visible = false
-color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(-89, -97, 10, -155, 87, -110, 87, -14, 173, 36, -1, 137, -175, 36, -89, -13, -89, -54, -93, -56, -89, -59)
+position = Vector2(9.46602, -2.9126215)
+color = Color(0, 1, 1, 0.8392157)
+polygon = PackedVector2Array(-89, -97, 10, -155, 87, -110, 88.59224, -18.68932, 180.33981, 34.2233, -1, 137, -174.27185, 34.2233, -87.86408, -16.747574, -89, -54, -93, -56, -89, -59)

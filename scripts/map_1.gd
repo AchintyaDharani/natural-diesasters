@@ -3,7 +3,12 @@ extends Node2D
 @onready var arrow = preload("res://scenes/arrow.tscn")
 @onready var earthquake = preload("res://scenes/earthquake.tscn")
 @onready var lightning = preload("res://scenes/lightning.tscn")
+@onready var tsunami = preload("res://scenes/wave.tscn")
 @onready var hud: CanvasLayer = $hud
+@onready var f1: TileMapLayer = $FloodedLayer_1
+@onready var f2: TileMapLayer = $FloodedLayer_2
+@onready var f3: TileMapLayer = $FloodedLayer_3
+
 
 var mouse_pos = get_global_mouse_position()
 var placing = false
@@ -133,3 +138,19 @@ func spawn_lightning():
 	scene = instance
 	instance.scale = lightning_scaling
 	t_placing = true
+	
+	
+func spawn_tsunami():
+	var instance = tsunami.instantiate()
+	add_child(instance)
+
+func flood():
+	match Global.flood_level:
+		1:
+			f1.visible = true
+		2:
+			f2.visible = true
+		3:
+			f3.visible = true
+		_:
+			pass
