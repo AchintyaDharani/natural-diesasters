@@ -10,7 +10,6 @@ var local_scale = Vector2(.6,.6)
 @onready var f2 = $Flooding_2
 @onready var f3 = $Flooding_3
 
-
 func _ready() -> void:
 	$Broken1.hide()
 
@@ -28,6 +27,7 @@ func take_damage(damage, type):
 		destroyed = true
 		$Building1.hide()
 		$Broken1.show()
+		destroyed_building.emit()
 		
 func damage_effect() -> void:
 	var tween = create_tween()

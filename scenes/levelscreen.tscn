@@ -3,6 +3,12 @@
 [ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="1_72efy"]
 [ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="1_oq732"]
 [ext_resource type="Texture2D" uid="uid://bb1bw4iniwxma" path="res://graphics/buttons/UI/BG_Text.png" id="2_duc3y"]
+[ext_resource type="Script" uid="uid://da0bnurjjdqg7" path="res://scripts/lvlscreen_1_button.gd" id="4_6stni"]
+[ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="4_duc3y"]
+[ext_resource type="Texture2D" uid="uid://84v7h7v2xbbk" path="res://graphics/buttons/UI/Buttons/Back.png" id="6_d5hda"]
+[ext_resource type="Script" uid="uid://caflpphnpxpfp" path="res://scripts/levelscreen_backbutton.gd" id="6_lpq50"]
+[ext_resource type="Texture2D" uid="uid://ppvqokgm8h5p" path="res://graphics/buttons/UI/Buttons/Back_Pressed.png" id="7_s51j2"]
+[ext_resource type="Texture2D" uid="uid://cyymcf20qba53" path="res://graphics/buttons/UI/Buttons/Back_Hover.png" id="8_s1e2j"]
 
 [node name="levelscreen" type="Control" unique_id=564252386]
 layout_mode = 3
@@ -75,13 +81,17 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_constants/separation = 100
 
-[node name="1" type="Button" parent="levels/HBoxContainer" unique_id=506791290]
+[node name="lvlscreen_1_button" type="Button" parent="levels/HBoxContainer" unique_id=506791290]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_72efy")
 text = "1"
+script = ExtResource("4_6stni")
+
+[node name="ButtonPressComponent" type="Node" parent="levels/HBoxContainer/lvlscreen_1_button" unique_id=1754953320]
+script = ExtResource("4_duc3y")
 
 [node name="2" type="Button" parent="levels/HBoxContainer" unique_id=823395836]
 custom_minimum_size = Vector2(200, 200)
@@ -106,3 +116,48 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_72efy")
 text = "4"
+
+[node name="Top right" type="VBoxContainer" parent="." unique_id=1151628419]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -356.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Top right" unique_id=327838227]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top right" unique_id=570186675]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="HBoxContainer" parent="Top right/HBoxContainer" unique_id=1021847415]
+custom_maximum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_scale = Vector2(0.4, 0.4)
+
+[node name="levelscreen_backbutton" type="TextureButton" parent="Top right/HBoxContainer/Button" unique_id=1886849572]
+layout_mode = 2
+offset_transform_scale = Vector2(0.4, 0.4)
+offset_transform_pivot = Vector2(1, 0)
+offset_transform_pivot_ratio = Vector2(1, 0)
+texture_normal = ExtResource("6_d5hda")
+texture_pressed = ExtResource("7_s51j2")
+texture_hover = ExtResource("8_s1e2j")
+script = ExtResource("6_lpq50")
+
+[node name="ButtonPressComponent" type="Node" parent="Top right/HBoxContainer/Button/levelscreen_backbutton" unique_id=177805735]
+script = ExtResource("4_duc3y")
+
+[node name="MarginContainer" type="MarginContainer" parent="Top right/HBoxContainer" unique_id=1918553092]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="levels/HBoxContainer/lvlscreen_1_button" to="levels/HBoxContainer/lvlscreen_1_button" method="_on_pressed"]
+[connection signal="pressed" from="Top right/HBoxContainer/Button/levelscreen_backbutton" to="Top right/HBoxContainer/Button/levelscreen_backbutton" method="_on_pressed"]
