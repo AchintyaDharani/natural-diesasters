@@ -25,6 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://dfjllwephc7dl" path="res://graphics/buttons/Lightning/Lightning.png" id="23_kp442"]
 [ext_resource type="Texture2D" uid="uid://bpr0nuny7d80t" path="res://graphics/buttons/Lightning/Lightning_Pressed.png" id="24_gltyx"]
 [ext_resource type="Texture2D" uid="uid://fbk1ki72ogup" path="res://graphics/buttons/Lightning/Lightning_Hover.png" id="25_mgfyp"]
+[ext_resource type="Texture2D" uid="uid://cb0o807tluvas" path="res://graphics/buttons/Flood/Flood.png" id="26_ptr5m"]
+[ext_resource type="Texture2D" uid="uid://evxauao2hqj0" path="res://graphics/buttons/Flood/Flood_Pressed.png" id="27_of3ib"]
+[ext_resource type="Texture2D" uid="uid://cxxgmcc6723wb" path="res://graphics/buttons/Flood/Flood_Hover.png" id="28_7600b"]
 
 [node name="hud" type="CanvasLayer" unique_id=1579764713]
 script = ExtResource("1_hd3ao")
@@ -234,6 +237,32 @@ offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
 
+[node name="Button4" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=853679547]
+layout_mode = 2
+texture_normal = ExtResource("26_ptr5m")
+texture_pressed = ExtResource("27_of3ib")
+texture_hover = ExtResource("28_7600b")
+script = ExtResource("17_qpprf")
+
+[node name="ButtonPressComponent" type="Node" parent="Bottom/HBoxContainer2/Button4" unique_id=1736522033]
+script = ExtResource("15_3swnk")
+
+[node name="cooldown_flood" type="Timer" parent="Bottom/HBoxContainer2/Button4" unique_id=270570520]
+wait_time = 10.0
+one_shot = true
+
+[node name="Label" type="Label" parent="Bottom/HBoxContainer2/Button4" unique_id=2133489575]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1871193079]
 visible = false
 anchors_preset = 15
@@ -251,3 +280,5 @@ color = Color(1, 1, 1, 0.22352941)
 [connection signal="timeout" from="Bottom/HBoxContainer2/Button2/cooldown_quake" to="." method="_on_cooldown_quake_timeout"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="timeout" from="Bottom/HBoxContainer2/Button3/cooldown_lightning" to="." method="_on_cooldown_lightning_timeout"]
+[connection signal="pressed" from="Bottom/HBoxContainer2/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="timeout" from="Bottom/HBoxContainer2/Button4/cooldown_flood" to="." method="_on_cooldown_flood_timeout"]

@@ -28,3 +28,21 @@ polygon = PackedVector2Array(-104, 47, -2, 111, 129, 36, 19, -28)
 visible = false
 position = Vector2(0, 106)
 texture = ExtResource("3_lq4j6")
+
+[node name="Flooding_1" type="Polygon2D" parent="." unique_id=1136329294]
+visible = false
+position = Vector2(3, 55)
+color = Color(0.70980394, 1, 1, 0.49803922)
+polygon = PackedVector2Array(-81, 78, -80, 13, -102, 27, -87, 40, -132, 67, -2, 141, 128, 65, 100, 49, 100, 63, -3, 121)
+
+[node name="Flooding_2" type="Polygon2D" parent="." unique_id=662676929]
+visible = false
+position = Vector2(1, 59)
+color = Color(0.1254902, 0.61960787, 1, 0.7411765)
+polygon = PackedVector2Array(-78, 51, -78, 10, -99, 23, -86, 36, -131, 63, 0, 138, 159, 46, 103, 16, 103, 36, -2, 90)
+
+[node name="Flooding_3" type="Polygon2D" parent="." unique_id=496945835]
+visible = false
+position = Vector2(3, 59)
+color = Color(0.35686275, 1, 1, 0.83137256)
+polygon = PackedVector2Array(-77, -46, -2, -23, 101, -72, 100, -94, 336, -39, -1, 137, -291, -26, -78, -72)

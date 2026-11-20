@@ -9,8 +9,11 @@ extends CanvasLayer
 @onready var cd2: Timer = $Bottom/HBoxContainer2/Button2/cooldown_quake
 @onready var label2: Label = $Bottom/HBoxContainer2/Button2/Label
 @onready var button3: TextureButton = $Bottom/HBoxContainer2/Button3
+@onready var button4: TextureButton = $Bottom/HBoxContainer2/Button4
 @onready var cd3: Timer = $Bottom/HBoxContainer2/Button3/cooldown_lightning
+@onready var cd4: Timer = $Bottom/HBoxContainer2/Button4/cooldown_flood
 @onready var label3: Label = $Bottom/HBoxContainer2/Button3/Label
+@onready var label4: Label = $Bottom/HBoxContainer2/Button4/Label
 @onready var shop: PackedScene = preload("res://scenes/shop.tscn")
 @onready var pausemenu = preload("res://scenes/pause_menu.tscn")
 
@@ -35,6 +38,10 @@ func _process(_delta: float) -> void:
 		label3.text = str(snapped(cd3.time_left, 0.1))
 	else:
 		label3.text = ""
+	if cd4.time_left > 0:
+		label4.text = str(snapped(cd4.time_left, 0.1))
+	else:
+		label4.text = ""
 
 
 func _on_button_pressed() -> void:
@@ -111,3 +118,13 @@ func lock_nado():
 func unlock_nado():
 	t_locked = false
 	button.disabled = false
+
+
+func _on_button_4_pressed() -> void:
+	button4.disabled = true
+	cd4.start()
+	map_1.spawn_tsunami()
+
+
+func _on_cooldown_flood_timeout() -> void:
+	button4.disabled = false
