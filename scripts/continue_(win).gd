@@ -3,4 +3,3 @@ extends Button
 
 func _on_pressed() -> void:
 	button_press_component._press_button()
-	Global.reset()
