@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="5_dpvot"]
 [ext_resource type="Texture2D" uid="uid://c88e07xfwumul" path="res://graphics/buttons/UI/Back_Pressed.png" id="6_q6arp"]
 [ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="7_flv80"]
+[ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="8_3r7u0"]
 [ext_resource type="Texture2D" uid="uid://c1g6etoocllic" path="res://graphics/buttons/Earthquake/U_Earthquake_I.png" id="8_4yyjb"]
 [ext_resource type="Texture2D" uid="uid://cvf2tq4n445ss" path="res://graphics/buttons/Earthquake/U_Earthquake_I_Pressed.png" id="9_s44or"]
 [ext_resource type="Texture2D" uid="uid://ddrf84gbve5bn" path="res://graphics/buttons/Earthquake/U_Earthquake_I_Hover.png" id="10_mnal3"]
@@ -93,6 +94,8 @@ texture_hover = ExtResource("7_flv80")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="ButtonPressComponent" parent="Top Right/HBoxContainer/Back" unique_id=247894837 instance=ExtResource("8_3r7u0")]
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=1430279043]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
@@ -120,6 +123,8 @@ texture_normal = ExtResource("8_4yyjb")
 texture_pressed = ExtResource("9_s44or")
 texture_hover = ExtResource("10_mnal3")
 
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" unique_id=1829773478 instance=ExtResource("8_3r7u0")]
+
 [node name="ColorRect4" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=595294012]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
@@ -132,6 +137,8 @@ disabled = true
 texture_normal = ExtResource("11_nkphh")
 texture_pressed = ExtResource("12_vjouu")
 texture_hover = ExtResource("13_jyb03")
+
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" unique_id=43369408 instance=ExtResource("8_3r7u0")]
 
 [node name="ColorRect3" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1290912564]
 custom_minimum_size = Vector2(5, 40)
@@ -146,6 +153,8 @@ texture_normal = ExtResource("14_2idv3")
 texture_pressed = ExtResource("15_fg4n1")
 texture_hover = ExtResource("16_uh1nj")
 
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" unique_id=42595123 instance=ExtResource("8_3r7u0")]
+
 [node name="ColorRect2" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1666228324]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
@@ -159,6 +168,8 @@ texture_normal = ExtResource("17_jm2fj")
 texture_pressed = ExtResource("18_m8fbf")
 texture_hover = ExtResource("19_rw4vr")
 
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" unique_id=440934973 instance=ExtResource("8_3r7u0")]
+
 [node name="ColorRect" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=122009146]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
@@ -171,6 +182,8 @@ disabled = true
 texture_normal = ExtResource("20_03cgc")
 texture_pressed = ExtResource("21_83q04")
 texture_hover = ExtResource("22_mb31g")
+
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" unique_id=1267386171 instance=ExtResource("8_3r7u0")]
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=995142637]
 layout_mode = 1
