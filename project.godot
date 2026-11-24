@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://dfnxgunk06nf7"
 
 Global="*uid://hfr5jtlnt3l6"
 BgMusic="*uid://cyroqcs2gqml7"
+EventSystem="*uid://bn2elp8qty0kl"
 
 [display]
 
@@ -37,7 +38,8 @@ folder_colors={
 "res://graphics/buttons/Earthquake/": "green",
 "res://graphics/buttons/Flood/": "blue",
 "res://graphics/buttons/Lightning/": "yellow",
-"res://graphics/buttons/Tornado/": "gray"
+"res://graphics/buttons/Tornado/": "gray",
+"res://scripts/autoloads/": "red"
 }
 
 [input]
