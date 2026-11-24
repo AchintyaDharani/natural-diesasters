@@ -65,7 +65,7 @@ func _ready() -> void:
 func _on_building_destroyed() -> void:
 	counter_building += 1
 	if counter_building == len(get_tree().get_nodes_in_group("buildings")):
-		win_screen.show()
+		win_screen.win_game()
 		hud.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _process(_delta: float) -> void:
