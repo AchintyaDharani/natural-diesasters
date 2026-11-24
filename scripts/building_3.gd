@@ -6,9 +6,11 @@ var destroyed := false
 var disasters = ["tornado", "earthquake", "lightning"]
 var multipliers = [2, 2, .5]
 var local_scale = Vector2(.6,.6)
+signal destroyed_building
 @onready var f1: Polygon2D = $Flooding_1
 @onready var f2: Polygon2D = $Flooding_2
 @onready var f3: Polygon2D = $Flooding_3
+@onready var sfx = $AudioStreamPlayer
 
 
 
@@ -29,6 +31,8 @@ func take_damage(damage, type):
 		destroyed = true
 		$Building3.hide()
 		$Broken3.show()
+		destroyed_building.emit()
+		sfx.play()
 
 func damage_effect() -> void:
 	var tween = create_tween()

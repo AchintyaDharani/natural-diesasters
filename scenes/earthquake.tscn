@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://buuuh0wucvxi1" path="res://graphics/Diesaster's/Earthquake_1.png" id="1_kbce0"]
 [ext_resource type="Texture2D" uid="uid://81eoheesfqpx" path="res://graphics/Diesaster's/Earthquake_2.png" id="2_jyw21"]
 [ext_resource type="Texture2D" uid="uid://c1tn58aff3580" path="res://graphics/Diesaster's/Earthquake_3.png" id="3_pat3x"]
+[ext_resource type="AudioStream" uid="uid://cf7whc5oce6fx" path="res://Assets/audio/freeeverythingxx-rubble-crash-275691.mp3" id="5_pat3x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l02jg"]
 radius = 157.8005
@@ -133,6 +134,29 @@ tracks/4/keys = {
 "method": &"queue_free"
 }]
 }
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_pat3x")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_pat3x")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_pat3x")
+}],
+"times": PackedFloat32Array(0.76666665, 1.8333334, 2.9)
+}
+tracks/5/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dyccd"]
 _data = {
@@ -160,5 +184,9 @@ texture = ExtResource("3_pat3x")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=38100922]
 libraries/ = SubResource("AnimationLibrary_dyccd")
 autoplay = &"earthquake"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1964212159]
+volume_db = -5.53
+pitch_scale = 1.29
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
