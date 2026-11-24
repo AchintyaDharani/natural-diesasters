@@ -21,9 +21,9 @@ color = Color(0.24477637, 0.2447764, 0.24477637, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1226420769]
 offset_left = 690.0
-offset_top = 100.0
+offset_top = 140.0
 offset_right = 1230.0
-offset_bottom = 920.0
+offset_bottom = 940.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -36,10 +36,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -240.0
-offset_top = -420.0
-offset_right = 240.0
-offset_bottom = 380.0
+offset_left = -270.0
+offset_top = -602.0
+offset_right = 270.0
+offset_bottom = 602.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
