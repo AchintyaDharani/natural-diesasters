@@ -10,6 +10,7 @@ signal destroyed_building
 @onready var f1: Polygon2D = $Flooding_1
 @onready var f2: Polygon2D = $Flooding_2
 @onready var f3: Polygon2D = $Flooding_3
+@onready var sfx = $AudioStreamPlayer
 
 func _ready() -> void:
 	$Broken2.hide()
@@ -30,6 +31,7 @@ func take_damage(damage, type):
 		$CollisionPolygon2D.queue_free()
 		$Broken2.show()
 		destroyed_building.emit()
+		sfx.play()
 
 func damage_effect() -> void:
 	var tween = create_tween()

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://5a3c4t32egnh" path="res://scripts/wave.gd" id="1_h2l3e"]
 [ext_resource type="Texture2D" uid="uid://hmxo4f22k8sy" path="res://graphics/Diesaster's/A_F_Wave.png" id="1_y5ysc"]
 [ext_resource type="Texture2D" uid="uid://bd4eovkwd3mgv" path="res://graphics/Diesaster's/bluebox.png" id="3_sl0wx"]
+[ext_resource type="AudioStream" uid="uid://b5vaavwey4dl2" path="res://Assets/audio/freesound_community-intense-waves-at-seashore-big-ship-approaching-30290.mp3" id="4_bj1h1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l02jg"]
 size = Vector2(353, 2220.1343)
@@ -102,6 +103,21 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 20.337492,
+"start_offset": 12.62,
+"stream": ExtResource("4_bj1h1")
+}],
+"times": PackedFloat32Array(0.06666667)
+}
+tracks/4/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sl0wx"]
 _data = {
@@ -175,5 +191,7 @@ shape = SubResource("RectangleShape2D_l02jg")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1854761697]
 libraries/ = SubResource("AnimationLibrary_sl0wx")
 autoplay = &"wave"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=162887397]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

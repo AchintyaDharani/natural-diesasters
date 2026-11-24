@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://jxqqr8yqexp2" path="res://scripts/bigbuilding.gd" id="1_yqlbw"]
 [ext_resource type="Texture2D" uid="uid://djk71ldmug67w" path="res://graphics/house/Building_2.png" id="2_l8r8k"]
 [ext_resource type="Texture2D" uid="uid://de48pj3kf3713" path="res://graphics/house/Broken_2.png" id="3_lq4j6"]
+[ext_resource type="AudioStream" uid="uid://ddki724bqln1g" path="res://Assets/audio/floraphonic-wood-smash-5-170421.mp3" id="4_hwjkg"]
 
 [node name="bigbuilding" type="StaticBody2D" unique_id=875487003]
 collision_layer = 3
@@ -46,3 +47,6 @@ visible = false
 position = Vector2(3, 59)
 color = Color(0.35686275, 1, 1, 0.83137256)
 polygon = PackedVector2Array(-77, -46, -2, -23, 101, -72, 100, -94, 336, -39, -1, 137, -291, -26, -78, -72)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1175428077]
+stream = ExtResource("4_hwjkg")

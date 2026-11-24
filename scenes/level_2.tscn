@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ndeiykqp43s8" path="res://scenes/hud.tscn" id="4_y0kc7"]
 [ext_resource type="Texture2D" uid="uid://dhfcqx5rb1e8n" path="res://Assets/water3.png" id="5_hey2k"]
 [ext_resource type="PackedScene" uid="uid://b8ht6ulqtqd7x" path="res://scenes/building_3.tscn" id="5_wo48x"]
+[ext_resource type="PackedScene" uid="uid://phjx54uyhnja" path="res://scenes/win_screen.tscn" id="10_que50"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2mo"]
 size = Vector2(1984, 89.5)
@@ -616,65 +617,71 @@ position = Vector2(2, 0)
 tile_map_data = PackedByteArray("AAAEAAkAAAAAAAAAAAAFAAoAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAoAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAACAAcAAAAAAAAAAAADAAgAAAAAAAAAAAABAAcAAAAAAAAAAAACAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAoAAAAAAAAAAAABAAkAAAAAAAAAAAACAAoAAAAAAAAAAAABAAsAAAAAAAAAAAACAAwAAAAAAAAAAAAEAAsAAAAAAAAAAAAFAAwAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wcAAAAAAAAAAAAAAAgAAAAAAAAAAAACAAkAAAAAAAAAAAAFAAgAAAAAAAAAAAD//wkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAwAAAAAAAAAAAADAAwAAAAAAAAAAAAEAAwAAAAAAAAAAAABAAwAAAAAAAAAAAACAAsAAAAAAAAAAAADAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAD//wsAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAADAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAADAAQAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAACAAMAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAD//wUAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAACAAYAAAAAAAAAAAAAAAYAAAAAAAAAAAADAAsAAAAAAAAAAAAEAAcAAAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAD//wEAAAAAAAAAAAD/////AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_wdtqu")
 
-[node name="Building" parent="." unique_id=2068289871 instance=ExtResource("2_b4j7a")]
+[node name="Building" parent="." unique_id=2068289871 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(699, 688)
 scale = Vector2(0.6, 0.6)
 
-[node name="Building3" parent="." unique_id=1092294606 instance=ExtResource("2_b4j7a")]
+[node name="Building3" parent="." unique_id=1092294606 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(522, 598)
 scale = Vector2(0.6, 0.6)
 
-[node name="Building9" parent="." unique_id=1053280830 instance=ExtResource("2_b4j7a")]
+[node name="Building9" parent="." unique_id=1053280830 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(533, 952)
 scale = Vector2(0.6, 0.6)
 
-[node name="Building6" parent="." unique_id=326259961 instance=ExtResource("2_b4j7a")]
+[node name="Building6" parent="." unique_id=326259961 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(178, 589)
 scale = Vector2(0.6, 0.6)
 
-[node name="Building7" parent="." unique_id=2056818510 instance=ExtResource("2_b4j7a")]
+[node name="Building7" parent="." unique_id=2056818510 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(355, 324)
 scale = Vector2(0.6, 0.6)
 
-[node name="Building8" parent="." unique_id=73200818 instance=ExtResource("2_b4j7a")]
+[node name="Building8" parent="." unique_id=73200818 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(701, 333)
 scale = Vector2(0.6, 0.6)
 
-[node name="Building4" parent="." unique_id=1267090446 instance=ExtResource("2_b4j7a")]
+[node name="Building4" parent="." unique_id=1267090446 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(1556, 767)
 scale = Vector2(0.6, 0.6)
 
-[node name="Building5" parent="." unique_id=1650909233 instance=ExtResource("2_b4j7a")]
+[node name="Building5" parent="." unique_id=1650909233 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(1572, 592.00006)
 scale = Vector2(0.6, 0.6)
 
-[node name="Building2" parent="." unique_id=1554478461 instance=ExtResource("2_b4j7a")]
+[node name="Building2" parent="." unique_id=1554478461 groups=["buildings"] instance=ExtResource("2_b4j7a")]
 position = Vector2(1380, 689)
 scale = Vector2(0.6, 0.6)
 
-[node name="bigbuilding" parent="." unique_id=875487003 instance=ExtResource("3_wo48x")]
+[node name="bigbuilding" parent="." unique_id=875487003 groups=["buildings"] instance=ExtResource("3_wo48x")]
 position = Vector2(1020, 443)
 scale = Vector2(0.6, 0.6)
 
-[node name="bigbuilding3" parent="." unique_id=2123694921 instance=ExtResource("3_wo48x")]
+[node name="bigbuilding3" parent="." unique_id=2123694921 groups=["buildings"] instance=ExtResource("3_wo48x")]
 position = Vector2(1747.0001, 122)
 scale = Vector2(0.6, 0.6)
 
-[node name="bigbuilding5" parent="." unique_id=1919800648 instance=ExtResource("3_wo48x")]
+[node name="bigbuilding5" parent="." unique_id=1919800648 groups=["buildings"] instance=ExtResource("3_wo48x")]
 position = Vector2(1023, 816)
 scale = Vector2(0.6, 0.6)
 
-[node name="bigbuilding4" parent="." unique_id=1419351870 instance=ExtResource("3_wo48x")]
+[node name="bigbuilding4" parent="." unique_id=1419351870 groups=["buildings"] instance=ExtResource("3_wo48x")]
 position = Vector2(1050.0001, 129)
 scale = Vector2(0.6, 0.6)
 
-[node name="bigbuilding2" parent="." unique_id=206214210 instance=ExtResource("3_wo48x")]
+[node name="bigbuilding2" parent="." unique_id=206214210 groups=["buildings"] instance=ExtResource("3_wo48x")]
 position = Vector2(1213, 346)
 scale = Vector2(0.6, 0.6)
 
-[node name="building_3" parent="." unique_id=1619457780 instance=ExtResource("5_wo48x")]
+[node name="building_3" parent="." unique_id=1619457780 groups=["buildings"] instance=ExtResource("5_wo48x")]
 position = Vector2(917, 237)
 scale = Vector2(0.6, 0.6)
 
 [node name="hud" parent="." unique_id=160174252 instance=ExtResource("4_y0kc7")]
 metadata/_edit_use_anchors_ = true
+
+[node name="win_screen" parent="." unique_id=777679151 instance=ExtResource("10_que50")]
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1319964374]
+position = Vector2(960, 540)
+current = true

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://crs1byy7mx86i" path="res://scripts/lightning.gd" id="1_gpx16"]
 [ext_resource type="Texture2D" uid="uid://wfpiitd37hs0" path="res://graphics/Diesaster's/A_Light_2.png" id="2_ybhjs"]
 [ext_resource type="Texture2D" uid="uid://bhxscb8ykuw8s" path="res://graphics/Diesaster's/A_L_Cloud.png" id="3_qg4np"]
+[ext_resource type="AudioStream" uid="uid://rgkt2delks0m" path="res://Assets/audio/chrysalyn-clean-dramatic-lightning-crash-547378.mp3" id="4_ybhjs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l02jg"]
 radius = 133.09395
@@ -68,7 +69,7 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(1.5, 3),
+"times": PackedFloat32Array(1.5, 3.2),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -78,6 +79,21 @@ tracks/2/keys = {
 "method": &"queue_free"
 }]
 }
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_ybhjs")
+}],
+"times": PackedFloat32Array(1.5)
+}
+tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5u1n0"]
 _data = {
@@ -105,5 +121,9 @@ texture = ExtResource("3_qg4np")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1767971021]
 libraries/ = SubResource("AnimationLibrary_5u1n0")
 autoplay = &"lightning_strike"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1260700321]
+volume_db = 1.794
+pitch_scale = 2.17
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

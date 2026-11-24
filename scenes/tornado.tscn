@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://kw5gw0xou8pm" path="res://graphics/Diesaster's/A_Tornado.png" id="1_7jxaq"]
 [ext_resource type="Script" uid="uid://jq8nnersdtyh" path="res://scripts/tornado.gd" id="1_shahy"]
+[ext_resource type="AudioStream" uid="uid://bwsb7g7n8gu8g" path="res://Assets/audio/juliush-hurricane-storm-nature-sounds-8397.mp3" id="3_3gxx4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l02jg"]
 radius = 111.0
@@ -77,6 +78,14 @@ autoplay = &"tornado_spin"
 wait_time = 15.0
 one_shot = true
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="." unique_id=958120275]
+stream = ExtResource("3_3gxx4")
+volume_db = -15.807
+pitch_scale = 0.69
+autoplay = true
+max_distance = 1201.0
+attenuation = 0.058314487
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

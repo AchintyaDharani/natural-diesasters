@@ -64,7 +64,7 @@ func _ready() -> void:
 	
 func _on_building_destroyed() -> void:
 	counter_building += 1
-	if counter_building == 7:
+	if counter_building == len(get_tree().get_nodes_in_group("buildings")):
 		win_screen.show()
 		hud.process_mode = Node.PROCESS_MODE_DISABLED
 

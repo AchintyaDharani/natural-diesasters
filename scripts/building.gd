@@ -10,6 +10,7 @@ signal destroyed_building
 @onready var f1 = $Flooding_1
 @onready var f2 = $Flooding_2
 @onready var f3 = $Flooding_3
+@onready var sfx = $AudioStreamPlayer
 
 func _ready() -> void:
 	$Broken1.hide()
@@ -29,6 +30,7 @@ func take_damage(damage, type):
 		$Building1.hide()
 		$Broken1.show()
 		destroyed_building.emit()
+		sfx.play()
 		
 func damage_effect() -> void:
 	var tween = create_tween()
