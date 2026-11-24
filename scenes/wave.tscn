@@ -193,5 +193,6 @@ libraries/ = SubResource("AnimationLibrary_sl0wx")
 autoplay = &"wave"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=162887397]
+bus = &"sfx"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

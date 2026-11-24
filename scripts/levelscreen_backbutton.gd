@@ -4,3 +4,4 @@ extends TextureButton
 
 func _on_pressed() -> void:
 	get_tree().change_scene_to_packed(back)
+	button_press_component._press_button()

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bfhik72ffhlj5" path="res://graphics/buttons/Tornado/Tornado_Pressed.png" id="3_y6sft"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_2fc2m"]
 [ext_resource type="Texture2D" uid="uid://brm17v2qbalfm" path="res://graphics/buttons/Tornado/Tornado_Hover.png" id="4_m4ofw"]
+[ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_aa4hd"]
 [ext_resource type="Texture2D" uid="uid://ckh6gfmfbyv2y" path="res://graphics/buttons/Earthquake/Earthquake_Hover.png" id="6_44xle"]
 [ext_resource type="Texture2D" uid="uid://mdssbbppjs8k" path="res://graphics/buttons/Earthquake/Earthquake_Pressed.png" id="7_24it5"]
 [ext_resource type="Texture2D" uid="uid://dfjllwephc7dl" path="res://graphics/buttons/Lightning/Lightning.png" id="8_gobkm"]
@@ -19,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://evxauao2hqj0" path="res://graphics/buttons/Flood/Flood_Pressed.png" id="12_yuijs"]
 [ext_resource type="Texture2D" uid="uid://cxxgmcc6723wb" path="res://graphics/buttons/Flood/Flood_Hover.png" id="13_aa4hd"]
 [ext_resource type="Script" uid="uid://ktnswyrt1etq" path="res://scripts/back.gd" id="19_aa4hd"]
-[ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="20_68utx"]
 
 [node name="shop" type="Control" unique_id=739215886]
 layout_mode = 3
@@ -62,6 +62,8 @@ texture_normal = ExtResource("2_ajxib")
 texture_pressed = ExtResource("3_y6sft")
 texture_hover = ExtResource("4_m4ofw")
 
+[node name="ButtonPressComponent" parent="centre/Tornado" unique_id=247894837 instance=ExtResource("5_aa4hd")]
+
 [node name="Earthquake" type="TextureButton" parent="centre" unique_id=918136229]
 layout_mode = 0
 offset_right = 100.0
@@ -70,6 +72,8 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_xfvoa")
 texture_pressed = ExtResource("7_24it5")
 texture_hover = ExtResource("6_44xle")
+
+[node name="ButtonPressComponent" parent="centre/Earthquake" unique_id=223130694 instance=ExtResource("5_aa4hd")]
 
 [node name="Lightning" type="TextureButton" parent="centre" unique_id=61614130]
 layout_mode = 0
@@ -80,6 +84,8 @@ texture_normal = ExtResource("8_gobkm")
 texture_pressed = ExtResource("9_j14q8")
 texture_hover = ExtResource("10_5u241")
 
+[node name="ButtonPressComponent" parent="centre/Lightning" unique_id=787756779 instance=ExtResource("5_aa4hd")]
+
 [node name="Flood" type="TextureButton" parent="centre" unique_id=668699994]
 layout_mode = 0
 offset_right = 100.0
@@ -88,6 +94,8 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("11_pqync")
 texture_pressed = ExtResource("12_yuijs")
 texture_hover = ExtResource("13_aa4hd")
+
+[node name="ButtonPressComponent" parent="centre/Flood" unique_id=336139988 instance=ExtResource("5_aa4hd")]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=62119039]
 visible = false
@@ -136,6 +144,8 @@ layout_mode = 2
 texture_normal = ExtResource("8_heatd")
 texture_pressed = ExtResource("9_1v8qu")
 texture_hover = ExtResource("10_44xle")
+
+[node name="ButtonPressComponent" parent="HBoxContainer/TextureButton" unique_id=1237098633 instance=ExtResource("5_aa4hd")]
 
 [node name="Label" type="Label" parent="." unique_id=1101310716]
 layout_mode = 1
@@ -202,8 +212,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("19_aa4hd")
 
-[node name="ButtonPressComponent" type="Node" parent="Top Right/HBoxContainer/Back" unique_id=1767852246]
-script = ExtResource("20_68utx")
+[node name="ButtonPressComponent" parent="Top Right/HBoxContainer/Back" unique_id=1616339072 instance=ExtResource("5_aa4hd")]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=681342806]
 custom_minimum_size = Vector2(200, 0)
