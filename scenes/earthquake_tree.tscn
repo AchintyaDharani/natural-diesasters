@@ -8,20 +8,26 @@
 [ext_resource type="Texture2D" uid="uid://c88e07xfwumul" path="res://graphics/buttons/UI/Back_Pressed.png" id="6_q6arp"]
 [ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="7_flv80"]
 [ext_resource type="Texture2D" uid="uid://c1g6etoocllic" path="res://graphics/buttons/Earthquake/U_Earthquake_I.png" id="8_4yyjb"]
+[ext_resource type="Script" uid="uid://dshkbnh4rmdas" path="res://scripts/earthquake_tree/back.gd" id="8_22lsn"]
 [ext_resource type="Texture2D" uid="uid://cvf2tq4n445ss" path="res://graphics/buttons/Earthquake/U_Earthquake_I_Pressed.png" id="9_s44or"]
 [ext_resource type="Texture2D" uid="uid://ddrf84gbve5bn" path="res://graphics/buttons/Earthquake/U_Earthquake_I_Hover.png" id="10_mnal3"]
 [ext_resource type="Texture2D" uid="uid://15d3jbdh6yv0" path="res://graphics/buttons/Earthquake/U_Earthquake_II.png" id="11_nkphh"]
 [ext_resource type="Texture2D" uid="uid://b6lu8gwv285jv" path="res://graphics/buttons/Earthquake/U_Earthquake_II_Pressed.png" id="12_vjouu"]
 [ext_resource type="Texture2D" uid="uid://pra7ef5iiss6" path="res://graphics/buttons/Earthquake/U_Earthquake_II_Hover.png" id="13_jyb03"]
+[ext_resource type="Script" uid="uid://bcr6j72ro6hnw" path="res://scripts/earthquake_tree/texture_button_1.gd" id="13_v8bxb"]
 [ext_resource type="Texture2D" uid="uid://drv1utlexp3xn" path="res://graphics/buttons/Earthquake/U_Earthquake_III.png" id="14_2idv3"]
 [ext_resource type="Texture2D" uid="uid://cg1jcu2dbfdty" path="res://graphics/buttons/Earthquake/U_Earthquake_III_Pressed.png" id="15_fg4n1"]
 [ext_resource type="Texture2D" uid="uid://b2qn632gpigxa" path="res://graphics/buttons/Earthquake/U_Earthquake_III_Hover.png" id="16_uh1nj"]
+[ext_resource type="Script" uid="uid://wdiksduha1ap" path="res://scripts/earthquake_tree/texture_button_2.gd" id="17_dpvot"]
 [ext_resource type="Texture2D" uid="uid://dmrbef6jsqbr5" path="res://graphics/buttons/Earthquake/U_Earthquake_IV.png" id="17_jm2fj"]
 [ext_resource type="Texture2D" uid="uid://uuwd6o52fl27" path="res://graphics/buttons/Earthquake/U_Earthquake_IV_Pressed.png" id="18_m8fbf"]
 [ext_resource type="Texture2D" uid="uid://bxdaynxrwxb5e" path="res://graphics/buttons/Earthquake/U_Earthquake_IV_Hover.png" id="19_rw4vr"]
 [ext_resource type="Texture2D" uid="uid://1jl4ntbubj20" path="res://graphics/buttons/Earthquake/U_Earthquake_V.png" id="20_03cgc"]
 [ext_resource type="Texture2D" uid="uid://c5tfbdx6ga34p" path="res://graphics/buttons/Earthquake/U_Earthquake_V_Pressed.png" id="21_83q04"]
+[ext_resource type="Script" uid="uid://dvf0whv7i8f8c" path="res://scripts/earthquake_tree/texture_button_3.gd" id="21_q6arp"]
 [ext_resource type="Texture2D" uid="uid://b3se10n82vd4k" path="res://graphics/buttons/Earthquake/U_Earthquake_V_Hover.png" id="22_mb31g"]
+[ext_resource type="Script" uid="uid://dpxvadlqw0k05" path="res://scripts/earthquake_tree/texture_button_4.gd" id="25_flv80"]
+[ext_resource type="Script" uid="uid://uu6fbdy2eh2k" path="res://scripts/earthquake_tree/texture_button_5.gd" id="29_4yyjb"]
 
 [node name="earthquake_tree" type="Control" unique_id=1534403053]
 layout_mode = 3
@@ -92,6 +98,7 @@ texture_pressed = ExtResource("6_q6arp")
 texture_hover = ExtResource("7_flv80")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("8_22lsn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=1430279043]
 custom_minimum_size = Vector2(200, 0)
@@ -119,6 +126,7 @@ disabled = true
 texture_normal = ExtResource("8_4yyjb")
 texture_pressed = ExtResource("9_s44or")
 texture_hover = ExtResource("10_mnal3")
+script = ExtResource("13_v8bxb")
 
 [node name="ColorRect4" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=595294012]
 custom_minimum_size = Vector2(5, 40)
@@ -132,6 +140,7 @@ disabled = true
 texture_normal = ExtResource("11_nkphh")
 texture_pressed = ExtResource("12_vjouu")
 texture_hover = ExtResource("13_jyb03")
+script = ExtResource("17_dpvot")
 
 [node name="ColorRect3" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1290912564]
 custom_minimum_size = Vector2(5, 40)
@@ -145,6 +154,7 @@ disabled = true
 texture_normal = ExtResource("14_2idv3")
 texture_pressed = ExtResource("15_fg4n1")
 texture_hover = ExtResource("16_uh1nj")
+script = ExtResource("21_q6arp")
 
 [node name="ColorRect2" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1666228324]
 custom_minimum_size = Vector2(5, 40)
@@ -158,6 +168,7 @@ disabled = true
 texture_normal = ExtResource("17_jm2fj")
 texture_pressed = ExtResource("18_m8fbf")
 texture_hover = ExtResource("19_rw4vr")
+script = ExtResource("25_flv80")
 
 [node name="ColorRect" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=122009146]
 custom_minimum_size = Vector2(5, 40)
@@ -171,6 +182,7 @@ disabled = true
 texture_normal = ExtResource("20_03cgc")
 texture_pressed = ExtResource("21_83q04")
 texture_hover = ExtResource("22_mb31g")
+script = ExtResource("29_4yyjb")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=995142637]
 layout_mode = 1
@@ -194,8 +206,14 @@ layout_mode = 2
 layout_mode = 2
 
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Top Right/HBoxContainer/Back" to="Top Right/HBoxContainer/Back" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" method="_on_pressed"]

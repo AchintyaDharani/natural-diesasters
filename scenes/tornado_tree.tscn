@@ -11,16 +11,22 @@
 [ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="7_pyvdv"]
 [ext_resource type="Texture2D" uid="uid://d2vlum2p0p653" path="res://graphics/buttons/Tornado/U_Tornado_II.png" id="7_y1e4o"]
 [ext_resource type="Texture2D" uid="uid://da1mdxk7ya3yu" path="res://graphics/buttons/Tornado/U_Tornado_II_Pressed.png" id="8_k7xde"]
+[ext_resource type="Script" uid="uid://k104tktd7jkf" path="res://scripts/tornado_tree/back.gd" id="8_pyvdv"]
 [ext_resource type="Texture2D" uid="uid://cwpce6l7xv740" path="res://graphics/buttons/Tornado/U_Tornado_II_Hover.png" id="9_fc174"]
 [ext_resource type="Texture2D" uid="uid://cecu8anlkahcp" path="res://graphics/buttons/Tornado/U_Tornado_III.png" id="10_pyvdv"]
 [ext_resource type="Texture2D" uid="uid://bsfvq8jok5brm" path="res://graphics/buttons/Tornado/U_Tornado_III_Pressed.png" id="11_rie01"]
 [ext_resource type="Texture2D" uid="uid://cdwh14khgjrx6" path="res://graphics/buttons/Tornado/U_Tornado_III_Hover.png" id="12_c2g6r"]
+[ext_resource type="Script" uid="uid://dvqqebftkrg6j" path="res://scripts/tornado_tree/texture_button_1.gd" id="12_v8ach"]
 [ext_resource type="Texture2D" uid="uid://dyicckc7et0uf" path="res://graphics/buttons/Tornado/U_Tornado_IV.png" id="13_v8ach"]
 [ext_resource type="Texture2D" uid="uid://cemkttajnr7cb" path="res://graphics/buttons/Tornado/U_Tornado_IV_Pressed.png" id="14_uto5j"]
 [ext_resource type="Texture2D" uid="uid://83aaj88lpfvv" path="res://graphics/buttons/Tornado/U_Tornado_IV_Hover.png" id="15_ukmck"]
 [ext_resource type="Texture2D" uid="uid://b5iq8sski7w56" path="res://graphics/buttons/Tornado/U_Tornado_V.png" id="16_7qnnt"]
+[ext_resource type="Script" uid="uid://cqqdag18onoh3" path="res://scripts/tornado_tree/texture_button_2.gd" id="16_uto5j"]
 [ext_resource type="Texture2D" uid="uid://1gru4u1802ff" path="res://graphics/buttons/Tornado/U_Tornado_V_Pressed.png" id="17_5nrcw"]
 [ext_resource type="Texture2D" uid="uid://cn21qh4ytewh4" path="res://graphics/buttons/Tornado/U_Tornado_V_Hover.png" id="18_2hamj"]
+[ext_resource type="Script" uid="uid://c24rcwahak1f3" path="res://scripts/tornado_tree/texture_button_3.gd" id="20_ukmck"]
+[ext_resource type="Script" uid="uid://kimappewnvkp" path="res://scripts/tornado_tree/texture_button_4.gd" id="24_uto5j"]
+[ext_resource type="Script" uid="uid://deup3w8wlstah" path="res://scripts/tornado_tree/texture_button_5.gd" id="28_ukmck"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l0nwl"]
 load_path = "res://.godot/imported/U_Tornado_I_Pressed.png-3c94d575e14381789fedc5ef40996888.ctex"
@@ -94,6 +100,7 @@ texture_pressed = ExtResource("6_fc174")
 texture_hover = ExtResource("7_pyvdv")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("8_pyvdv")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=1430279043]
 custom_minimum_size = Vector2(200, 0)
@@ -121,6 +128,7 @@ disabled = true
 texture_normal = ExtResource("5_lw8ad")
 texture_pressed = SubResource("CompressedTexture2D_l0nwl")
 texture_hover = ExtResource("6_8aaq1")
+script = ExtResource("12_v8ach")
 
 [node name="ColorRect4" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=595294012]
 custom_minimum_size = Vector2(5, 40)
@@ -134,6 +142,7 @@ disabled = true
 texture_normal = ExtResource("7_y1e4o")
 texture_pressed = ExtResource("8_k7xde")
 texture_hover = ExtResource("9_fc174")
+script = ExtResource("16_uto5j")
 
 [node name="ColorRect3" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1290912564]
 custom_minimum_size = Vector2(5, 40)
@@ -147,6 +156,7 @@ disabled = true
 texture_normal = ExtResource("10_pyvdv")
 texture_pressed = ExtResource("11_rie01")
 texture_hover = ExtResource("12_c2g6r")
+script = ExtResource("20_ukmck")
 
 [node name="ColorRect2" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1666228324]
 custom_minimum_size = Vector2(5, 40)
@@ -160,6 +170,7 @@ disabled = true
 texture_normal = ExtResource("13_v8ach")
 texture_pressed = ExtResource("14_uto5j")
 texture_hover = ExtResource("15_ukmck")
+script = ExtResource("24_uto5j")
 
 [node name="ColorRect" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=122009146]
 custom_minimum_size = Vector2(5, 40)
@@ -173,6 +184,7 @@ disabled = true
 texture_normal = ExtResource("16_7qnnt")
 texture_pressed = ExtResource("17_5nrcw")
 texture_hover = ExtResource("18_2hamj")
+script = ExtResource("28_ukmck")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=995142637]
 layout_mode = 1
@@ -196,8 +208,14 @@ layout_mode = 2
 layout_mode = 2
 
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Top Right/HBoxContainer/Back" to="Top Right/HBoxContainer/Back" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" method="_on_pressed"]

@@ -40,6 +40,11 @@ folder_colors={
 "res://graphics/buttons/Lightning/": "yellow",
 "res://graphics/buttons/Tornado/": "gray",
 "res://scripts/autoloads/": "red"
+"res://scripts/earthquake_tree/": "orange",
+"res://scripts/flood_tree/": "blue",
+"res://scripts/lightning_tree/": "yellow",
+"res://scripts/shop_scripts/": "red",
+"res://scripts/tornado_tree/": "gray"
 }
 
 [input]

@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://bfhik72ffhlj5" path="res://graphics/buttons/Tornado/Tornado_Pressed.png" id="3_y6sft"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_2fc2m"]
 [ext_resource type="Texture2D" uid="uid://brm17v2qbalfm" path="res://graphics/buttons/Tornado/Tornado_Hover.png" id="4_m4ofw"]
+
+[ext_resource type="Script" uid="uid://d1ikfp7wptwpn" path="res://scripts/shop_scripts/tornado.gd" id="5_68utx"]
+[ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_aa4hd"]
+
 [ext_resource type="Texture2D" uid="uid://ckh6gfmfbyv2y" path="res://graphics/buttons/Earthquake/Earthquake_Hover.png" id="6_44xle"]
 [ext_resource type="Texture2D" uid="uid://mdssbbppjs8k" path="res://graphics/buttons/Earthquake/Earthquake_Pressed.png" id="7_24it5"]
 [ext_resource type="Texture2D" uid="uid://dfjllwephc7dl" path="res://graphics/buttons/Lightning/Lightning.png" id="8_gobkm"]
@@ -15,11 +19,18 @@
 [ext_resource type="Texture2D" uid="uid://bpr0nuny7d80t" path="res://graphics/buttons/Lightning/Lightning_Pressed.png" id="9_j14q8"]
 [ext_resource type="Texture2D" uid="uid://fbk1ki72ogup" path="res://graphics/buttons/Lightning/Lightning_Hover.png" id="10_5u241"]
 [ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="10_44xle"]
+[ext_resource type="Script" uid="uid://b5qb1vici8i86" path="res://scripts/shop_scripts/earthquake.gd" id="10_ru2r1"]
 [ext_resource type="Texture2D" uid="uid://cb0o807tluvas" path="res://graphics/buttons/Flood/Flood.png" id="11_pqync"]
 [ext_resource type="Texture2D" uid="uid://evxauao2hqj0" path="res://graphics/buttons/Flood/Flood_Pressed.png" id="12_yuijs"]
 [ext_resource type="Texture2D" uid="uid://cxxgmcc6723wb" path="res://graphics/buttons/Flood/Flood_Hover.png" id="13_aa4hd"]
+[ext_resource type="Script" uid="uid://br0xrc4ki6rq" path="res://scripts/shop_scripts/lightning.gd" id="14_lxs01"]
+[ext_resource type="Script" uid="uid://tm8x0r65sjfq" path="res://scripts/shop_scripts/flood.gd" id="18_6nbx6"]
 [ext_resource type="Script" uid="uid://ktnswyrt1etq" path="res://scripts/back.gd" id="19_aa4hd"]
+
 [ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="20_68utx"]
+
+[ext_resource type="Script" uid="uid://c2mv6n5iw31bp" path="res://scripts/shop_scripts/texture_button.gd" id="24_mihhf"]
+
 
 [node name="shop" type="Control" unique_id=739215886]
 layout_mode = 3
@@ -61,6 +72,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_ajxib")
 texture_pressed = ExtResource("3_y6sft")
 texture_hover = ExtResource("4_m4ofw")
+script = ExtResource("5_68utx")
 
 [node name="Earthquake" type="TextureButton" parent="centre" unique_id=918136229]
 layout_mode = 0
@@ -70,6 +82,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("2_xfvoa")
 texture_pressed = ExtResource("7_24it5")
 texture_hover = ExtResource("6_44xle")
+script = ExtResource("10_ru2r1")
 
 [node name="Lightning" type="TextureButton" parent="centre" unique_id=61614130]
 layout_mode = 0
@@ -79,6 +92,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("8_gobkm")
 texture_pressed = ExtResource("9_j14q8")
 texture_hover = ExtResource("10_5u241")
+script = ExtResource("14_lxs01")
 
 [node name="Flood" type="TextureButton" parent="centre" unique_id=668699994]
 layout_mode = 0
@@ -88,6 +102,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("11_pqync")
 texture_pressed = ExtResource("12_yuijs")
 texture_hover = ExtResource("13_aa4hd")
+script = ExtResource("18_6nbx6")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=62119039]
 visible = false
@@ -136,6 +151,7 @@ layout_mode = 2
 texture_normal = ExtResource("8_heatd")
 texture_pressed = ExtResource("9_1v8qu")
 texture_hover = ExtResource("10_44xle")
+script = ExtResource("24_mihhf")
 
 [node name="Label" type="Label" parent="." unique_id=1101310716]
 layout_mode = 1
@@ -210,9 +226,14 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
 [connection signal="pressed" from="centre/Tornado" to="." method="_on_tornado_pressed"]
+[connection signal="pressed" from="centre/Tornado" to="centre/Tornado" method="_on_pressed"]
 [connection signal="pressed" from="centre/Earthquake" to="." method="_on_earthquake_pressed"]
+[connection signal="pressed" from="centre/Earthquake" to="centre/Earthquake" method="_on_pressed"]
 [connection signal="pressed" from="centre/Lightning" to="." method="_on_lightning_pressed"]
+[connection signal="pressed" from="centre/Lightning" to="centre/Lightning" method="_on_pressed"]
 [connection signal="pressed" from="centre/Flood" to="." method="_on_flood_pressed"]
+[connection signal="pressed" from="centre/Flood" to="centre/Flood" method="_on_pressed"]
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/TextureButton" to="HBoxContainer/TextureButton" method="_on_pressed"]
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="Top Right/HBoxContainer/Back" method="_on_pressed"]

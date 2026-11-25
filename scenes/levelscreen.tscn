@@ -11,6 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://ppvqokgm8h5p" path="res://graphics/buttons/UI/Buttons/Back_Pressed.png" id="7_s51j2"]
 [ext_resource type="Texture2D" uid="uid://cyymcf20qba53" path="res://graphics/buttons/UI/Buttons/Back_Hover.png" id="8_s1e2j"]
 
+[sub_resource type="GDScript" id="GDScript_d5hda"]
+script/source = "extends Button
+@onready var button_press_component: ButtonComponent = $ButtonPressComponent
+@onready var lvl2 = preload(\"res://scenes/level_2.tscn\")
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_packed(lvl2)
+	$ButtonPressComponent._press_button()
+"
+
 [node name="levelscreen" type="Control" unique_id=564252386]
 layout_mode = 3
 anchors_preset = 15
@@ -105,6 +115,9 @@ script = ExtResource("6_s51j2")
 
 [node name="ButtonPressComponent" type="Node" parent="levels/HBoxContainer/lvlscreen_2_button" unique_id=7332695]
 script = ExtResource("4_duc3y")
+script = SubResource("GDScript_d5hda")
+
+[node name="ButtonPressComponent" parent="levels/HBoxContainer/lvlscreen_2_button" unique_id=1106194881 instance=ExtResource("5_d5hda")]
 
 [node name="3" type="Button" parent="levels/HBoxContainer" unique_id=1717344237]
 custom_minimum_size = Vector2(200, 200)

@@ -7,6 +7,11 @@
 [ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="3_05uyy"]
 [ext_resource type="Script" uid="uid://bjynlpdp0n150" path="res://scripts/restart.gd" id="5_d3xb4"]
 
+[ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_v4r4p"]
+[ext_resource type="Script" uid="uid://ddmdchhdsk168" path="res://scripts/(settings).gd" id="7_1s2dm"]
+[ext_resource type="Script" uid="uid://clwaqr7f37g4" path="res://scripts/exit.gd" id="8_88e76"]
+
+
 [node name="Pause_menu" type="Control" unique_id=1738971995]
 process_mode = 3
 layout_mode = 3
@@ -92,10 +97,24 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme = ExtResource("1_hdmo1")
 text = "Settings"
+script = ExtResource("7_1s2dm")
 
 [node name="ButtonPressComponent" type="Node" parent="Middle/ButtonContainer/(Settings)" unique_id=2037771272]
 script = ExtResource("3_05uyy")
 
+[node name="Exit" type="Button" parent="Middle/ButtonContainer" unique_id=880670399]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("1_hdmo1")
+text = "Exit
+"
+script = ExtResource("8_88e76")
+
+[node name="ButtonPressComponent" parent="Middle/ButtonContainer/Exit" unique_id=503649904 instance=ExtResource("5_v4r4p")]
+
 [connection signal="pressed" from="Middle/ButtonContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Middle/ButtonContainer/Resume" to="Middle/ButtonContainer/Resume" method="_on_pressed"]
 [connection signal="pressed" from="Middle/ButtonContainer/Restart" to="Middle/ButtonContainer/Restart" method="_on_pressed"]
+[connection signal="pressed" from="Middle/ButtonContainer/(Settings)" to="Middle/ButtonContainer/(Settings)" method="_on_pressed"]
+[connection signal="pressed" from="Middle/ButtonContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Middle/ButtonContainer/Exit" to="Middle/ButtonContainer/Exit" method="_on_pressed"]
