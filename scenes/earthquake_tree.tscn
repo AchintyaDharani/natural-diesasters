@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://srfil65nfo1v"]
 
 [ext_resource type="Script" uid="uid://0of8jrlqa17v" path="res://scripts/earthquake_tree.gd" id="1_y7w3f"]
-[ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="2_3r7u0"]
+[ext_resource type="Texture2D" uid="uid://bbps5hfmywoe0" path="res://graphics/buttons/Earthquake/BG_Earthquake.png" id="2_3r7u0"]
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="3_22lsn"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_v8bxb"]
 [ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="5_dpvot"]

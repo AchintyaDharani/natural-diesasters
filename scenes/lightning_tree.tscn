@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cx0uygfvsvqk2"]
 
 [ext_resource type="Script" uid="uid://dc040bnuh457e" path="res://scripts/lightning_tree.gd" id="1_2qswc"]
-[ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="2_bgem0"]
+[ext_resource type="Texture2D" uid="uid://chkr1olsxrqni" path="res://graphics/buttons/Lightning/BG_Lightning.png" id="2_t2av0"]
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="3_t2av0"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_hh7tr"]
 [ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="5_r0rga"]
@@ -42,7 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_bgem0")
+texture = ExtResource("2_t2av0")
 
 [node name="Top Right" type="HBoxContainer" parent="." unique_id=795459861]
 layout_mode = 1
