@@ -5,11 +5,15 @@
 [ext_resource type="Script" uid="uid://b6cpd8lklatwu" path="res://scripts/main_menu.gd" id="1_oa1go"]
 
 [ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="1_rtw2f"]
+
 [ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="2_bqqt6"]
 
 [ext_resource type="Texture2D" uid="uid://d1lhvvwc43fji" path="res://graphics/buttons/UI/Mainmenu.png" id="2_oa1go"]
+
+
 [ext_resource type="Script" uid="uid://bxk4ytk2g1lf" path="res://scripts/settings_button.gd" id="3_wu84c"]
 [ext_resource type="Script" uid="uid://lp3g24f1ybbw" path="res://scripts/quit_button.gd" id="4_8ln24"]
+[ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_oa1go"]
 
 [node name="MainMenu" type="Control" unique_id=945770910]
 layout_mode = 3
@@ -67,8 +71,7 @@ text = "Play
 "
 script = ExtResource("1_ekxnf")
 
-[node name="ButtonPressComponent" type="Node" parent="VBoxContainer/PlayButton" unique_id=1461314106]
-script = ExtResource("2_bqqt6")
+[node name="ButtonPressComponent" parent="VBoxContainer/PlayButton" unique_id=247894837 instance=ExtResource("5_oa1go")]
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=2134335533]
 custom_minimum_size = Vector2(500, 100)
@@ -78,8 +81,7 @@ text = "Settings
 "
 script = ExtResource("3_wu84c")
 
-[node name="ButtonPressComponent" type="Node" parent="VBoxContainer/SettingsButton" unique_id=1858750854]
-script = ExtResource("2_bqqt6")
+[node name="ButtonPressComponent" parent="VBoxContainer/SettingsButton" unique_id=1947134425 instance=ExtResource("5_oa1go")]
 
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=1463971625]
 custom_minimum_size = Vector2(500, 100)
@@ -88,8 +90,7 @@ theme = ExtResource("1_8ln24")
 text = "Quit"
 script = ExtResource("4_8ln24")
 
-[node name="ButtonPressComponent" type="Node" parent="VBoxContainer/QuitButton" unique_id=1205317255]
-script = ExtResource("2_bqqt6")
+[node name="ButtonPressComponent" parent="VBoxContainer/QuitButton" unique_id=606327614 instance=ExtResource("5_oa1go")]
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="VBoxContainer/PlayButton" method="_on_pressed"]

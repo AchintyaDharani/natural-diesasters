@@ -4,3 +4,4 @@ extends Button
 
 func _on_pressed() -> void:
 	get_tree().change_scene_to_packed(lvl1)
+	$ButtonPressComponent._press_button()

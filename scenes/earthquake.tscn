@@ -188,5 +188,6 @@ autoplay = &"earthquake"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1964212159]
 volume_db = -5.53
 pitch_scale = 1.29
+bus = &"sfx"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

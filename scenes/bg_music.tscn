@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://cyroqcs2gqml7"]
 
 [ext_resource type="AudioStream" uid="uid://csyytqfg4j00l" path="res://Assets/audio/xtremefreddy-game-music-loop-3-144252.mp3" id="1_f6gl3"]
+[ext_resource type="AudioStream" uid="uid://djtl7xdhyythq" path="res://Assets/audio/freesound_gamestudio-button-394464.mp3" id="2_8f2av"]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=582357692]
+[node name="bg_music" type="AudioStreamPlayer" unique_id=582357692]
 stream = ExtResource("1_f6gl3")
 autoplay = true
+bus = &"bgm"
 parameters/looping = true
+
+[node name="button_click" type="AudioStreamPlayer" parent="." unique_id=843369959]
+stream = ExtResource("2_8f2av")
+bus = &"sfx"

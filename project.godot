@@ -17,13 +17,12 @@ config/icon="res://icon.svg"
 
 [audio]
 
-buses/default_bus_layout="uid://dfnxgunk06nf7"
+buses/default_bus_layout="uid://duf372m820it"
 
 [autoload]
 
 Global="*uid://hfr5jtlnt3l6"
 BgMusic="*uid://cyroqcs2gqml7"
-EventSystem="*uid://bn2elp8qty0kl"
 
 [display]
 

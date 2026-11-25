@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dy6owmim58ri7" path="res://graphics/buttons/UI/Win_screen_menu.png" id="1_wv5lq"]
 [ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="2_2l6cc"]
 [ext_resource type="Script" uid="uid://ct862fv343ha7" path="res://scripts/continue_(win).gd" id="3_0lrm4"]
-[ext_resource type="Script" uid="uid://do1xrbmm8j5pv" path="res://scripts/button_press_component.gd" id="3_e41g7"]
+[ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_0lrm4"]
 
 [node name="win_screen" type="CanvasLayer" unique_id=777679151]
 script = ExtResource("1_0lrm4")
@@ -21,9 +21,9 @@ color = Color(0.24477637, 0.2447764, 0.24477637, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1226420769]
 offset_left = 690.0
-offset_top = 100.0
+offset_top = 140.0
 offset_right = 1230.0
-offset_bottom = 920.0
+offset_bottom = 940.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -36,10 +36,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -240.0
-offset_top = -420.0
-offset_right = 240.0
-offset_bottom = 380.0
+offset_left = -270.0
+offset_top = -602.0
+offset_right = 270.0
+offset_bottom = 602.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -61,8 +61,7 @@ theme = ExtResource("2_2l6cc")
 text = "Continue"
 script = ExtResource("3_0lrm4")
 
-[node name="ButtonPressComponent" type="Node" parent="middle/ButtonContainer/Continue (win)" unique_id=1848066205]
-script = ExtResource("3_e41g7")
+[node name="ButtonPressComponent" parent="middle/ButtonContainer/Continue (win)" unique_id=247894837 instance=ExtResource("5_0lrm4")]
 
 [connection signal="pressed" from="middle/ButtonContainer/Continue (win)" to="." method="_on_continue_win_pressed"]
 [connection signal="pressed" from="middle/ButtonContainer/Continue (win)" to="middle/ButtonContainer/Continue (win)" method="_on_pressed"]

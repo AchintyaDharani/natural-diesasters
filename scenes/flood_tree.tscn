@@ -101,6 +101,8 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_y1vrc")
 
+[node name="ButtonPressComponent" parent="Top Right/HBoxContainer/Back" unique_id=247894837 instance=ExtResource("8_osvk1")]
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=1430279043]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
@@ -129,6 +131,8 @@ texture_pressed = ExtResource("9_osvk1")
 texture_hover = ExtResource("10_y1vrc")
 script = ExtResource("13_obt6c")
 
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" unique_id=638270380 instance=ExtResource("8_osvk1")]
+
 [node name="ColorRect4" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=595294012]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
@@ -142,6 +146,8 @@ texture_normal = ExtResource("11_obt6c")
 texture_pressed = ExtResource("12_8bcur")
 texture_hover = ExtResource("13_f4qg1")
 script = ExtResource("17_8bcur")
+
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" unique_id=184395392 instance=ExtResource("8_osvk1")]
 
 [node name="ColorRect3" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1290912564]
 custom_minimum_size = Vector2(5, 40)
@@ -157,6 +163,8 @@ texture_pressed = ExtResource("15_6u7ie")
 texture_hover = ExtResource("16_5h4re")
 script = ExtResource("21_j37nw")
 
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" unique_id=941211508 instance=ExtResource("8_osvk1")]
+
 [node name="ColorRect2" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=1666228324]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
@@ -171,6 +179,8 @@ texture_pressed = ExtResource("18_huv80")
 texture_hover = ExtResource("19_2pcxk")
 script = ExtResource("25_6u7ie")
 
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" unique_id=581534545 instance=ExtResource("8_osvk1")]
+
 [node name="ColorRect" type="ColorRect" parent="ScrollContainer/CenterContainer/VBoxContainer" unique_id=122009146]
 custom_minimum_size = Vector2(5, 40)
 custom_maximum_size = Vector2(5, 40)
@@ -184,6 +194,8 @@ texture_normal = ExtResource("20_nr5ku")
 texture_pressed = ExtResource("21_wl0t0")
 texture_hover = ExtResource("22_jvtyh")
 script = ExtResource("29_6u7ie")
+
+[node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" unique_id=500024983 instance=ExtResource("8_osvk1")]
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=995142637]
 layout_mode = 1
@@ -207,10 +219,8 @@ layout_mode = 2
 layout_mode = 2
 
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="." method="_on_back_pressed"]
-
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="Top Right/HBoxContainer/Back" method="_on_pressed"]
 [connection signal="pressed" from="Top Right/HBoxContainer/Back" to="Top Right/HBoxContainer/Back/ButtonPressComponent" method="_on_back_pressed"]
-
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="." method="_on_texture_button_1_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" to="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" method="_on_pressed"]
 [connection signal="pressed" from="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]

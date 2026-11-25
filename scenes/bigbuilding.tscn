@@ -50,3 +50,4 @@ polygon = PackedVector2Array(-77, -46, -2, -23, 101, -72, 100, -94, 336, -39, -1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1175428077]
 stream = ExtResource("4_hwjkg")
+bus = &"sfx"
