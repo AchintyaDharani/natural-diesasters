@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cii8p2xe1vl06"]
 
 [ext_resource type="Script" uid="uid://dmc1cxmn62qdx" path="res://scripts/flood_tree.gd" id="1_045jy"]
-[ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="2_osvk1"]
+[ext_resource type="Texture2D" uid="uid://yr5p2g846opf" path="res://graphics/buttons/Flood/BG_Flood.png" id="2_osvk1"]
 [ext_resource type="Texture2D" uid="uid://c7mv5xah6ggn4" path="res://graphics/buttons/UI/Currency_UI.png" id="3_y1vrc"]
 [ext_resource type="Script" uid="uid://bv50u8cc2ue2t" path="res://scripts/coin_count.gd" id="4_obt6c"]
 [ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="5_8bcur"]
@@ -40,6 +40,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -810.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_osvk1")
