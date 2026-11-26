@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://wr4bnaj2u1ou" path="res://scripts/resume.gd" id="3_2nc7s"]
 [ext_resource type="Script" uid="uid://bjynlpdp0n150" path="res://scripts/restart.gd" id="5_d3xb4"]
 [ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_v4r4p"]
+[ext_resource type="Script" uid="uid://clwaqr7f37g4" path="res://scripts/exit.gd" id="7_1s2dm"]
 
 [node name="Pause_menu" type="Control" unique_id=1738971995]
 process_mode = 3
@@ -93,6 +94,16 @@ text = "Settings"
 
 [node name="ButtonPressComponent" parent="Middle/ButtonContainer/(Settings)" unique_id=863391800 instance=ExtResource("5_v4r4p")]
 
+[node name="Exit" type="Button" parent="Middle/ButtonContainer" unique_id=150923549]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("1_hdmo1")
+text = "Exit"
+script = ExtResource("7_1s2dm")
+
+[node name="ButtonPressComponent" parent="Middle/ButtonContainer/Exit" unique_id=165740031 instance=ExtResource("5_v4r4p")]
+
 [connection signal="pressed" from="Middle/ButtonContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="Middle/ButtonContainer/Resume" to="Middle/ButtonContainer/Resume" method="_on_pressed"]
 [connection signal="pressed" from="Middle/ButtonContainer/Restart" to="Middle/ButtonContainer/Restart" method="_on_pressed"]
+[connection signal="pressed" from="Middle/ButtonContainer/Exit" to="Middle/ButtonContainer/Exit" method="_on_pressed"]
