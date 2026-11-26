@@ -11,7 +11,7 @@ extends Node2D
 @onready var f3: TileMapLayer = $FloodedLayer_3
 
 
-var mouse_pos = get_global_mouse_position()
+var mouse_pos
 var placing = false
 var directing = false
 var arrowdir
