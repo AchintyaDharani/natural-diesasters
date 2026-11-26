@@ -62,6 +62,7 @@ func disable_button():
 	cd.paused = true
 	cd2.paused = true
 	cd3.paused = true
+	cd4.paused = true
 
 func enable_button():
 	if cd.time_left == 0 and t_locked == false:
@@ -73,6 +74,7 @@ func enable_button():
 	cd.paused = false
 	cd2.paused = false
 	cd3.paused = false
+	cd4.paused = false
 
 
 

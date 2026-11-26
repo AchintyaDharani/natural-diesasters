@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://cdw203ciw8qn1"]
+
+[ext_resource type="Texture2D" uid="uid://c4ln750kt1e23" path="res://graphics/buttons/UI/blankbox.png" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://cgqpep5rpelhx" path="res://scripts/bg_slider.gd" id="2_r6d6q"]
+[ext_resource type="Script" uid="uid://dahvh372pxivl" path="res://scripts/sfx_slider.gd" id="3_6wm04"]
+[ext_resource type="Texture2D" uid="uid://cmvbhuugfx35n" path="res://graphics/buttons/UI/Back.png" id="4_83j8s"]
+[ext_resource type="Texture2D" uid="uid://c88e07xfwumul" path="res://graphics/buttons/UI/Back_Pressed.png" id="5_gjs24"]
+[ext_resource type="Texture2D" uid="uid://g04byq5mhmr7" path="res://graphics/buttons/UI/Back_Hover.png" id="6_am25x"]
+[ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="7_4ppmf"]
+
+[node name="Settings" type="Control" unique_id=718457928]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="blur" type="ColorRect" parent="." unique_id=1436454038]
+self_modulate = Color(1, 1, 1, 0.5411765)
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24477637, 0.2447764, 0.24477637, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=233969700]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -595.0
+offset_top = -410.0
+offset_right = 595.0
+offset_bottom = 410.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5p8wc")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=1906704958]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer" unique_id=1218483809]
+layout_mode = 2
+theme_override_font_sizes/font_size = 97
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/VBoxContainer" unique_id=1687288291]
+custom_minimum_size = Vector2(0, 218.845)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/VBoxContainer" unique_id=219801235]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer" unique_id=109503910]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "Background Music:"
+horizontal_alignment = 1
+
+[node name="bg_slider" type="HSlider" parent="TextureRect/VBoxContainer/HBoxContainer" unique_id=1945367868]
+custom_minimum_size = Vector2(850, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("2_r6d6q")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TextureRect/VBoxContainer" unique_id=1950093243]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/VBoxContainer/HBoxContainer2" unique_id=761983475]
+custom_minimum_size = Vector2(104.695, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer/HBoxContainer2" unique_id=299129942]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "SFX:"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/VBoxContainer/HBoxContainer2" unique_id=1239548385]
+custom_minimum_size = Vector2(109.84, 0)
+layout_mode = 2
+
+[node name="sfx_slider" type="HSlider" parent="TextureRect/VBoxContainer/HBoxContainer2" unique_id=235237415]
+custom_minimum_size = Vector2(850, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_6wm04")
+
+[node name="Top Right" type="HBoxContainer" parent="." unique_id=512329248]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -3559.9966
+offset_right = -0.00048828125
+offset_bottom = 819.99994
+grow_horizontal = 0
+scale = Vector2(0.1, 0.1)
+pivot_offset_ratio = Vector2(1, 0)
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right" unique_id=196477822]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="Back" type="TextureButton" parent="Top Right/HBoxContainer" unique_id=1249505756]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("4_83j8s")
+texture_pressed = ExtResource("5_gjs24")
+texture_hover = ExtResource("6_am25x")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ButtonPressComponent" parent="Top Right/HBoxContainer/Back" unique_id=247894837 instance=ExtResource("7_4ppmf")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top Right/HBoxContainer" unique_id=1639950646]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[connection signal="value_changed" from="TextureRect/VBoxContainer/HBoxContainer/bg_slider" to="TextureRect/VBoxContainer/HBoxContainer/bg_slider" method="_on_value_changed"]
+[connection signal="drag_ended" from="TextureRect/VBoxContainer/HBoxContainer2/sfx_slider" to="TextureRect/VBoxContainer/HBoxContainer2/sfx_slider" method="_on_drag_ended"]
+[connection signal="value_changed" from="TextureRect/VBoxContainer/HBoxContainer2/sfx_slider" to="TextureRect/VBoxContainer/HBoxContainer2/sfx_slider" method="_on_value_changed"]
+[connection signal="pressed" from="Top Right/HBoxContainer/Back" to="TextureRect/VBoxContainer/HBoxContainer/bg_slider" method="_on_back_pressed"]
