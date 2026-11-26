@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var hp = 400
+var hp = 1200
 var mancount = 20
 var destroyed := false
 var disasters = ["tornado", "earthquake", "lightning"]

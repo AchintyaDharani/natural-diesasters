@@ -124,6 +124,7 @@ disabled = true
 texture_normal = ExtResource("5_lw8ad")
 texture_pressed = SubResource("CompressedTexture2D_l0nwl")
 texture_hover = ExtResource("6_8aaq1")
+texture_disabled = ExtResource("6_8aaq1")
 
 [node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton1" unique_id=1950377821 instance=ExtResource("8_fc174")]
 
@@ -139,6 +140,7 @@ disabled = true
 texture_normal = ExtResource("7_y1e4o")
 texture_pressed = ExtResource("8_k7xde")
 texture_hover = ExtResource("9_fc174")
+texture_disabled = ExtResource("9_fc174")
 
 [node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton2" unique_id=1687697728 instance=ExtResource("8_fc174")]
 
@@ -154,6 +156,7 @@ disabled = true
 texture_normal = ExtResource("10_pyvdv")
 texture_pressed = ExtResource("11_rie01")
 texture_hover = ExtResource("12_c2g6r")
+texture_disabled = ExtResource("12_c2g6r")
 
 [node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton3" unique_id=759302443 instance=ExtResource("8_fc174")]
 
@@ -169,6 +172,7 @@ disabled = true
 texture_normal = ExtResource("13_v8ach")
 texture_pressed = ExtResource("14_uto5j")
 texture_hover = ExtResource("15_ukmck")
+texture_disabled = ExtResource("15_ukmck")
 
 [node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton4" unique_id=425115465 instance=ExtResource("8_fc174")]
 
@@ -184,6 +188,7 @@ disabled = true
 texture_normal = ExtResource("16_7qnnt")
 texture_pressed = ExtResource("17_5nrcw")
 texture_hover = ExtResource("18_2hamj")
+texture_disabled = ExtResource("18_2hamj")
 
 [node name="ButtonPressComponent" parent="ScrollContainer/CenterContainer/VBoxContainer/TextureButton5" unique_id=322549469 instance=ExtResource("8_fc174")]
 

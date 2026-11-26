@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="1_8ln24"]
 [ext_resource type="Script" uid="uid://ceppcm5hgkajd" path="res://scripts/play_button.gd" id="1_ekxnf"]
 [ext_resource type="Script" uid="uid://b6cpd8lklatwu" path="res://scripts/main_menu.gd" id="1_oa1go"]
-[ext_resource type="Texture2D" uid="uid://dhq1ai2o2xnk1" path="res://graphics/buttons/Tornado/BG_Tornado.png" id="1_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://d1lhvvwc43fji" path="res://graphics/buttons/UI/Mainmenu.png" id="2_oa1go"]
 [ext_resource type="Script" uid="uid://bxk4ytk2g1lf" path="res://scripts/settings_button.gd" id="3_wu84c"]
 [ext_resource type="Script" uid="uid://lp3g24f1ybbw" path="res://scripts/quit_button.gd" id="4_8ln24"]
 [ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_oa1go"]
@@ -18,8 +18,8 @@ grow_vertical = 2
 script = ExtResource("1_oa1go")
 
 [node name="BG" type="Sprite2D" parent="." unique_id=1394016286]
-position = Vector2(960, 540)
-texture = ExtResource("1_rtw2f")
+position = Vector2(978, 662)
+texture = ExtResource("2_oa1go")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=537720078]
 layout_mode = 1

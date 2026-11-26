@@ -1,7 +1,7 @@
 extends Area2D
 
 var building = []
-var damage = 300
+var damage = 30
 @onready var hitbox: CollisionShape2D = $CollisionShape2D
 @onready var redraw = false
 var level:int = 0:
@@ -15,17 +15,17 @@ var level:int = 0:
 func _on_level_changed():
 	match level:
 		0:
-			damage = 300
+			damage = 30
 		1:
-			pass
+			damage = 40
 		2:
-			pass
+			damage = 45
 		3:
-			pass
+			damage = 50
 		4:
-			pass
+			damage = 55
 		5:
-			pass
+			damage = 60
 
 
 
