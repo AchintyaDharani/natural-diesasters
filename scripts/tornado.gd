@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 var speed = 300.0
-var damage = 10
+var damage = 5
 var rng = RandomNumberGenerator.new()
 var nullvector = Vector2(0, 0)
 var level:int = 0:
@@ -16,17 +16,23 @@ var level:int = 0:
 func _on_level_changed():
 	match level:
 		0:
-			damage = 10
+			damage = 5
+			
 		1:
-			pass
-		2:
-			pass
+			damage = 10
+			
+		2: 
+			damage = 15
+			
 		3:
-			pass
+			damage = 20
+			
 		4:
-			pass
+			damage = 25
+			
 		5:
-			pass
+			damage = 30
+			
 
 func _ready():
 	velocity = nullvector.normalized() * speed

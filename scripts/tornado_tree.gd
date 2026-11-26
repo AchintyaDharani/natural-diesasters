@@ -6,11 +6,11 @@ extends Control
 @onready var cost = $VBoxContainer2/cost
 var costs = [10, 10, 10, 10, 10]
 var explanations = [
-	"a",
-	"b",
-	"c",
-	"d",
-	"e"
+	"Increases damage by 100%",
+	"Increases damage by 50%",
+	"Increases damage by 30%",
+	"Increases damage by 25%",
+	"Increases damage by 20%",
 ]
 
 func _ready() -> void:
