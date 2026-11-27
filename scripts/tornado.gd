@@ -5,7 +5,7 @@ var speed = 300.0
 var damage = 5
 var rng = RandomNumberGenerator.new()
 var nullvector = Vector2(0, 0)
-var level:int = 0:
+var level:int = -1:
 	set(value):
 		if value == level:
 			return
