@@ -24,9 +24,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
 		self._on_back_pressed()
-	var counter = Global.flood_level
-	if Global.flood_level < len(list):
-		list[Global.flood_level].disabled = false
+	var counter = Global.wave_level
+	if Global.wave_level < len(list):
+		list[Global.wave_level].disabled = false
 	for i in list:
 		if counter == 0:
 			pass
@@ -48,7 +48,7 @@ func _on_back_pressed() -> void:
 
 func _on_texture_button_1_pressed() -> void:
 	if Global.coins >= costs[0]:
-		Global.flood_level = 1
+		Global.wave_level = 1
 		Global.coins -= costs[0]
 	else:
 		pass
@@ -56,7 +56,7 @@ func _on_texture_button_1_pressed() -> void:
 
 func _on_texture_button_2_pressed() -> void:
 	if Global.coins >= costs[1]:
-		Global.flood_level = 2
+		Global.wave_level = 2
 		Global.coins -= costs[1]
 	else:
 		pass
@@ -64,7 +64,7 @@ func _on_texture_button_2_pressed() -> void:
 
 func _on_texture_button_3_pressed() -> void:
 	if Global.coins >= costs[2]:
-		Global.flood_level = 3
+		Global.wave_level = 3
 		Global.coins -= costs[2]
 	else:
 		pass
@@ -72,7 +72,7 @@ func _on_texture_button_3_pressed() -> void:
 
 func _on_texture_button_4_pressed() -> void:
 	if Global.coins >= costs[3]:
-		Global.flood_level = 4
+		Global.wave_level = 4
 		Global.coins -= costs[3]
 	else:
 		pass
@@ -80,7 +80,7 @@ func _on_texture_button_4_pressed() -> void:
 
 func _on_texture_button_5_pressed() -> void:
 	if Global.coins >= costs[4]:
-		Global.flood_level = 5
+		Global.wave_level = 5
 		Global.coins -= costs[4]
 	else:
 		pass
