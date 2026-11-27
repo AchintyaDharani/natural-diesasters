@@ -5,6 +5,7 @@
 [ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="2_2l6cc"]
 [ext_resource type="Script" uid="uid://ct862fv343ha7" path="res://scripts/continue_(win).gd" id="3_0lrm4"]
 [ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_0lrm4"]
+[ext_resource type="AudioStream" uid="uid://b6hhrr77ew3ug" path="res://Assets/audio/floraphonic-90s-game-ui-2-185095.mp3" id="6_6s1kg"]
 
 [node name="win_screen" type="CanvasLayer" unique_id=777679151]
 script = ExtResource("1_0lrm4")
@@ -62,6 +63,10 @@ text = "Continue"
 script = ExtResource("3_0lrm4")
 
 [node name="ButtonPressComponent" parent="middle/ButtonContainer/Continue (win)" unique_id=247894837 instance=ExtResource("5_0lrm4")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=936579458]
+stream = ExtResource("6_6s1kg")
+bus = &"sfx"
 
 [connection signal="pressed" from="middle/ButtonContainer/Continue (win)" to="." method="_on_continue_win_pressed"]
 [connection signal="pressed" from="middle/ButtonContainer/Continue (win)" to="middle/ButtonContainer/Continue (win)" method="_on_pressed"]

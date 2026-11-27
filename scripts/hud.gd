@@ -20,6 +20,8 @@ extends CanvasLayer
 var shop_open = false
 var t_locked = false
 
+signal lost
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	color_rect.visible = false
@@ -135,3 +137,7 @@ func _on_button_4_pressed() -> void:
 
 func _on_cooldown_flood_timeout() -> void:
 	button4.disabled = false
+
+
+func _on_timer_timeout() -> void:
+	lost.emit()

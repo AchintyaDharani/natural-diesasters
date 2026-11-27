@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dhfcqx5rb1e8n" path="res://Assets/water3.png" id="5_hey2k"]
 [ext_resource type="PackedScene" uid="uid://b8ht6ulqtqd7x" path="res://scenes/building_3.tscn" id="5_wo48x"]
 [ext_resource type="PackedScene" uid="uid://phjx54uyhnja" path="res://scenes/win_screen.tscn" id="10_que50"]
+[ext_resource type="PackedScene" uid="uid://d08s1iipm0kge" path="res://scenes/lose_screen.tscn" id="11_hey2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2mo"]
 size = Vector2(1984, 89.5)
@@ -681,6 +682,8 @@ scale = Vector2(0.6, 0.6)
 metadata/_edit_use_anchors_ = true
 
 [node name="win_screen" parent="." unique_id=777679151 instance=ExtResource("10_que50")]
+
+[node name="lose_screen" parent="." unique_id=1636914819 instance=ExtResource("11_hey2k")]
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1319964374]
 position = Vector2(960, 540)

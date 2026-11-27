@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://d08s1iipm0kge"]
+
+[ext_resource type="Texture2D" uid="uid://c4ln750kt1e23" path="res://graphics/buttons/UI/blankbox.png" id="1_v2sw8"]
+[ext_resource type="Theme" uid="uid://blkgg1f1whplk" path="res://scripts/new_theme.tres" id="3_jylt6"]
+[ext_resource type="Script" uid="uid://cp186npqbqhck" path="res://scripts/restart2.gd" id="3_lytqm"]
+[ext_resource type="PackedScene" uid="uid://eapgh2kvh231" path="res://scenes/button_press_component.tscn" id="5_06t62"]
+[ext_resource type="AudioStream" uid="uid://bcdb4l6sir3xd" path="res://Assets/audio/universfield-game-over-deep-male-voice-clip-352695.mp3" id="5_v2sw8"]
+
+[node name="lose_screen" type="CanvasLayer" unique_id=777679151]
+
+[node name="blur" type="ColorRect" parent="." unique_id=1208657059]
+self_modulate = Color(1, 1, 1, 0.5411765)
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24477637, 0.2447764, 0.24477637, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1226420769]
+offset_left = 690.0
+offset_top = 140.0
+offset_right = 1230.0
+offset_bottom = 940.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_v2sw8")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=1472365083]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -229.0
+offset_right = 229.0
+offset_bottom = 110.0
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 38.31)
+theme_override_font_sizes/font_size = 80
+text = "GAME OVER"
+
+[node name="middle" type="VBoxContainer" parent="." unique_id=2027537819]
+custom_maximum_size = Vector2(480, 800)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -602.0
+offset_right = 270.0
+offset_bottom = 602.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="middle" unique_id=914941147]
+custom_minimum_size = Vector2(0, 660)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ButtonContainer" type="VBoxContainer" parent="middle" unique_id=671520656]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Restart" type="Button" parent="middle/ButtonContainer" unique_id=1574172683]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("3_jylt6")
+text = "Restart"
+script = ExtResource("3_lytqm")
+
+[node name="ButtonPressComponent" parent="middle/ButtonContainer/Restart" unique_id=247894837 instance=ExtResource("5_06t62")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1259954602]
+stream = ExtResource("5_v2sw8")
+bus = &"sfx"
+
+[connection signal="pressed" from="middle/ButtonContainer/Restart" to="middle/ButtonContainer/Restart" method="_on_pressed"]
