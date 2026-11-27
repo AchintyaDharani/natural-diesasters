@@ -25,7 +25,7 @@ func _on_level_changed():
 		4:
 			damage = 55
 		5:
-			damage = 60
+			damage = 66
 
 
 

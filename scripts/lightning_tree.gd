@@ -4,13 +4,13 @@ extends Control
 @onready var list = []
 @onready var label = $VBoxContainer2/Label
 @onready var cost = $VBoxContainer2/cost
-var costs = [10, 10, 10, 10, 10]
+var costs = [350, 400, 450, 500, 550]
 var explanations = [
-	"a",
-	"b",
-	"c",
-	"d",
-	"e"
+	"Increases damage by 33%",
+	"Increases damage by 12.5%",
+	"Increases damage by 11%",
+	"Increases damage by 10%",
+	"Increases damage by 20%"
 ]
 
 func _ready() -> void:

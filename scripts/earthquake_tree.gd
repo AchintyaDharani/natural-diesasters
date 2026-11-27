@@ -4,7 +4,7 @@ extends Control
 @onready var list = []
 @onready var label = $VBoxContainer2/Label
 @onready var cost = $VBoxContainer2/cost
-var costs = [100, 250, 275, 230, 240]
+var costs = [150, 350, 400, 450, 500]
 var explanations = [
 	"Increases damage by 50%",
 	"Increases damage by 33%",
