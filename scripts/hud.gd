@@ -15,6 +15,7 @@ extends CanvasLayer
 @onready var label3: Label = $Bottom/HBoxContainer2/Button3/Label
 @onready var label4: Label = $Bottom/HBoxContainer2/Button4/Label
 @onready var pausebtn = $"Top Left/HBoxContainer/Pause"
+@onready var max = $Bottom/HBoxContainer2/Button/Label2
 @onready var shop: PackedScene = preload("res://scenes/shop.tscn")
 @onready var pausemenu = preload("res://scenes/pause_menu.tscn")
 var shop_open = false
@@ -24,6 +25,7 @@ signal lost
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	max.hide()
 	color_rect.visible = false
 
 

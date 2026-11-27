@@ -185,6 +185,18 @@ offset_top = -23.0
 grow_horizontal = 0
 grow_vertical = 0
 
+[node name="Label2" type="Label" parent="Bottom/HBoxContainer2/Button" unique_id=406959458]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(4.17, 0)
+text = "MAX"
+
 [node name="Button2" type="TextureButton" parent="Bottom/HBoxContainer2" unique_id=1058348413]
 layout_mode = 2
 texture_normal = ExtResource("17_iypfu")

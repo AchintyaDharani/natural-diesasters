@@ -81,9 +81,11 @@ func _process(_delta: float) -> void:
 	counted_nados = counter
 	if counted_nados == max_tornados and switch == 0:
 		hud.lock_nado()
+		hud.max.show()
 		switch = 1
 	elif counted_nados != max_tornados and switch == 1:
 		hud.unlock_nado()
+		hud.max.hide()
 		switch = 0
 	
 	mouse_pos = get_global_mouse_position()
