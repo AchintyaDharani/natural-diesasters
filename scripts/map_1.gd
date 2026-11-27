@@ -6,6 +6,7 @@ extends Node2D
 @onready var tsunami = preload("res://scenes/wave.tscn")
 @onready var hud: CanvasLayer = $hud
 @onready var win_screen = $win_screen
+@onready var lose_screen = $lose_screen
 @onready var f1: TileMapLayer = $FloodedLayer_1
 @onready var f2: TileMapLayer = $FloodedLayer_2
 @onready var f3: TileMapLayer = $FloodedLayer_3
@@ -58,6 +59,7 @@ func _on_tornado_level_changed():
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	win_screen.hide()
+	lose_screen.hide()
 	for child in get_children():
 		if child.has_signal("destroyed_building"):
 			child.destroyed_building.connect(_on_building_destroyed)
@@ -67,6 +69,7 @@ func _on_building_destroyed() -> void:
 	if counter_building == len(get_tree().get_nodes_in_group("buildings")):
 		win_screen.show()
 		hud.process_mode = Node.PROCESS_MODE_DISABLED
+		win_screen.get_child(3).play()
 
 func _process(_delta: float) -> void:
 	tornado_level = Global.tornado_level
@@ -167,3 +170,9 @@ func flood():
 			f3.visible = true
 		_:
 			pass
+
+
+func _on_hud_lost() -> void:
+	lose_screen.show()
+	hud.process_mode = Node.PROCESS_MODE_DISABLED
+	lose_screen.get_child(3).play()

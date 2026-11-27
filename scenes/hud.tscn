@@ -268,6 +268,7 @@ color = Color(1, 1, 1, 0.22352941)
 
 [connection signal="pressed" from="Top Right/HBoxContainer/Shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Top Left/HBoxContainer/Pause" to="." method="_on_pause_pressed"]
+[connection signal="timeout" from="Top Left/H/countdown/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Bottom/HBoxContainer2/Button/cooldown_nado" to="." method="_on_cooldown_nado_timeout"]
 [connection signal="pressed" from="Bottom/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
