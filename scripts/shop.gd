@@ -4,10 +4,12 @@ extends Control
 @onready var earthquake = preload("res://scenes/earthquake_tree.tscn")
 @onready var lightning = preload("res://scenes/lightning_tree.tscn")
 @onready var flood = preload("res://scenes/flood_tree.tscn")
+@onready var backbtn = $"Top Right/HBoxContainer/Back"
 @onready var buttons_array = $centre.get_children()
 @onready var centre_pos = $centre.position
 @onready var label = $Label
 @export var radius = 100
+var tree_open = false
 
 
 
@@ -25,6 +27,9 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("esc") and tree_open == false:
+		backbtn._on_pressed()
+		self._on_back_pressed()
 	for button in buttons_array:
 		if button.is_hovered():
 			if button == $centre/Tornado:
@@ -43,24 +48,29 @@ func _process(_delta: float) -> void:
 			label.text = ""
 
 func _on_tornado_pressed() -> void:
+	tree_open = true
 	var instance = tornado.instantiate()
 	add_child(instance)
 
 
 func _on_back_pressed() -> void:
+	get_parent().shop_open = false
 	self.queue_free()
 
 
 func _on_earthquake_pressed() -> void:
+	tree_open = true
 	var instance = earthquake.instantiate()
 	add_child(instance)
 
 
 func _on_lightning_pressed() -> void:
+	tree_open = true
 	var instance = lightning.instantiate()
 	add_child(instance)
 
 
 func _on_flood_pressed() -> void:
+	tree_open = true
 	var instance = flood.instantiate()
 	add_child(instance)

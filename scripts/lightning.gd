@@ -4,7 +4,7 @@ var building = []
 var damage = 30
 @onready var hitbox: CollisionShape2D = $CollisionShape2D
 @onready var redraw = false
-var level:int = 0:
+var level:int = -1:
 	set(value):
 		if value == level:
 			return
