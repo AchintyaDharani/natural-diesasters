@@ -22,7 +22,7 @@ var counted_nados = 0
 
 var counter_building := 0
 
-var tornado_scaling = Vector2(.1, .1)
+var tornado_scaling
 var earthquake_scaling = Vector2(1, 1)
 var lightning_scaling = Vector2(.7, .7)
 var arrow_scaling = Vector2(10, 10)
@@ -129,7 +129,8 @@ func spawn_tornado():
 	var instance = tornado.instantiate()
 	add_child(instance)
 	scene = instance
-	instance.scale = tornado_scaling
+	#instance.scale = tornado_scaling
+	tornado_scaling = instance.scale
 	placing = true
 	
 	

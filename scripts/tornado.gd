@@ -4,7 +4,8 @@ extends CharacterBody2D
 var speed = 300.0
 var damage = 5
 var rng = RandomNumberGenerator.new()
-var nullvector = Vector2(0, 0)
+@onready var nullvector = Vector2(0, 0)
+
 var level:int = -1:
 	set(value):
 		if value == level:
@@ -17,27 +18,35 @@ func _on_level_changed():
 	match level:
 		0:
 			damage = 5
-			
 		1:
 			damage = 10
-			
 		2: 
 			damage = 15
-			
 		3:
 			damage = 20
-			
 		4:
 			damage = 25
-			
 		5:
 			damage = 30
-			
 
 func _ready():
+	match Global.tornado_level:
+		0:
+			self.scale = Vector2(.1, .1) 
+		1:
+			self.scale = Vector2(.4, .4)
+		2: 
+			self.scale = Vector2(.5, .5)
+		3:
+			self.scale = Vector2(.6, .6)
+		4:
+			self.scale = Vector2(.7, .7)
+		5:
+			self.scale = Vector2(.8, .8)
+			
 	velocity = nullvector.normalized() * speed
 	process_mode = PROCESS_MODE_DISABLED
-
+	
 
 
 func _physics_process(delta: float) -> void:

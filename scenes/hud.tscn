@@ -242,7 +242,7 @@ script = ExtResource("17_qpprf")
 [node name="ButtonPressComponent" parent="Bottom/HBoxContainer2/Button4" unique_id=1830639930 instance=ExtResource("8_ptr5m")]
 
 [node name="cooldown_flood" type="Timer" parent="Bottom/HBoxContainer2/Button4" unique_id=270570520]
-wait_time = 10.0
+wait_time = 15.0
 one_shot = true
 
 [node name="Label" type="Label" parent="Bottom/HBoxContainer2/Button4" unique_id=2133489575]
