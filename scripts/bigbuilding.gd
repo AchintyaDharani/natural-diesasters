@@ -3,8 +3,8 @@ extends StaticBody2D
 var hp = 1200
 var mancount = 20
 var destroyed := false
-var disasters = ["tornado", "earthquake", "lightning"]
-var multipliers = [.5, .5, 2]
+var disasters = ["tornado", "earthquake", "lightning", "flood"]
+var multipliers = [.5, .5, 2, 2]
 var local_scale = Vector2(.6,.6)
 signal destroyed_building
 @onready var f1: Polygon2D = $Flooding_1

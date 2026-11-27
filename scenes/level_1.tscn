@@ -684,6 +684,18 @@ scale = Vector2(0.6, 0.6)
 position = Vector2(901, 361)
 scale = Vector2(0.6, 0.6)
 
+[node name="bigbuilding4" parent="." unique_id=1569276768 groups=["buildings"] instance=ExtResource("3_rus8k")]
+position = Vector2(1617, 354)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding5" parent="." unique_id=434484793 groups=["buildings"] instance=ExtResource("3_rus8k")]
+position = Vector2(1567.0001, 919)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding6" parent="." unique_id=1434494775 groups=["buildings"] instance=ExtResource("3_rus8k")]
+position = Vector2(959, 594)
+scale = Vector2(0.6, 0.6)
+
 [node name="hud" parent="." unique_id=160174252 instance=ExtResource("4_5xbjy")]
 metadata/_edit_use_anchors_ = true
 
