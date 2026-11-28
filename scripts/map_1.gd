@@ -43,15 +43,15 @@ func _on_tornado_level_changed():
 		0:
 			max_tornados = 2
 		1:
-			pass
+			max_tornados = 3
 		2:
-			pass
+			max_tornados = 4
 		3:
-			pass
+			max_tornados = 5
 		4:
-			pass
+			max_tornados = 6
 		5:
-			pass
+			max_tornados = 7
 
 
 

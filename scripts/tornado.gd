@@ -32,7 +32,7 @@ func _on_level_changed():
 func _ready():
 	match Global.tornado_level:
 		0:
-			self.scale = Vector2(.1, .1) 
+			self.scale = Vector2(.2, .2) 
 		1:
 			self.scale = Vector2(.4, .4)
 		2: 

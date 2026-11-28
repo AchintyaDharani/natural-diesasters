@@ -597,7 +597,7 @@ shape = SubResource("RectangleShape2D_ne2mo")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=860419750]
 position = Vector2(2, 0)
-tile_map_data = PackedByteArray("AAD3/w8AAAAAAAAAAAD4/w0AAAABAAAAAAD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAP//AAABAAAAAAADAAAAAAABAAAAAAADAP//AAAAAAAAAAAEAAAAAAABAAAAAAAEAP//AAABAAAAAAAFAAAAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAQAAAABAAAAAAAFAAYAAAAAAAAAAAAFAAgAAAAAAAAAAAAFAAoAAAABAAAAAAAFAAwAAAAAAAAAAAAEAAsAAAABAAAAAAAEAAwAAAAAAAAAAAADAAsAAAAAAAAAAAADAAwAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAAAAAAAAAABAAsAAAAAAAAAAAABAAwAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAwAAAAAAAAAAAD//wsAAAAAAAAAAAD//wkAAAAAAAAAAAAAAAgAAAAAAAAAAAD//wcAAAAAAAAAAAAAAAYAAAAAAAAAAAD//wUAAAABAAAAAAAAAAQAAAABAAAAAAD//wMAAAAAAAAAAAAAAAIAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAUAAAABAAAAAAABAAQAAAABAAAAAAABAAUAAAABAAAAAAACAAYAAAABAAAAAAACAAcAAAABAAAAAAADAAgAAAABAAAAAAADAAkAAAABAAAAAAAEAAoAAAABAAAAAAADAAYAAAABAAAAAAADAAUAAAABAAAAAAAEAAQAAAABAAAAAAAEAAMAAAABAAAAAAACAAQAAAABAAAAAAACAAMAAAABAAAAAAADAAIAAAABAAAAAAADAAEAAAABAAAAAAAEAAIAAAABAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAACAAgAAAAAAAAAAAACAAkAAAAAAAAAAAADAAoAAAAAAAAAAAACAAoAAAAAAAAAAAABAAkAAAAAAAAAAAABAAoAAAAAAAAAAAADAAcAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAACAAUAAAAAAAAAAAAEAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAIAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAMAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD3/w8AAAAAAAAAAAD4/w0AAAABAAAAAAD/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAP//AAABAAAAAAADAAAAAAABAAAAAAADAP//AAAAAAAAAAAEAAAAAAABAAAAAAAEAP//AAABAAAAAAAFAAAAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAQAAAABAAAAAAAFAAYAAAAAAAAAAAAFAAgAAAAAAAAAAAAFAAoAAAABAAAAAAAFAAwAAAAAAAAAAAAEAAsAAAABAAAAAAAEAAwAAAAAAAAAAAADAAsAAAAAAAAAAAADAAwAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAAAAAAAAAABAAsAAAAAAAAAAAABAAwAAAAAAAAAAAAAAAsAAAABAAAAAAAAAAwAAAABAAAAAAD//wsAAAAAAAAAAAD//wkAAAAAAAAAAAAAAAgAAAAAAAAAAAD//wcAAAAAAAAAAAAAAAYAAAAAAAAAAAD//wUAAAABAAAAAAAAAAQAAAABAAAAAAD//wMAAAAAAAAAAAAAAAIAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAUAAAABAAAAAAABAAQAAAABAAAAAAABAAUAAAABAAAAAAACAAYAAAABAAAAAAACAAcAAAABAAAAAAADAAgAAAABAAAAAAADAAkAAAABAAAAAAAEAAoAAAABAAAAAAADAAYAAAABAAAAAAADAAUAAAABAAAAAAAEAAQAAAABAAAAAAAEAAMAAAABAAAAAAACAAQAAAABAAAAAAACAAMAAAABAAAAAAADAAIAAAABAAAAAAADAAEAAAABAAAAAAAEAAIAAAABAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAcAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAACAAgAAAABAAAAAAACAAkAAAAAAAAAAAADAAoAAAAAAAAAAAACAAoAAAAAAAAAAAABAAkAAAABAAAAAAABAAoAAAABAAAAAAADAAcAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAACAAUAAAAAAAAAAAAEAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAIAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAMAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_que50")
 
 [node name="FloodedLayer_1" type="TileMapLayer" parent="." unique_id=286406944]
@@ -623,39 +623,79 @@ position = Vector2(699, 688)
 scale = Vector2(0.6, 0.6)
 
 [node name="Building3" parent="." unique_id=1092294606 groups=["buildings"] instance=ExtResource("2_b4j7a")]
-position = Vector2(522, 598)
+position = Vector2(537, 532)
 scale = Vector2(0.6, 0.6)
 
 [node name="Building9" parent="." unique_id=1053280830 groups=["buildings"] instance=ExtResource("2_b4j7a")]
-position = Vector2(533, 952)
+position = Vector2(1761, 447)
 scale = Vector2(0.6, 0.6)
 
 [node name="Building6" parent="." unique_id=326259961 groups=["buildings"] instance=ExtResource("2_b4j7a")]
-position = Vector2(178, 589)
+position = Vector2(251, 550)
 scale = Vector2(0.6, 0.6)
 
 [node name="Building7" parent="." unique_id=2056818510 groups=["buildings"] instance=ExtResource("2_b4j7a")]
-position = Vector2(355, 324)
+position = Vector2(403, 353)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building19" parent="." unique_id=1628182673 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(103, 332)
 scale = Vector2(0.6, 0.6)
 
 [node name="Building8" parent="." unique_id=73200818 groups=["buildings"] instance=ExtResource("2_b4j7a")]
-position = Vector2(701, 333)
+position = Vector2(705, 381)
 scale = Vector2(0.6, 0.6)
 
 [node name="Building4" parent="." unique_id=1267090446 groups=["buildings"] instance=ExtResource("2_b4j7a")]
-position = Vector2(1556, 767)
+position = Vector2(1534, 794)
 scale = Vector2(0.6, 0.6)
 
 [node name="Building5" parent="." unique_id=1650909233 groups=["buildings"] instance=ExtResource("2_b4j7a")]
-position = Vector2(1572, 592.00006)
+position = Vector2(1572.0001, 544)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building10" parent="." unique_id=671503945 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(549.0001, 812)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building11" parent="." unique_id=312179549 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(427, 870)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building12" parent="." unique_id=114372749 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(298, 934.00006)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building13" parent="." unique_id=1551156915 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(149, 1011)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building14" parent="." unique_id=3882231 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(458, 708.00006)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building15" parent="." unique_id=880931456 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(344, 762.00006)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building16" parent="." unique_id=1324826564 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(215, 820.00006)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building17" parent="." unique_id=1871665425 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(86, 876)
+scale = Vector2(0.6, 0.6)
+
+[node name="Building18" parent="." unique_id=969890285 groups=["buildings"] instance=ExtResource("2_b4j7a")]
+position = Vector2(82, 586.00006)
 scale = Vector2(0.6, 0.6)
 
 [node name="Building2" parent="." unique_id=1554478461 groups=["buildings"] instance=ExtResource("2_b4j7a")]
-position = Vector2(1380, 689)
+position = Vector2(1372, 719)
 scale = Vector2(0.6, 0.6)
 
 [node name="bigbuilding" parent="." unique_id=875487003 groups=["buildings"] instance=ExtResource("3_wo48x")]
-position = Vector2(1020, 443)
+position = Vector2(945, 449)
 scale = Vector2(0.6, 0.6)
 
 [node name="bigbuilding3" parent="." unique_id=2123694921 groups=["buildings"] instance=ExtResource("3_wo48x")]
@@ -663,7 +703,35 @@ position = Vector2(1747.0001, 122)
 scale = Vector2(0.6, 0.6)
 
 [node name="bigbuilding5" parent="." unique_id=1919800648 groups=["buildings"] instance=ExtResource("3_wo48x")]
-position = Vector2(1023, 816)
+position = Vector2(1048, 748.00006)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding6" parent="." unique_id=634432202 groups=["buildings"] instance=ExtResource("3_wo48x")]
+position = Vector2(1457, 543)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding7" parent="." unique_id=1703191940 groups=["buildings"] instance=ExtResource("3_wo48x")]
+position = Vector2(1382, 243)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding8" parent="." unique_id=1625545292 groups=["buildings"] instance=ExtResource("3_wo48x")]
+position = Vector2(1463, 298)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding9" parent="." unique_id=535044103 groups=["buildings"] instance=ExtResource("3_wo48x")]
+position = Vector2(1262, 299)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding10" parent="." unique_id=1982426408 groups=["buildings"] instance=ExtResource("3_wo48x")]
+position = Vector2(1082, 393)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding11" parent="." unique_id=599004394 groups=["buildings"] instance=ExtResource("3_wo48x")]
+position = Vector2(1844, 442)
+scale = Vector2(0.6, 0.6)
+
+[node name="bigbuilding12" parent="." unique_id=598025774 groups=["buildings"] instance=ExtResource("3_wo48x")]
+position = Vector2(1844, 643)
 scale = Vector2(0.6, 0.6)
 
 [node name="bigbuilding4" parent="." unique_id=1419351870 groups=["buildings"] instance=ExtResource("3_wo48x")]
@@ -671,11 +739,47 @@ position = Vector2(1050.0001, 129)
 scale = Vector2(0.6, 0.6)
 
 [node name="bigbuilding2" parent="." unique_id=206214210 groups=["buildings"] instance=ExtResource("3_wo48x")]
-position = Vector2(1213, 346)
+position = Vector2(1237, 415)
 scale = Vector2(0.6, 0.6)
 
 [node name="building_3" parent="." unique_id=1619457780 groups=["buildings"] instance=ExtResource("5_wo48x")]
 position = Vector2(917, 237)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_9" parent="." unique_id=390902250 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(273, 223)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_10" parent="." unique_id=904122509 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(420, 124)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_12" parent="." unique_id=610878718 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(571, 273)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_11" parent="." unique_id=703926 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(712, 181)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_4" parent="." unique_id=1510247368 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(1409, 975.00006)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_5" parent="." unique_id=1326133244 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(1215, 873.00006)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_6" parent="." unique_id=183805213 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(1753, 869.00006)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_7" parent="." unique_id=222600769 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(902, 871)
+scale = Vector2(0.6, 0.6)
+
+[node name="building_8" parent="." unique_id=1501550120 groups=["buildings"] instance=ExtResource("5_wo48x")]
+position = Vector2(719, 962)
 scale = Vector2(0.6, 0.6)
 
 [node name="hud" parent="." unique_id=160174252 instance=ExtResource("4_y0kc7")]

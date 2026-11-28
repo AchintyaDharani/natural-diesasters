@@ -6,20 +6,17 @@ extends Control
 @onready var cost = $VBoxContainer2/cost
 var costs = [450, 500, 600, 650, 750]
 var explanations = [
-	"Increases damage by 80%",
-	"Increases damage by 11%",
-	"Increases damage by 30%",
+	"Increases damage by 60%",
+	"Increases damage by 50%",
+	"Increases damage by 25%",
 	"Increases damage by 20%",
-	"Increases damage by 15%"
+	"Increases damage by 39%"
 ]
 
 func _ready() -> void:
 	for i in tree.get_children():
 		if i is TextureButton:
 			list.append(i)
-
-
-
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("esc"):
