@@ -23,6 +23,29 @@ var t_locked = false
 
 signal lost
 
+var level:int = -1:
+	set(value):
+		if value == level:
+			return
+		level = value
+		_on_level_changed()
+
+
+func _on_level_changed():
+	match level:
+		0:
+			cd.wait_time = 3
+		1:
+			cd.wait_time = 2.8
+		2: 
+			cd.wait_time = 2.5
+		3:
+			cd.wait_time = 2.3
+		4:
+			cd.wait_time = 2.2
+		5:
+			cd.wait_time = 2.1
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	maxt.hide()
@@ -31,6 +54,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	level = Global.tornado_level
 	if Input.is_action_just_pressed("esc") and shop_open == false:
 		pausebtn._on_pressed()
 		self._on_pause_pressed()

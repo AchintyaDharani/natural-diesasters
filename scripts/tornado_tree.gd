@@ -6,11 +6,30 @@ extends Control
 @onready var cost = $VBoxContainer2/cost
 var costs = [30, 75, 100, 150, 200]
 var explanations = [
-	"Increases damage by 100%",
-	"Increases damage by 50%",
-	"Increases damage by 30%",
-	"Increases damage by 25%",
-	"Increases damage by 20%",
+	"Increases damage by 100%
+	Doubles the size
+	Adds 1 more Tornado
+	Reduces cooldown",
+	
+	"Increases damage by 50%
+	Increases size by 25%
+	Adds 1 more Tornado
+	Reduces cooldown",
+	
+	"Increases damage by 30%
+	Increases size by 20%
+	Adds 1 more Tornado
+	Reduces cooldown",
+	
+	"Increases damage by 25%
+	Increases size by 16%
+	Adds 1 more Tornado
+	Reduces cooldown",
+	
+	"Increases damage by 20%
+	Increases size by 14%
+	Adds 1 more Tornado
+	Reduces cooldown",
 ]
 
 func _ready() -> void:
